@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFacesSampleCS", "SimpleFacesSampleCS.vs2010.csproj", "{4FBADA2D-604A-4E3F-82E0-9F62A7C4925B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32_x86 = Debug|Win32_x86
+		Debug|Win64_x64 = Debug|Win64_x64
+		Release|Win32_x86 = Release|Win32_x86
+		Release|Win64_x64 = Release|Win64_x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FBADA2D-604A-4E3F-82E0-9F62A7C4925B}.Debug|Win32_x86.ActiveCfg = Debug|x86
+		{4FBADA2D-604A-4E3F-82E0-9F62A7C4925B}.Debug|Win32_x86.Build.0 = Debug|x86
+		{4FBADA2D-604A-4E3F-82E0-9F62A7C4925B}.Debug|Win64_x64.ActiveCfg = Debug|x64
+		{4FBADA2D-604A-4E3F-82E0-9F62A7C4925B}.Debug|Win64_x64.Build.0 = Debug|x64
+		{4FBADA2D-604A-4E3F-82E0-9F62A7C4925B}.Release|Win32_x86.ActiveCfg = Release|x86
+		{4FBADA2D-604A-4E3F-82E0-9F62A7C4925B}.Release|Win32_x86.Build.0 = Release|x86
+		{4FBADA2D-604A-4E3F-82E0-9F62A7C4925B}.Release|Win64_x64.ActiveCfg = Release|x64
+		{4FBADA2D-604A-4E3F-82E0-9F62A7C4925B}.Release|Win64_x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

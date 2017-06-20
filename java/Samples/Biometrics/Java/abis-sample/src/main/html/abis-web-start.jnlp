@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="" href="abis-web-start.jnlp">
+
+<information>
+	<title>Neurotechnology ABIS Web Start</title>
+	<vendor>Neurotechnology</vendor>
+	<homepage href="http://www.neurotechnology.com"/>
+	<description>Neurotechnology ABIS Web Start</description>
+	<description kind="short">Neurotechnology ABIS Web Start</description>
+	<offline-allowed/>
+</information>
+
+<security>
+	<all-permissions/>
+</security>
+
+<update check="timeout" policy="prompt-update"/>
+
+	<resources>
+		<j2se version="1.6+"/>
+		<jar href="abis-sample-web.jar" main="true"/>
+		<jar href="neurotec-core.jar"/>
+		<jar href="neurotec-licensing.jar"/>
+		<jar href="neurotec-media.jar"/>
+		<jar href="neurotec-media-processing.jar"/>
+		<jar href="neurotec-biometrics.jar"/>
+		<jar href="neurotec-biometrics-client.jar"/>
+		<jar href="neurotec-devices.jar"/>
+		<jar href="neurotec-gui.jar"/>
+		<jar href="neurotec-biometrics-gui.jar"/>
+		<jar href="samples-utils.jar"/>
+	</resources>
+	<resources os="Windows" arch="x86">
+		<nativelib href="neurotec-native-win32-x86.jar" download="eager"/>
+	</resources>
+	<resources os="Windows" arch="amd64">
+		<nativelib href="neurotec-native-win64-x64.jar" download="eager"/>
+	</resources>
+	<resources os="Linux" arch="x86_64 amd64">
+		<nativelib href="neurotec-native-linux-x86-64.jar" download="eager"/>
+	</resources>
+	<resources os="Linux">
+		<nativelib href="neurotec-native-linux-x86.jar" download="eager"/>
+	</resources>
+	<resources os="Mac OS X">
+		<nativelib href="neurotec-native-macosx-universal.jar" download="eager"/>
+	</resources>
+	<application-desc
+		name="Neurotechnology ABIS Web Start"
+		documentbase="index.html"
+		main-class="com.neurotec.samples.abis.AbisApplication"
+		width="800"
+		height="600">
+	</application-desc>
+</jnlp>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: net.java.dev.jna:jna:4.2.2-Neurotec">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/java/dev/jna/jna/4.2.2-Neurotec/jna-4.2.2-Neurotec.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/net/java/dev/jna/jna/4.2.2-Neurotec/jna-4.2.2-Neurotec-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/java/dev/jna/jna/4.2.2-Neurotec/jna-4.2.2-Neurotec-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

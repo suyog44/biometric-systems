@@ -1,0 +1,15 @@
+// ============================================================================
+// Main
+// ============================================================================
+
+project.ext.productRootDir = "../../../.."
+project.ext.productBinDir = new File(project.productRootDir, "Bin")
+project.ext.productBinJavaDir = new File(project.productBinDir, "Java")
+project.ext.productBinAndroidDir = new File(project.productBinDir, "Android")
+project.ext.productLibAndroidDir = new File(project.productRootDir, "Lib/Android")
+
+// ============================================================================
+// Android
+// ============================================================================
+
+apply plugin: 'com.android.library'

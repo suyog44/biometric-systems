@@ -1,0 +1,87 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionType" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="HostName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="AdminPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">24932</Value>
+    </Setting>
+    <Setting Name="ClientPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">25452</Value>
+    </Setting>
+    <Setting Name="Phrases" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1=What is your grandmother's name?;2=Where and when have you been born?;3=What is your favourite meal and drink?</Value>
+    </Setting>
+    <Setting Name="FingerScanner" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="IrisScanner" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PalmScanner" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="VoiceCaptureDevice" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FaceCaptureDevice" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ClientProperties" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Fingers.DeterminePatternClass=True;Fingers.CalculateNfiq=True;Fingers.ReturnBinarizedImage=True;Faces.CreateThumbnailImage=True;Faces.DetectAllFeaturePoints=True;Faces.DetermineGender=True;Faces.DetermineAge=True;Faces.DetectProperties=True;Faces.RecognizeExpression=True;Faces.RecognizeEmotion=True;Palms.ReturnBinarizedImage=True;Matching.WithDetails=True;Fingers.CheckForDuplicatesWhenCapturing=True</Value>
+    </Setting>
+    <Setting Name="TableName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="OdbcConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FingersGeneralizationRecordCount" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="FacesGeneralizationRecordCount" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="PalmsGeneralizationRecordCount" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="QueryAutoComplete" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Id IN (&lt;/string&gt;
+  &lt;string&gt;Id=&lt;/string&gt;
+  &lt;string&gt;Country=&lt;/string&gt;
+  &lt;string&gt;City=&lt;/string&gt;
+  &lt;string&gt;FirstName=&lt;/string&gt;
+  &lt;string&gt;LastName=&lt;/string&gt;
+  &lt;string&gt;YearOfBirth &amp;gt;&lt;/string&gt;
+  &lt;string&gt;GenderString='Male'&lt;/string&gt;
+  &lt;string&gt;GenderString='Female'&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="WarnHasSchema" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Schemas" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Sample db schema#(FirstName string , LastName string , YearOfBirth int , GenderString string, Country string, City string)#(Thumbnail blob, EnrollData blob)#Gender=GenderString#Thumbnail=Thumbnail#EnrollData=EnrollData&lt;/string&gt;
+  &lt;string&gt;Remote server schema#(FirstName string , LastName string , YearOfBirth int , GenderString string, Country string, City string)##Gender=GenderString#Thumbnail=#EnrollData=&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="CurrentScema" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="LocalOperations" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="FacesMirrorHorizontally" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

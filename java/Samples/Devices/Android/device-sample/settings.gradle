@@ -1,0 +1,4 @@
+rootProject.name = 'device-sample-android'
+include 'samples-utils', 'neurotec-licensing-gui-android'
+project(':samples-utils').projectDir = new File("../../../Common/Android/utils")
+project(':neurotec-licensing-gui-android').projectDir = new File("../../../Common/Android/neurotec-licensing-gui-android")

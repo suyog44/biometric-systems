@@ -1,0 +1,160 @@
+"backButton" = "BACK";
+"verify" = "VERIFY";
+"enroll" = "ENROLL";
+"identify" = "IDENTIFY";
+"scan" = "SCAN";
+"cancel" = "CANCEL";
+"ok" = "OK";
+"close" = "Close";
+"initialImagesFolderName" = "Biometrics";
+
+//Menu
+"databaseButton" = "Database";
+"infoButton" = "Info";
+"fingerButton" = "Fingerprint";
+"faceButton" = "Face";
+"eyeButton" = "Iris";
+"voiceButton" = "Voice";
+
+
+//Voice
+"voiceRecord" = "Record your voice";
+"voiceExtractSuccess" = "Voice extracted";
+"voiceIdentifySuccess" = "Detected %@ voice";
+
+//Face
+"faceCameraLabel" = "Focus on the face";
+"extractionLabel" = "Scanning wait...";
+"faceSelectTheFace" = "SELECT THE FACE";
+"verifyFail" = "Verify failed";
+"identifyFail" = "Identify failed";
+"extractFail" = "Extract failed";
+"faceIdentifySuccess" = "Detected %@ face";
+"extractionNumberOfFaces" = "%i person detected";
+"faceExpression" = "expression:";
+"faceGender" = "gender:";
+
+"nleNeutral" = "neutral";
+"nleSmile" = "smiling";
+"nleSmile" = "smiling with opened jaw";
+"nleRaisedBrows" = "raised eyebrows";
+"nleEyesAway" = "looking away";
+"nleSquinting" = "squinting";
+"nleFrowning" = "frowning";
+
+"ngMale" = "male";
+"ngFemale" = "female";
+
+//Finger
+"fingerIdentifySuccess" = "Detected %@ finger";
+"fingerExtractSuccess" = "Finger exctracted";
+"chooseFromGalleryOrScanLabel" = "Choose image from gallery\nor scan from device";
+"putFingerOnScanner" = "Scanning is in progress.\nPut your finger on the scanner";
+"scannerNotFoundTitle" = "Scanner not found";
+"scannerNotFoundMessage" = "Please connect supported fingerprint scanner";
+"scanFailedTitle" = "Scanning failed";
+"scanTimeout" = "Scan timed out";
+"scanCancelled" = "Scan was cancelled";
+"scanUnexpectedStatus" = "Something unexpected has happened";
+"lastScanNotFinished" = "Last scan operation has not finished yet";
+
+//Eye
+"eyeIdentifySuccess" = "Detected %@ eye";
+"chooseFromGalleryLabel" = "Choose from gallery";
+"eyeExtractSuccess" = "Eye extracted";
+
+//Settings
+"settingsExtraction" = "EXTRACTION";
+"settingsEnrollment" = "ENROLLMENT";
+"settingsMatching" = "MATCHING";
+"settingsAdvanced" = "ADVANCED";
+"settingsThumbnail" = "THUMBNAIL";
+
+//Settings Settings
+"Fingers.FastExtraction" = "Fast extraction";
+"Fingers.TemplateSize" = "Template size";
+"Fingers.QualityThreshold" = "Quality threshold";
+"Fingers.ReturnProcessedImage" = "Return processed image";
+"Fingers.MatchingSpeed" = "Matching speed";
+"Fingers.MaximalRotation" = "Maximal rotation";
+"Fingers.DefaultDPI" = "Default DPI for images from gallery";
+"Matching.Threshold" = "Matching threshold";
+"Enrollment.CheckForDublicates" = "Check for dublicates";
+"Irises.TemplateSize" = "Template size";
+"Irises.FastExtraction" = "Fast extraction";
+"Irises.QualityThreshold" = "Quality threshold";
+"Irises.MatchingSpeed" = "Matching speed";
+"Irises.MaximalRotation" = "Maximal rotation";
+"Faces.TemplateSize" = "Template size";
+"Faces.ConfidenceThreshold" = "Confidence threshold";
+"Faces.MinimalInterOcularDistance" = "Minimal inter ocular distance";
+"Faces.MaximalRoll" = "Maximal roll";
+"Faces.MaximalYaw" = "Maximal yaw";
+"Faces.MatchingSpeed" = "Matching speed";
+"Faces.DetectAllFeaturePoints" = "Detect all feature points";
+"Faces.DetectBaseFeaturePoints" = "Detect base feature points";
+"Faces.DetermineGender" = "Determine gender";
+"Faces.DetectProperties" = "Detect properties";
+"Faces.RecognizeExpression" = "Recognize expression";
+"Faces.RecognizeEmotion" = "Recognize emotion";
+"Faces.CreateThumbnailImage" = "Create thumbnail image";
+"Faces.TokenImageWidth" = "Token image width";
+"Voices.UniquePhrasesOnly" = "Unique phrases only";
+"Voices.ExtractTextDependentFeatures" = "Extract text dependent features";
+"Voices.ExtractTextIndependentFeatures" = "Extract text independent features";
+
+
+//Title
+
+"menuTitle" = "Biometrics";
+"fingerTitle" = "Fingerprint recognition";
+"faceTitle" = "Face recognition";
+"eyeTitle" = "Eye recognition";
+"voiceTitle" = "Voice recognition";
+"settingsTitle" = "Settings";
+"databaseTitle" = "Database";
+"infoTitle" = "Info";
+"errorTitle" = "Error";
+
+//Enroll dialog
+"cancelButton" = "Cancel";
+"enrollButton" = "Enroll";
+"enrollTitle" = "Enroll information";
+"enrollPlaceholder" = "Name";
+"enrollErrorAlertTitle" = "Attention!";
+"enrollErrorAlertButton" = "Ok";
+"dublicateIdEnrollError" = "Template with this name is already enrolled";
+"dublicateEnrollError" = "Template with this subject is already enrolled";
+"unknownEnrollError" = "Unknown error occured while enrolling template";
+
+
+//Database
+"emptyList" = "LIST IS EMPTY";
+"dbChooseFace" = "Choose face to verify";
+"dbChooseFinger" = "Choose finger to verify";
+"dbChooseEye" = "Choose eye iris to verify";
+"dbChooseVoice" = "Choose voice to verify";
+"dbFace" = "Faces";
+"dbVoice" = "Voices";
+"dbFinger" = "Fingers";
+"dbEye" = "Eyes";
+"deleteSubjectAlertTitle" = "Attention!";
+"deleteSubjectAlertMessage" = "Do you really want to remove this template?";
+"deleteSubjectAlertCancel" = "Cancel";
+"deleteSubjectAlertAccept" = "Yes";
+
+
+//ProgressView
+"loaderExtracting" = "Extracting...";
+"loaderVerifying" = "Verifying...";
+"loaderIdentifying" = "Identifying...";
+
+//Settings types
+"nmsLow" = "low";
+"nmsMedium" = "medium";
+"nmsHigh" = "high";
+
+"ntsCompact" = "compact";
+"ntsSmall" = "small";
+"ntsMedium" = "medium";
+"ntsLarge" = "large";

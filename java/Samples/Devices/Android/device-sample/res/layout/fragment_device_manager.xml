@@ -1,0 +1,119 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+
+	<ScrollView
+		android:id="@+id/scrollViewDeviceManager"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="10"
+		>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:orientation="vertical" >
+
+			<CheckBox
+				android:id="@+id/checkBox_any"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:checked="true"
+				android:text="@string/msg_any" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:paddingLeft="25dp" >
+
+				<CheckBox
+					android:id="@+id/checkBox_capture_device"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/msg_capture_device" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:paddingLeft="25dp" >
+
+					<CheckBox
+						android:id="@+id/checkBox_camera"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/msg_camera" />
+
+					<CheckBox
+						android:id="@+id/checkBox_microphone"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/msg_microphone" />
+				</LinearLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:paddingLeft="25dp" >
+
+				<CheckBox
+					android:id="@+id/checkBox_biometric_device"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/msg_biometric_device" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:paddingLeft="25dp" >
+
+					<CheckBox
+						android:id="@+id/checkBox_fscanner"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/msg_fscanner" />
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical"
+						android:paddingLeft="25dp" >
+
+						<CheckBox
+							android:id="@+id/checkBox_finger_scanner"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/msg_finger_scanner" />
+
+						<CheckBox
+							android:id="@+id/checkBox_palm_scanner"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/msg_palm_scanner" />
+					</LinearLayout>
+
+					<CheckBox
+						android:id="@+id/checkBox_iris_scanner"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/msg_iris_scanner" />
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+
+	<include
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		layout="@layout/fragment_buttons" />
+
+</LinearLayout>

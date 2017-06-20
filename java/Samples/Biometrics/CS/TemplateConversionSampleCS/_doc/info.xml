@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<neu:sampleInfo xmlns:neu="http://www.neurotechnology.com/SampleExplorer">
+	<neu:title>Template Conversion Sample C#</neu:title>
+	<neu:description>
+Sample demonstrates how to convert different types of
+templates (from/to ANSI templates, from/to Neurotechnology templates).
+	</neu:description>
+	<neu:tag>C#</neu:tag>
+	<neu:tag>.NET</neu:tag>
+	<neu:tag>Fingers</neu:tag>
+	<neu:tag>Biometric Standards</neu:tag>
+	<neu:tag>VeriLook Extended SDK</neu:tag>
+	<neu:tag>VeriFinger Extended SDK</neu:tag>
+	<neu:tag>VeriEye Extended SDK</neu:tag>
+	<neu:tag>MegaMatcher Standard SDK</neu:tag>
+	<neu:tag>MegaMatcher Extended SDK</neu:tag>
+</neu:sampleInfo>

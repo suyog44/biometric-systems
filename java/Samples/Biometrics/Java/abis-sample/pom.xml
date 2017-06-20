@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0">
+	<parent>
+		<artifactId>biometrics-samples</artifactId>
+		<groupId>com.neurotec.samples</groupId>
+		<version>9.0.0.0</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>abis-sample</artifactId>
+	<name>Abis Sample</name>
+	<build>
+		<resources>
+			<resource>
+				<directory>${project.basedir}/src/main/resources</directory>
+			</resource>
+			<resource>
+				<targetPath>${project.build.outputDirectory}/images</targetPath>
+				<filtering>true</filtering>
+				<directory>${basedir}/../../../Common/Resources</directory>
+				<includes>
+					<include>**/*.png</include>
+					<include>**/*.jpg</include>
+				</includes>
+			</resource>
+			<resource>
+				<targetPath>${project.build.outputDirectory}/images</targetPath>
+				<directory>${basedir}/../../../../Resources</directory>
+			</resource>
+		</resources>
+	</build>
+	<profiles>
+		<profile>
+			<id>standalone</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>standalone</id>
+								<phase>package</phase>
+								<goals>
+									<goal>single</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<outputDirectory>${product.bin.directory}</outputDirectory>
+							<finalName>Java</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+							<descriptors>
+								<descriptor>src/main/assembly/standalone.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>web</id>
+			<activation />
+			<build>
+				<resources>
+					<resource>
+						<targetPath>${project.build.outputDirectory}/data</targetPath>
+						<directory>${product.bin.data.directory}</directory>
+						<includes>
+							<include>*.ndf</include>
+						</includes>
+					</resource>
+				</resources>
+				<finalName>${project.final.name}</finalName>
+				<plugins>
+					<plugin>
+						<artifactId>maven-resources-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>copy-resources</id>
+								<phase>none</phase>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>prepare-win32-x86-native-libraries</id>
+								<phase>process-resources</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<taskdef
+											resource="net/sf/antcontrib/antcontrib.properties"
+											classpathref="maven.compile.classpath" />
+										<available
+											file="${product.bin.directory.win32.x86}"
+											property="exists" />
+										<if>
+											<equals
+												arg1="${exists}"
+												arg2="true" />
+											<then>
+												<copy
+													todir="${project.build.directory}/native/Win32_x86">
+													<fileset
+														dir="${product.bin.directory.win32.x86}">
+														<include
+															name="**/*.dll" />
+														<include
+															name="**/*.bin" />
+														<exclude
+															name="Release/**/*.*" />
+														<exclude
+															name="Debug/**/*.*" />
+														<exclude
+															name="**/*Neurotec*.*" />
+													</fileset>
+													<flattenmapper />
+												</copy>
+											</then>
+										</if>
+									</target>
+								</configuration>
+							</execution>
+							<execution>
+								<id>prepare-win64-x64-native-libraries</id>
+								<phase>process-resources</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<taskdef
+											resource="net/sf/antcontrib/antcontrib.properties"
+											classpathref="maven.compile.classpath" />
+										<available
+											file="${product.bin.directory.win64.x64}"
+											property="exists" />
+										<if>
+											<equals
+												arg1="${exists}"
+												arg2="true" />
+											<then>
+												<copy
+													todir="${project.build.directory}/native/Win64_x64">
+													<fileset
+														dir="${product.bin.directory.win64.x64}">
+														<include
+															name="**/*.dll" />
+														<include
+															name="**/*.bin" />
+														<exclude
+															name="Release/**/*.*" />
+														<exclude
+															name="Debug/**/*.*" />
+														<exclude
+															name="**/*Neurotec*.*" />
+													</fileset>
+													<flattenmapper />
+												</copy>
+											</then>
+										</if>
+									</target>
+								</configuration>
+							</execution>
+							<execution>
+								<id>prepare-linux-x86-native-libraries</id>
+								<phase>process-resources</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<taskdef
+											resource="net/sf/antcontrib/antcontrib.properties"
+											classpathref="maven.compile.classpath" />
+										<available
+											file="${product.lib.directory.linux.x86}"
+											property="exists" />
+										<if>
+											<equals
+												arg1="${exists}"
+												arg2="true" />
+											<then>
+												<copy
+													todir="${project.build.directory}/native/Linux_x86">
+													<fileset
+														dir="${product.lib.directory.linux.x86}">
+														<include
+															name="**/*.so" />
+														<include
+															name="**/*.bin" />
+														<exclude
+															name="Release/**/*.*" />
+														<exclude
+															name="Debug/**/*.*" />
+														<exclude
+															name="**/*Neurotec*.*" />
+													</fileset>
+													<flattenmapper />
+												</copy>
+											</then>
+										</if>
+									</target>
+								</configuration>
+							</execution>
+							<execution>
+								<id>prepare-linux-x86-64-native-libraries</id>
+								<phase>process-resources</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<taskdef
+											resource="net/sf/antcontrib/antcontrib.properties"
+											classpathref="maven.compile.classpath" />
+										<available
+											file="${product.lib.directory.linux.x86.64}"
+											property="exists" />
+										<if>
+											<equals
+												arg1="${exists}"
+												arg2="true" />
+											<then>
+												<copy
+													todir="${project.build.directory}/native/Linux_x86_64">
+													<fileset
+														dir="${product.lib.directory.linux.x86.64}">
+														<include
+															name="**/*.so" />
+														<include
+															name="**/*.bin" />
+														<exclude
+															name="Release/**/*.*" />
+														<exclude
+															name="Debug/**/*.*" />
+														<exclude
+															name="**/*Neurotec*.*" />
+													</fileset>
+													<flattenmapper />
+												</copy>
+											</then>
+										</if>
+									</target>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<artifactId>maven-shade-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>shade</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<finalName>${project.final.name}</finalName>
+							<outputFile>${web.output.directory}/${project.final.name}.jar</outputFile>
+							<artifactSet>
+								<excludes>
+									<exclude>com.neurotec:*</exclude>
+									<exclude>com.neurotec.samples:samples-utils</exclude>
+								</excludes>
+							</artifactSet>
+							<filters>
+								<filter>
+									<artifact>*:*</artifact>
+									<excludes>
+										<exclude>META-INF/**</exclude>
+										<exclude>**/LICENSE*</exclude>
+									</excludes>
+								</filter>
+							</filters>
+						</configuration>
+					</plugin>
+					<plugin>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>web-dependencies</id>
+								<phase>package</phase>
+								<goals>
+									<goal>single</goal>
+								</goals>
+								<configuration>
+									<outputDirectory>${product.output.directory}</outputDirectory>
+									<filename>${project.final.name}</filename>
+									<descriptors>
+										<descriptor>src/main/assembly/web-dependencies.xml</descriptor>
+									</descriptors>
+								</configuration>
+							</execution>
+							<execution>
+								<id>neurotec-native-win32-x86</id>
+								<phase>package</phase>
+								<goals>
+									<goal>single</goal>
+								</goals>
+								<configuration>
+									<outputDirectory>${web.output.directory}</outputDirectory>
+									<finalName>neurotec-native-win32-x86</finalName>
+									<descriptors>
+										<descriptor>src/main/assembly/neurotec-native-win32-x86.xml</descriptor>
+									</descriptors>
+								</configuration>
+							</execution>
+							<execution>
+								<id>neurotec-native-win64-x64</id>
+								<phase>package</phase>
+								<goals>
+									<goal>single</goal>
+								</goals>
+								<configuration>
+									<outputDirectory>${web.output.directory}</outputDirectory>
+									<finalName>neurotec-native-win64-x64</finalName>
+									<descriptors>
+										<descriptor>src/main/assembly/neurotec-native-win64-x64.xml</descriptor>
+									</descriptors>
+								</configuration>
+							</execution>
+							<execution>
+								<id>neurotec-native-linux-x86</id>
+								<phase>package</phase>
+								<goals>
+									<goal>single</goal>
+								</goals>
+								<configuration>
+									<outputDirectory>${web.output.directory}</outputDirectory>
+									<finalName>neurotec-native-linux-x86</finalName>
+									<descriptors>
+										<descriptor>src/main/assembly/neurotec-native-linux-x86.xml</descriptor>
+									</descriptors>
+								</configuration>
+							</execution>
+							<execution>
+								<id>neurotec-native-linux-x86-64</id>
+								<phase>package</phase>
+								<goals>
+									<goal>single</goal>
+								</goals>
+								<configuration>
+									<outputDirectory>${web.output.directory}</outputDirectory>
+									<finalName>neurotec-native-linux-x86-64</finalName>
+									<descriptors>
+										<descriptor>src/main/assembly/neurotec-native-linux-x86-64.xml</descriptor>
+									</descriptors>
+								</configuration>
+							</execution>
+						</executions>
+						<configuration>
+							<appendAssemblyId>false</appendAssemblyId>
+						</configuration>
+					</plugin>
+					<plugin>
+						<artifactId>maven-jarsigner-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>sign</id>
+								<phase>package</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<archiveDirectory>${web.output.directory}</archiveDirectory>
+							<includes>
+								<include>**/*.jar</include>
+							</includes>
+							<keystore>${keystore.directory}/keystore.pfx</keystore>
+							<alias>test</alias>
+							<storepass>test</storepass>
+							<storetype>pkcs12</storetype>
+							<verify>false</verify>
+							<arguments>
+								<argument>-digestalg</argument>
+								<argument>SHA1</argument>
+							</arguments>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+			<properties>
+				<project.final.name>${project.artifactId}-web</project.final.name>
+				<project.main.class>com.neurotec.samples.abis.AbisApplet</project.main.class>
+				<project.dependency.directory>${project.build.directory}/jars</project.dependency.directory>
+				<web.output.directory>${product.output.directory}/${project.final.name}</web.output.directory>
+				<macosx.library.path>/Library/Frameworks/</macosx.library.path>
+				<macosx.universal.jar.name>neurotec-native-macosx-universal</macosx.universal.jar.name>
+				<keystore.directory>${basedir}/src/main/keystore</keystore.directory>
+			</properties>
+		</profile>
+	</profiles>
+	<dependencies>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-biometrics-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-biometrics-gui</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-devices</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.simpleframework</groupId>
+			<artifactId>simple-xml</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>ant-contrib</groupId>
+			<artifactId>ant-contrib</artifactId>
+			<version>20020829</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	<properties>
+		<product.root.directory>${basedir}/../../../..</product.root.directory>
+		<project.package.name>com.neurotec.samples.abis</project.package.name>
+		<project.main.class>com.neurotec.samples.abis.AbisApplication</project.main.class>
+	</properties>
+</project>

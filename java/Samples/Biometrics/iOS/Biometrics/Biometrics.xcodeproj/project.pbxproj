@@ -1,0 +1,1209 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D4909BA1B69F6DD0058C178 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4909B91B69F6DD0058C178 /* main.m */; };
+		2D4909BD1B69F6DD0058C178 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4909BC1B69F6DD0058C178 /* AppDelegate.m */; };
+		2D4909C31B69F6DD0058C178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D4909C11B69F6DD0058C178 /* Main.storyboard */; };
+		2D4909C51B69F6DD0058C178 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D4909C41B69F6DD0058C178 /* Images.xcassets */; };
+		2D4909C81B69F6DD0058C178 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4909C61B69F6DD0058C178 /* LaunchScreen.xib */; };
+		2D4909D41B69F6DD0058C178 /* BiometricsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4909D31B69F6DD0058C178 /* BiometricsTests.m */; };
+		2D5D942B1B8C8B0B00067848 /* EWFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5D942A1B8C8B0B00067848 /* EWFView.m */; };
+		2D9476BD1B6A050B0070818E /* NBiometricClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476AD1B6A04F80070818E /* NBiometricClient.framework */; };
+		2D9476BE1B6A050B0070818E /* NBiometricClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476AD1B6A04F80070818E /* NBiometricClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D9476BF1B6A050B0070818E /* NBiometrics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476AE1B6A04F80070818E /* NBiometrics.framework */; };
+		2D9476C01B6A050B0070818E /* NBiometrics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476AE1B6A04F80070818E /* NBiometrics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D9476C11B6A050B0070818E /* NCluster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476AF1B6A04F80070818E /* NCluster.framework */; };
+		2D9476C21B6A050B0070818E /* NCluster.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476AF1B6A04F80070818E /* NCluster.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D9476C31B6A050B0070818E /* NCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476B01B6A04F80070818E /* NCore.framework */; };
+		2D9476C41B6A050B0070818E /* NCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476B01B6A04F80070818E /* NCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D9476C51B6A050B0070818E /* NDevices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476B11B6A04F80070818E /* NDevices.framework */; };
+		2D9476C61B6A050B0070818E /* NDevices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476B11B6A04F80070818E /* NDevices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D9476C71B6A050B0070818E /* NLicensing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476B21B6A04F80070818E /* NLicensing.framework */; };
+		2D9476C81B6A050B0070818E /* NLicensing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476B21B6A04F80070818E /* NLicensing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D9476C91B6A050B0070818E /* NMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476B31B6A04F80070818E /* NMedia.framework */; };
+		2D9476CA1B6A050B0070818E /* NMedia.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476B31B6A04F80070818E /* NMedia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D9476CB1B6A050B0070818E /* NMediaProc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476B41B6A04F80070818E /* NMediaProc.framework */; };
+		2D9476CC1B6A050B0070818E /* NMediaProc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9476B41B6A04F80070818E /* NMediaProc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D9476CF1B6A0A1B0070818E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D9476CD1B6A0A1B0070818E /* InfoPlist.strings */; };
+		2D9476D31B6A0C470070818E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D9476D11B6A0C470070818E /* Localizable.strings */; };
+		2DA595B71B69FCB900A4C44C /* CameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5959C1B69FCB900A4C44C /* CameraView.m */; };
+		2DA595B81B69FCB900A4C44C /* DBCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5959F1B69FCB900A4C44C /* DBCategoryCell.m */; };
+		2DA595B91B69FCB900A4C44C /* DBCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595A01B69FCB900A4C44C /* DBCategoryCell.xib */; };
+		2DA595BA1B69FCB900A4C44C /* DBEmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595A21B69FCB900A4C44C /* DBEmptyCell.m */; };
+		2DA595BB1B69FCB900A4C44C /* DBEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595A31B69FCB900A4C44C /* DBEmptyCell.xib */; };
+		2DA595BC1B69FCB900A4C44C /* EnrollDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595A51B69FCB900A4C44C /* EnrollDialog.m */; };
+		2DA595BD1B69FCB900A4C44C /* EnrollDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595A61B69FCB900A4C44C /* EnrollDialog.xib */; };
+		2DA595BE1B69FCB900A4C44C /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595A81B69FCB900A4C44C /* ProgressView.m */; };
+		2DA595BF1B69FCB900A4C44C /* SettingsCheckboxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595AB1B69FCB900A4C44C /* SettingsCheckboxCell.m */; };
+		2DA595C01B69FCB900A4C44C /* SettingsCheckboxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595AC1B69FCB900A4C44C /* SettingsCheckboxCell.xib */; };
+		2DA595C11B69FCB900A4C44C /* SettingsSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595AE1B69FCB900A4C44C /* SettingsSectionHeader.m */; };
+		2DA595C21B69FCB900A4C44C /* SettingsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595AF1B69FCB900A4C44C /* SettingsSectionHeader.xib */; };
+		2DA595C31B69FCB900A4C44C /* SettingsSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595B11B69FCB900A4C44C /* SettingsSliderCell.m */; };
+		2DA595C41B69FCB900A4C44C /* SettingsSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595B21B69FCB900A4C44C /* SettingsSliderCell.xib */; };
+		2DA595C51B69FCB900A4C44C /* SoundWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595B41B69FCB900A4C44C /* SoundWaveView.m */; };
+		2DA595C61B69FCB900A4C44C /* UITextFieldWithInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595B61B69FCB900A4C44C /* UITextFieldWithInsets.m */; };
+		2DA595D81B69FD1400A4C44C /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595C91B69FD1400A4C44C /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
+		2DA595D91B69FD1400A4C44C /* UIBackgroundImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595CB1B69FD1400A4C44C /* UIBackgroundImages.m */; };
+		2DA595DA1B69FD1400A4C44C /* UICollectionViewCell+typeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595CD1B69FD1400A4C44C /* UICollectionViewCell+typeEnum.m */; };
+		2DA595DB1B69FD1400A4C44C /* UIColor+applicationColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595CF1B69FD1400A4C44C /* UIColor+applicationColors.m */; };
+		2DA595DC1B69FD1400A4C44C /* UIFont+applicationFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595D11B69FD1400A4C44C /* UIFont+applicationFonts.m */; };
+		2DA595DD1B69FD1400A4C44C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595D31B69FD1400A4C44C /* UIImage+ImageEffects.m */; };
+		2DA595DE1B69FD1400A4C44C /* UIImageView+geometryConverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595D51B69FD1400A4C44C /* UIImageView+geometryConverse.m */; };
+		2DA595DF1B69FD1400A4C44C /* UIMotionEffectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA595D71B69FD1400A4C44C /* UIMotionEffectHelper.m */; };
+		2DA595F91B69FDD800A4C44C /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595E11B69FDD800A4C44C /* close@2x.png */; };
+		2DA595FA1B69FDD800A4C44C /* db_eye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595E21B69FDD800A4C44C /* db_eye@2x.png */; };
+		2DA595FB1B69FDD800A4C44C /* db_face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595E31B69FDD800A4C44C /* db_face@2x.png */; };
+		2DA595FC1B69FDD800A4C44C /* db_finger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595E41B69FDD800A4C44C /* db_finger@2x.png */; };
+		2DA595FD1B69FDD800A4C44C /* db_voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595E51B69FDD800A4C44C /* db_voice@2x.png */; };
+		2DA595FE1B69FDD800A4C44C /* delete_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595E61B69FDD800A4C44C /* delete_icon@2x.png */; };
+		2DA595FF1B69FDD800A4C44C /* gallery_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595E71B69FDD800A4C44C /* gallery_icon@2x.png */; };
+		2DA596001B69FDD800A4C44C /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595E81B69FDD800A4C44C /* logo@2x.png */; };
+		2DA596011B69FDD800A4C44C /* menu_eye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595E91B69FDD800A4C44C /* menu_eye@2x.png */; };
+		2DA596021B69FDD800A4C44C /* menu_face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595EA1B69FDD800A4C44C /* menu_face@2x.png */; };
+		2DA596031B69FDD800A4C44C /* menu_finger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595EB1B69FDD800A4C44C /* menu_finger@2x.png */; };
+		2DA596041B69FDD800A4C44C /* menu_voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595EC1B69FDD800A4C44C /* menu_voice@2x.png */; };
+		2DA596051B69FDD800A4C44C /* navigation_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595ED1B69FDD800A4C44C /* navigation_bar@2x.png */; };
+		2DA596061B69FDD800A4C44C /* open_gallery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595EE1B69FDD800A4C44C /* open_gallery@2x.png */; };
+		2DA596071B69FDD800A4C44C /* record_voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595EF1B69FDD800A4C44C /* record_voice@2x.png */; };
+		2DA596081B69FDD800A4C44C /* record_voice_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595F01B69FDD800A4C44C /* record_voice_selected@2x.png */; };
+		2DA596091B69FDD800A4C44C /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595F11B69FDD800A4C44C /* settings@2x.png */; };
+		2DA5960A1B69FDD800A4C44C /* shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595F21B69FDD800A4C44C /* shadow@2x.png */; };
+		2DA5960B1B69FDD800A4C44C /* slider_handle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595F31B69FDD800A4C44C /* slider_handle@2x.png */; };
+		2DA5960C1B69FDD800A4C44C /* slider_maximum_track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595F41B69FDD800A4C44C /* slider_maximum_track@2x.png */; };
+		2DA5960D1B69FDD800A4C44C /* slider_minimum_track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595F51B69FDD800A4C44C /* slider_minimum_track@2x.png */; };
+		2DA5960E1B69FDD800A4C44C /* switch_camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595F61B69FDD800A4C44C /* switch_camera@2x.png */; };
+		2DA5960F1B69FDD800A4C44C /* switch_camera_round@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595F71B69FDD800A4C44C /* switch_camera_round@2x.png */; };
+		2DA596101B69FDD800A4C44C /* take_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA595F81B69FDD800A4C44C /* take_photo@2x.png */; };
+		2DA596141B69FEDE00A4C44C /* HeaderLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596131B69FEDE00A4C44C /* HeaderLayout.m */; };
+		2DA5963C1B69FEEF00A4C44C /* CollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596171B69FEEF00A4C44C /* CollectionDelegate.m */; };
+		2DA5963D1B69FEEF00A4C44C /* DatabaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596191B69FEEF00A4C44C /* DatabaseController.m */; };
+		2DA5963E1B69FEEF00A4C44C /* DatabaseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA5961A1B69FEEF00A4C44C /* DatabaseController.xib */; };
+		2DA5963F1B69FEEF00A4C44C /* EyeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5961C1B69FEEF00A4C44C /* EyeController.m */; };
+		2DA596401B69FEEF00A4C44C /* EyeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA5961D1B69FEEF00A4C44C /* EyeController.xib */; };
+		2DA596411B69FEEF00A4C44C /* EyesCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5961F1B69FEEF00A4C44C /* EyesCollectionViewDelegate.m */; };
+		2DA596421B69FEEF00A4C44C /* FaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596211B69FEEF00A4C44C /* FaceController.m */; };
+		2DA596431B69FEEF00A4C44C /* FaceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA596221B69FEEF00A4C44C /* FaceController.xib */; };
+		2DA596441B69FEEF00A4C44C /* FacesCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596241B69FEEF00A4C44C /* FacesCollectionViewDelegate.m */; };
+		2DA596451B69FEEF00A4C44C /* FingerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596261B69FEEF00A4C44C /* FingerController.m */; };
+		2DA596461B69FEEF00A4C44C /* FingerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA596271B69FEEF00A4C44C /* FingerController.xib */; };
+		2DA596471B69FEEF00A4C44C /* FingersCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596291B69FEEF00A4C44C /* FingersCollectionViewDelegate.m */; };
+		2DA596481B69FEEF00A4C44C /* ImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5962B1B69FEEF00A4C44C /* ImagePickerController.m */; };
+		2DA596491B69FEEF00A4C44C /* InfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5962D1B69FEEF00A4C44C /* InfoController.m */; };
+		2DA5964A1B69FEEF00A4C44C /* InfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA5962E1B69FEEF00A4C44C /* InfoController.xib */; };
+		2DA5964B1B69FEEF00A4C44C /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596301B69FEEF00A4C44C /* MenuController.m */; };
+		2DA5964C1B69FEEF00A4C44C /* MenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA596311B69FEEF00A4C44C /* MenuController.xib */; };
+		2DA5964D1B69FEEF00A4C44C /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596331B69FEEF00A4C44C /* NavigationController.m */; };
+		2DA5964E1B69FEEF00A4C44C /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596351B69FEEF00A4C44C /* SettingsController.m */; };
+		2DA5964F1B69FEEF00A4C44C /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA596361B69FEEF00A4C44C /* SettingsController.xib */; };
+		2DA596501B69FEEF00A4C44C /* VoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596381B69FEEF00A4C44C /* VoiceController.m */; };
+		2DA596511B69FEEF00A4C44C /* VoiceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA596391B69FEEF00A4C44C /* VoiceController.xib */; };
+		2DA596521B69FEEF00A4C44C /* VoicesCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5963B1B69FEEF00A4C44C /* VoicesCollectionViewDelegate.m */; };
+		2DA5967C1B69FF5000A4C44C /* BiometricsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596681B69FF5000A4C44C /* BiometricsLayer.m */; };
+		2DA5967D1B69FF5000A4C44C /* BiometricsResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5966A1B69FF5000A4C44C /* BiometricsResource.m */; };
+		2DA5967E1B69FF5000A4C44C /* Eye.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5966C1B69FF5000A4C44C /* Eye.m */; };
+		2DA5967F1B69FF5000A4C44C /* Face.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5966E1B69FF5000A4C44C /* Face.m */; };
+		2DA596801B69FF5000A4C44C /* FaceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596701B69FF5000A4C44C /* FaceResult.m */; };
+		2DA596811B69FF5000A4C44C /* Finger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596721B69FF5000A4C44C /* Finger.m */; };
+		2DA596821B69FF5000A4C44C /* SettingHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596741B69FF5000A4C44C /* SettingHandler.m */; };
+		2DA596831B69FF5000A4C44C /* SettingsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596761B69FF5000A4C44C /* SettingsHandler.m */; };
+		2DA596841B69FF5000A4C44C /* Voice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA596781B69FF5000A4C44C /* Voice.m */; };
+		2DA596981B6A00B500A4C44C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA596971B6A00B500A4C44C /* libz.dylib */; };
+		2DA5969A1B6A00C900A4C44C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA596991B6A00C900A4C44C /* SystemConfiguration.framework */; };
+		2DA5969C1B6A020B00A4C44C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA5969B1B6A020B00A4C44C /* CoreData.framework */; };
+		2DADB9811B6A58EE00F2E078 /* info.html in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB96E1B6A58EE00F2E078 /* info.html */; };
+		2DADB9821B6A58EE00F2E078 /* Neurotechnology_image0000_L_000.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB9701B6A58EE00F2E078 /* Neurotechnology_image0000_L_000.png */; };
+		2DADB9831B6A58EE00F2E078 /* Neurotechnology_image0000_R_000.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB9711B6A58EE00F2E078 /* Neurotechnology_image0000_R_000.png */; };
+		2DADB9841B6A58EE00F2E078 /* Neurotechnology_image0001_L_000.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB9721B6A58EE00F2E078 /* Neurotechnology_image0001_L_000.png */; };
+		2DADB9851B6A58EE00F2E078 /* Neurotechnology_image0001_L_001.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB9731B6A58EE00F2E078 /* Neurotechnology_image0001_L_001.png */; };
+		2DADB9861B6A58EE00F2E078 /* Neurotechnology_image0001_L_002.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB9741B6A58EE00F2E078 /* Neurotechnology_image0001_L_002.png */; };
+		2DADB9871B6A58EE00F2E078 /* Neurotechnology_image0001_L_003.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB9751B6A58EE00F2E078 /* Neurotechnology_image0001_L_003.png */; };
+		2DADB9881B6A58EE00F2E078 /* Neurotechnology_image0001_L_004.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB9761B6A58EE00F2E078 /* Neurotechnology_image0001_L_004.png */; };
+		2DADB9891B6A58EE00F2E078 /* Neurotechnology_image0001_R_000.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB9771B6A58EE00F2E078 /* Neurotechnology_image0001_R_000.png */; };
+		2DADB98A1B6A58EE00F2E078 /* Neurotechnology_image0001_R_001.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB9781B6A58EE00F2E078 /* Neurotechnology_image0001_R_001.png */; };
+		2DADB98B1B6A58EE00F2E078 /* Neurotechnology_image0001_R_002.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB9791B6A58EE00F2E078 /* Neurotechnology_image0001_R_002.png */; };
+		2DADB98C1B6A58EE00F2E078 /* Neurotechnology_image0001_R_003.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB97A1B6A58EE00F2E078 /* Neurotechnology_image0001_R_003.png */; };
+		2DADB98D1B6A58EE00F2E078 /* Neurotechnology_image0001_R_004.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB97B1B6A58EE00F2E078 /* Neurotechnology_image0001_R_004.png */; };
+		2DADB98E1B6A58EE00F2E078 /* Neurotechnology_image0002_L_000.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB97C1B6A58EE00F2E078 /* Neurotechnology_image0002_L_000.png */; };
+		2DADB98F1B6A58EE00F2E078 /* Neurotechnology_image0002_L_001.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB97D1B6A58EE00F2E078 /* Neurotechnology_image0002_L_001.png */; };
+		2DADB9901B6A58EE00F2E078 /* Neurotechnology_image0002_L_002.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB97E1B6A58EE00F2E078 /* Neurotechnology_image0002_L_002.png */; };
+		2DADB9911B6A58EE00F2E078 /* pause_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB97F1B6A58EE00F2E078 /* pause_icon@2x.png */; };
+		2DADB9921B6A58EE00F2E078 /* play_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DADB9801B6A58EE00F2E078 /* play_icon@2x.png */; };
+		DB4D49D01CF848250079A574 /* FacesCreateTemplateLargeLite.ndf in Resources */ = {isa = PBXBuildFile; fileRef = DB4D49C21CF848240079A574 /* FacesCreateTemplateLargeLite.ndf */; };
+		DB4D49D11CF848250079A574 /* FacesCreateTemplateMediumLite.ndf in Resources */ = {isa = PBXBuildFile; fileRef = DB4D49C31CF848240079A574 /* FacesCreateTemplateMediumLite.ndf */; };
+		DB4D49D21CF848250079A574 /* FacesCreateTemplateSmall.ndf in Resources */ = {isa = PBXBuildFile; fileRef = DB4D49C41CF848240079A574 /* FacesCreateTemplateSmall.ndf */; };
+		DB4D49D31CF848250079A574 /* FacesDetect45.ndf in Resources */ = {isa = PBXBuildFile; fileRef = DB4D49C51CF848240079A574 /* FacesDetect45.ndf */; };
+		DB4D49D41CF848250079A574 /* FacesDetect180.ndf in Resources */ = {isa = PBXBuildFile; fileRef = DB4D49C61CF848240079A574 /* FacesDetect180.ndf */; };
+		DB4D49D51CF848250079A574 /* FacesDetectSegmentsAge.ndf in Resources */ = {isa = PBXBuildFile; fileRef = DB4D49C71CF848250079A574 /* FacesDetectSegmentsAge.ndf */; };
+		DB4D49D61CF848250079A574 /* FacesDetectSegmentsAttributes.ndf in Resources */ = {isa = PBXBuildFile; fileRef = DB4D49C81CF848250079A574 /* FacesDetectSegmentsAttributes.ndf */; };
+		DB4D49D71CF848250079A574 /* FacesDetectSegmentsEmotions.ndf in Resources */ = {isa = PBXBuildFile; fileRef = DB4D49C91CF848250079A574 /* FacesDetectSegmentsEmotions.ndf */; };
+		DB4D49D81CF848250079A574 /* FacesDetectSegmentsOrientation.ndf in Resources */ = {isa = PBXBuildFile; fileRef = DB4D49CA1CF848250079A574 /* FacesDetectSegmentsOrientation.ndf */; };
+		DB4D49D91CF848250079A574 /* FacesDetectSegmentsFeaturePointsTrack.ndf in Resources */ = {isa = PBXBuildFile; fileRef = DB4D49CB1CF848250079A574 /* FacesDetectSegmentsFeaturePointsTrack.ndf */; };
+		DB4D49DA1CF848250079A574 /* FacesDetectSegmentsLiveness.ndf in Resources */ = {isa = PBXBuildFile; fileRef = DB4D49CC1CF848250079A574 /* FacesDetectSegmentsLiveness.ndf */; };
+		DB4D49DB1CF848250079A574 /* FingersDetectSegmentsClassifier.ndf in Resources */ = {isa = PBXBuildFile; fileRef = DB4D49CD1CF848250079A574 /* FingersDetectSegmentsClassifier.ndf */; };
+		DB4D49DC1CF848250079A574 /* Irises.ndf in Resources */ = {isa = PBXBuildFile; fileRef = DB4D49CE1CF848250079A574 /* Irises.ndf */; };
+		DB4D49DD1CF848250079A574 /* VoicesCreateTemplateModel.ndf in Resources */ = {isa = PBXBuildFile; fileRef = DB4D49CF1CF848250079A574 /* VoicesCreateTemplateModel.ndf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D4909CE1B69F6DD0058C178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D4909AC1B69F6DD0058C178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D4909B31B69F6DD0058C178;
+			remoteInfo = Biometrics;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2D94768C1B6A03D30070818E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2D9476C81B6A050B0070818E /* NLicensing.framework in Embed Frameworks */,
+				2D9476CA1B6A050B0070818E /* NMedia.framework in Embed Frameworks */,
+				2D9476CC1B6A050B0070818E /* NMediaProc.framework in Embed Frameworks */,
+				2D9476C21B6A050B0070818E /* NCluster.framework in Embed Frameworks */,
+				2D9476C61B6A050B0070818E /* NDevices.framework in Embed Frameworks */,
+				2D9476C01B6A050B0070818E /* NBiometrics.framework in Embed Frameworks */,
+				2D9476C41B6A050B0070818E /* NCore.framework in Embed Frameworks */,
+				2D9476BE1B6A050B0070818E /* NBiometricClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2D4909B41B69F6DD0058C178 /* Biometrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biometrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D4909B81B69F6DD0058C178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D4909B91B69F6DD0058C178 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D4909BB1B69F6DD0058C178 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2D4909BC1B69F6DD0058C178 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2D4909C21B69F6DD0058C178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D4909C41B69F6DD0058C178 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2D4909C71B69F6DD0058C178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2D4909CD1B69F6DD0058C178 /* BiometricsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiometricsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D4909D21B69F6DD0058C178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D4909D31B69F6DD0058C178 /* BiometricsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiometricsTests.m; sourceTree = "<group>"; };
+		2D5D94291B8C8B0B00067848 /* EWFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EWFView.h; path = Biometrics/view/EWFView.h; sourceTree = "<group>"; };
+		2D5D942A1B8C8B0B00067848 /* EWFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EWFView.m; path = Biometrics/view/EWFView.m; sourceTree = "<group>"; };
+		2D9476AD1B6A04F80070818E /* NBiometricClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NBiometricClient.framework; path = ../../../../../Frameworks/iOS/NBiometricClient.framework; sourceTree = "<group>"; };
+		2D9476AE1B6A04F80070818E /* NBiometrics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NBiometrics.framework; path = ../../../../../Frameworks/iOS/NBiometrics.framework; sourceTree = "<group>"; };
+		2D9476AF1B6A04F80070818E /* NCluster.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NCluster.framework; path = ../../../../../Frameworks/iOS/NCluster.framework; sourceTree = "<group>"; };
+		2D9476B01B6A04F80070818E /* NCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NCore.framework; path = ../../../../../Frameworks/iOS/NCore.framework; sourceTree = "<group>"; };
+		2D9476B11B6A04F80070818E /* NDevices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NDevices.framework; path = ../../../../../Frameworks/iOS/NDevices.framework; sourceTree = "<group>"; };
+		2D9476B21B6A04F80070818E /* NLicensing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NLicensing.framework; path = ../../../../../Frameworks/iOS/NLicensing.framework; sourceTree = "<group>"; };
+		2D9476B31B6A04F80070818E /* NMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMedia.framework; path = ../../../../../Frameworks/iOS/NMedia.framework; sourceTree = "<group>"; };
+		2D9476B41B6A04F80070818E /* NMediaProc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMediaProc.framework; path = ../../../../../Frameworks/iOS/NMediaProc.framework; sourceTree = "<group>"; };
+		2D9476CE1B6A0A1B0070818E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2D9476D21B6A0C470070818E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
+		2DA595991B69F93C00A4C44C /* Biometrics-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Biometrics-Prefix.pch"; sourceTree = "<group>"; };
+		2DA5959B1B69FCB900A4C44C /* CameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraView.h; path = Biometrics/view/CameraView.h; sourceTree = "<group>"; };
+		2DA5959C1B69FCB900A4C44C /* CameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraView.m; path = Biometrics/view/CameraView.m; sourceTree = "<group>"; };
+		2DA5959E1B69FCB900A4C44C /* DBCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBCategoryCell.h; sourceTree = "<group>"; };
+		2DA5959F1B69FCB900A4C44C /* DBCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBCategoryCell.m; sourceTree = "<group>"; };
+		2DA595A01B69FCB900A4C44C /* DBCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DBCategoryCell.xib; sourceTree = "<group>"; };
+		2DA595A11B69FCB900A4C44C /* DBEmptyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBEmptyCell.h; sourceTree = "<group>"; };
+		2DA595A21B69FCB900A4C44C /* DBEmptyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBEmptyCell.m; sourceTree = "<group>"; };
+		2DA595A31B69FCB900A4C44C /* DBEmptyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DBEmptyCell.xib; sourceTree = "<group>"; };
+		2DA595A41B69FCB900A4C44C /* EnrollDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnrollDialog.h; path = Biometrics/view/EnrollDialog.h; sourceTree = "<group>"; };
+		2DA595A51B69FCB900A4C44C /* EnrollDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnrollDialog.m; path = Biometrics/view/EnrollDialog.m; sourceTree = "<group>"; };
+		2DA595A61B69FCB900A4C44C /* EnrollDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EnrollDialog.xib; path = Biometrics/view/EnrollDialog.xib; sourceTree = "<group>"; };
+		2DA595A71B69FCB900A4C44C /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressView.h; path = Biometrics/view/ProgressView.h; sourceTree = "<group>"; };
+		2DA595A81B69FCB900A4C44C /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressView.m; path = Biometrics/view/ProgressView.m; sourceTree = "<group>"; };
+		2DA595AA1B69FCB900A4C44C /* SettingsCheckboxCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsCheckboxCell.h; sourceTree = "<group>"; };
+		2DA595AB1B69FCB900A4C44C /* SettingsCheckboxCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsCheckboxCell.m; sourceTree = "<group>"; };
+		2DA595AC1B69FCB900A4C44C /* SettingsCheckboxCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsCheckboxCell.xib; sourceTree = "<group>"; };
+		2DA595AD1B69FCB900A4C44C /* SettingsSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsSectionHeader.h; sourceTree = "<group>"; };
+		2DA595AE1B69FCB900A4C44C /* SettingsSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsSectionHeader.m; sourceTree = "<group>"; };
+		2DA595AF1B69FCB900A4C44C /* SettingsSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsSectionHeader.xib; sourceTree = "<group>"; };
+		2DA595B01B69FCB900A4C44C /* SettingsSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsSliderCell.h; sourceTree = "<group>"; };
+		2DA595B11B69FCB900A4C44C /* SettingsSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsSliderCell.m; sourceTree = "<group>"; };
+		2DA595B21B69FCB900A4C44C /* SettingsSliderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsSliderCell.xib; sourceTree = "<group>"; };
+		2DA595B31B69FCB900A4C44C /* SoundWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundWaveView.h; path = Biometrics/view/SoundWaveView.h; sourceTree = "<group>"; };
+		2DA595B41B69FCB900A4C44C /* SoundWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundWaveView.m; path = Biometrics/view/SoundWaveView.m; sourceTree = "<group>"; };
+		2DA595B51B69FCB900A4C44C /* UITextFieldWithInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITextFieldWithInsets.h; path = Biometrics/view/UITextFieldWithInsets.h; sourceTree = "<group>"; };
+		2DA595B61B69FCB900A4C44C /* UITextFieldWithInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITextFieldWithInsets.m; path = Biometrics/view/UITextFieldWithInsets.m; sourceTree = "<group>"; };
+		2DA595C81B69FD1400A4C44C /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
+		2DA595C91B69FD1400A4C44C /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
+		2DA595CA1B69FD1400A4C44C /* UIBackgroundImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBackgroundImages.h; sourceTree = "<group>"; };
+		2DA595CB1B69FD1400A4C44C /* UIBackgroundImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBackgroundImages.m; sourceTree = "<group>"; };
+		2DA595CC1B69FD1400A4C44C /* UICollectionViewCell+typeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+typeEnum.h"; sourceTree = "<group>"; };
+		2DA595CD1B69FD1400A4C44C /* UICollectionViewCell+typeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+typeEnum.m"; sourceTree = "<group>"; };
+		2DA595CE1B69FD1400A4C44C /* UIColor+applicationColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+applicationColors.h"; sourceTree = "<group>"; };
+		2DA595CF1B69FD1400A4C44C /* UIColor+applicationColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+applicationColors.m"; sourceTree = "<group>"; };
+		2DA595D01B69FD1400A4C44C /* UIFont+applicationFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+applicationFonts.h"; sourceTree = "<group>"; };
+		2DA595D11B69FD1400A4C44C /* UIFont+applicationFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+applicationFonts.m"; sourceTree = "<group>"; };
+		2DA595D21B69FD1400A4C44C /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		2DA595D31B69FD1400A4C44C /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		2DA595D41B69FD1400A4C44C /* UIImageView+geometryConverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+geometryConverse.h"; sourceTree = "<group>"; };
+		2DA595D51B69FD1400A4C44C /* UIImageView+geometryConverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+geometryConverse.m"; sourceTree = "<group>"; };
+		2DA595D61B69FD1400A4C44C /* UIMotionEffectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMotionEffectHelper.h; sourceTree = "<group>"; };
+		2DA595D71B69FD1400A4C44C /* UIMotionEffectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMotionEffectHelper.m; sourceTree = "<group>"; };
+		2DA595E11B69FDD800A4C44C /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		2DA595E21B69FDD800A4C44C /* db_eye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "db_eye@2x.png"; sourceTree = "<group>"; };
+		2DA595E31B69FDD800A4C44C /* db_face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "db_face@2x.png"; sourceTree = "<group>"; };
+		2DA595E41B69FDD800A4C44C /* db_finger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "db_finger@2x.png"; sourceTree = "<group>"; };
+		2DA595E51B69FDD800A4C44C /* db_voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "db_voice@2x.png"; sourceTree = "<group>"; };
+		2DA595E61B69FDD800A4C44C /* delete_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete_icon@2x.png"; sourceTree = "<group>"; };
+		2DA595E71B69FDD800A4C44C /* gallery_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gallery_icon@2x.png"; sourceTree = "<group>"; };
+		2DA595E81B69FDD800A4C44C /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		2DA595E91B69FDD800A4C44C /* menu_eye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_eye@2x.png"; sourceTree = "<group>"; };
+		2DA595EA1B69FDD800A4C44C /* menu_face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_face@2x.png"; sourceTree = "<group>"; };
+		2DA595EB1B69FDD800A4C44C /* menu_finger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_finger@2x.png"; sourceTree = "<group>"; };
+		2DA595EC1B69FDD800A4C44C /* menu_voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_voice@2x.png"; sourceTree = "<group>"; };
+		2DA595ED1B69FDD800A4C44C /* navigation_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_bar@2x.png"; sourceTree = "<group>"; };
+		2DA595EE1B69FDD800A4C44C /* open_gallery@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open_gallery@2x.png"; sourceTree = "<group>"; };
+		2DA595EF1B69FDD800A4C44C /* record_voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record_voice@2x.png"; sourceTree = "<group>"; };
+		2DA595F01B69FDD800A4C44C /* record_voice_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record_voice_selected@2x.png"; sourceTree = "<group>"; };
+		2DA595F11B69FDD800A4C44C /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		2DA595F21B69FDD800A4C44C /* shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shadow@2x.png"; sourceTree = "<group>"; };
+		2DA595F31B69FDD800A4C44C /* slider_handle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider_handle@2x.png"; sourceTree = "<group>"; };
+		2DA595F41B69FDD800A4C44C /* slider_maximum_track@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider_maximum_track@2x.png"; sourceTree = "<group>"; };
+		2DA595F51B69FDD800A4C44C /* slider_minimum_track@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider_minimum_track@2x.png"; sourceTree = "<group>"; };
+		2DA595F61B69FDD800A4C44C /* switch_camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch_camera@2x.png"; sourceTree = "<group>"; };
+		2DA595F71B69FDD800A4C44C /* switch_camera_round@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch_camera_round@2x.png"; sourceTree = "<group>"; };
+		2DA595F81B69FDD800A4C44C /* take_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "take_photo@2x.png"; sourceTree = "<group>"; };
+		2DA596121B69FEDE00A4C44C /* HeaderLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderLayout.h; sourceTree = "<group>"; };
+		2DA596131B69FEDE00A4C44C /* HeaderLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderLayout.m; sourceTree = "<group>"; };
+		2DA596161B69FEEF00A4C44C /* CollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionDelegate.h; sourceTree = "<group>"; };
+		2DA596171B69FEEF00A4C44C /* CollectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionDelegate.m; sourceTree = "<group>"; };
+		2DA596181B69FEEF00A4C44C /* DatabaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseController.h; sourceTree = "<group>"; };
+		2DA596191B69FEEF00A4C44C /* DatabaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseController.m; sourceTree = "<group>"; };
+		2DA5961A1B69FEEF00A4C44C /* DatabaseController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatabaseController.xib; sourceTree = "<group>"; };
+		2DA5961B1B69FEEF00A4C44C /* EyeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EyeController.h; sourceTree = "<group>"; };
+		2DA5961C1B69FEEF00A4C44C /* EyeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EyeController.m; sourceTree = "<group>"; };
+		2DA5961D1B69FEEF00A4C44C /* EyeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EyeController.xib; sourceTree = "<group>"; };
+		2DA5961E1B69FEEF00A4C44C /* EyesCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EyesCollectionViewDelegate.h; sourceTree = "<group>"; };
+		2DA5961F1B69FEEF00A4C44C /* EyesCollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EyesCollectionViewDelegate.m; sourceTree = "<group>"; };
+		2DA596201B69FEEF00A4C44C /* FaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceController.h; sourceTree = "<group>"; };
+		2DA596211B69FEEF00A4C44C /* FaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceController.m; sourceTree = "<group>"; };
+		2DA596221B69FEEF00A4C44C /* FaceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceController.xib; sourceTree = "<group>"; };
+		2DA596231B69FEEF00A4C44C /* FacesCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacesCollectionViewDelegate.h; sourceTree = "<group>"; };
+		2DA596241B69FEEF00A4C44C /* FacesCollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacesCollectionViewDelegate.m; sourceTree = "<group>"; };
+		2DA596251B69FEEF00A4C44C /* FingerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerController.h; sourceTree = "<group>"; };
+		2DA596261B69FEEF00A4C44C /* FingerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FingerController.m; sourceTree = "<group>"; };
+		2DA596271B69FEEF00A4C44C /* FingerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FingerController.xib; sourceTree = "<group>"; };
+		2DA596281B69FEEF00A4C44C /* FingersCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingersCollectionViewDelegate.h; sourceTree = "<group>"; };
+		2DA596291B69FEEF00A4C44C /* FingersCollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FingersCollectionViewDelegate.m; sourceTree = "<group>"; };
+		2DA5962A1B69FEEF00A4C44C /* ImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerController.h; sourceTree = "<group>"; };
+		2DA5962B1B69FEEF00A4C44C /* ImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerController.m; sourceTree = "<group>"; };
+		2DA5962C1B69FEEF00A4C44C /* InfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoController.h; sourceTree = "<group>"; };
+		2DA5962D1B69FEEF00A4C44C /* InfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoController.m; sourceTree = "<group>"; };
+		2DA5962E1B69FEEF00A4C44C /* InfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoController.xib; sourceTree = "<group>"; };
+		2DA5962F1B69FEEF00A4C44C /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
+		2DA596301B69FEEF00A4C44C /* MenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuController.m; sourceTree = "<group>"; };
+		2DA596311B69FEEF00A4C44C /* MenuController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuController.xib; sourceTree = "<group>"; };
+		2DA596321B69FEEF00A4C44C /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		2DA596331B69FEEF00A4C44C /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		2DA596341B69FEEF00A4C44C /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
+		2DA596351B69FEEF00A4C44C /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
+		2DA596361B69FEEF00A4C44C /* SettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsController.xib; sourceTree = "<group>"; };
+		2DA596371B69FEEF00A4C44C /* VoiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceController.h; sourceTree = "<group>"; };
+		2DA596381B69FEEF00A4C44C /* VoiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceController.m; sourceTree = "<group>"; };
+		2DA596391B69FEEF00A4C44C /* VoiceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoiceController.xib; sourceTree = "<group>"; };
+		2DA5963A1B69FEEF00A4C44C /* VoicesCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoicesCollectionViewDelegate.h; sourceTree = "<group>"; };
+		2DA5963B1B69FEEF00A4C44C /* VoicesCollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoicesCollectionViewDelegate.m; sourceTree = "<group>"; };
+		2DA596671B69FF5000A4C44C /* BiometricsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiometricsLayer.h; sourceTree = "<group>"; };
+		2DA596681B69FF5000A4C44C /* BiometricsLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiometricsLayer.m; sourceTree = "<group>"; };
+		2DA596691B69FF5000A4C44C /* BiometricsResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiometricsResource.h; sourceTree = "<group>"; };
+		2DA5966A1B69FF5000A4C44C /* BiometricsResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiometricsResource.m; sourceTree = "<group>"; };
+		2DA5966B1B69FF5000A4C44C /* Eye.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eye.h; sourceTree = "<group>"; };
+		2DA5966C1B69FF5000A4C44C /* Eye.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eye.m; sourceTree = "<group>"; };
+		2DA5966D1B69FF5000A4C44C /* Face.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Face.h; sourceTree = "<group>"; };
+		2DA5966E1B69FF5000A4C44C /* Face.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Face.m; sourceTree = "<group>"; };
+		2DA5966F1B69FF5000A4C44C /* FaceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceResult.h; sourceTree = "<group>"; };
+		2DA596701B69FF5000A4C44C /* FaceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceResult.m; sourceTree = "<group>"; };
+		2DA596711B69FF5000A4C44C /* Finger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finger.h; sourceTree = "<group>"; };
+		2DA596721B69FF5000A4C44C /* Finger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finger.m; sourceTree = "<group>"; };
+		2DA596731B69FF5000A4C44C /* SettingHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingHandler.h; sourceTree = "<group>"; };
+		2DA596741B69FF5000A4C44C /* SettingHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingHandler.m; sourceTree = "<group>"; };
+		2DA596751B69FF5000A4C44C /* SettingsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsHandler.h; sourceTree = "<group>"; };
+		2DA596761B69FF5000A4C44C /* SettingsHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsHandler.m; sourceTree = "<group>"; };
+		2DA596771B69FF5000A4C44C /* Voice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voice.h; sourceTree = "<group>"; };
+		2DA596781B69FF5000A4C44C /* Voice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voice.m; sourceTree = "<group>"; };
+		2DA596971B6A00B500A4C44C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		2DA596991B6A00C900A4C44C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2DA5969B1B6A020B00A4C44C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2DADB96E1B6A58EE00F2E078 /* info.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = info.html; sourceTree = "<group>"; };
+		2DADB9701B6A58EE00F2E078 /* Neurotechnology_image0000_L_000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0000_L_000.png; sourceTree = "<group>"; };
+		2DADB9711B6A58EE00F2E078 /* Neurotechnology_image0000_R_000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0000_R_000.png; sourceTree = "<group>"; };
+		2DADB9721B6A58EE00F2E078 /* Neurotechnology_image0001_L_000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0001_L_000.png; sourceTree = "<group>"; };
+		2DADB9731B6A58EE00F2E078 /* Neurotechnology_image0001_L_001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0001_L_001.png; sourceTree = "<group>"; };
+		2DADB9741B6A58EE00F2E078 /* Neurotechnology_image0001_L_002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0001_L_002.png; sourceTree = "<group>"; };
+		2DADB9751B6A58EE00F2E078 /* Neurotechnology_image0001_L_003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0001_L_003.png; sourceTree = "<group>"; };
+		2DADB9761B6A58EE00F2E078 /* Neurotechnology_image0001_L_004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0001_L_004.png; sourceTree = "<group>"; };
+		2DADB9771B6A58EE00F2E078 /* Neurotechnology_image0001_R_000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0001_R_000.png; sourceTree = "<group>"; };
+		2DADB9781B6A58EE00F2E078 /* Neurotechnology_image0001_R_001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0001_R_001.png; sourceTree = "<group>"; };
+		2DADB9791B6A58EE00F2E078 /* Neurotechnology_image0001_R_002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0001_R_002.png; sourceTree = "<group>"; };
+		2DADB97A1B6A58EE00F2E078 /* Neurotechnology_image0001_R_003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0001_R_003.png; sourceTree = "<group>"; };
+		2DADB97B1B6A58EE00F2E078 /* Neurotechnology_image0001_R_004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0001_R_004.png; sourceTree = "<group>"; };
+		2DADB97C1B6A58EE00F2E078 /* Neurotechnology_image0002_L_000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0002_L_000.png; sourceTree = "<group>"; };
+		2DADB97D1B6A58EE00F2E078 /* Neurotechnology_image0002_L_001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0002_L_001.png; sourceTree = "<group>"; };
+		2DADB97E1B6A58EE00F2E078 /* Neurotechnology_image0002_L_002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neurotechnology_image0002_L_002.png; sourceTree = "<group>"; };
+		2DADB97F1B6A58EE00F2E078 /* pause_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause_icon@2x.png"; sourceTree = "<group>"; };
+		2DADB9801B6A58EE00F2E078 /* play_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play_icon@2x.png"; sourceTree = "<group>"; };
+		DB4D49C21CF848240079A574 /* FacesCreateTemplateLargeLite.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesCreateTemplateLargeLite.ndf; path = ../../../../../../Bin/Data/FacesCreateTemplateLargeLite.ndf; sourceTree = "<group>"; };
+		DB4D49C31CF848240079A574 /* FacesCreateTemplateMediumLite.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesCreateTemplateMediumLite.ndf; path = ../../../../../../Bin/Data/FacesCreateTemplateMediumLite.ndf; sourceTree = "<group>"; };
+		DB4D49C41CF848240079A574 /* FacesCreateTemplateSmall.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesCreateTemplateSmall.ndf; path = ../../../../../../Bin/Data/FacesCreateTemplateSmall.ndf; sourceTree = "<group>"; };
+		DB4D49C51CF848240079A574 /* FacesDetect45.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetect45.ndf; path = ../../../../../../Bin/Data/FacesDetect45.ndf; sourceTree = "<group>"; };
+		DB4D49C61CF848240079A574 /* FacesDetect180.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetect180.ndf; path = ../../../../../../Bin/Data/FacesDetect180.ndf; sourceTree = "<group>"; };
+		DB4D49C71CF848250079A574 /* FacesDetectSegmentsAge.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetectSegmentsAge.ndf; path = ../../../../../../Bin/Data/FacesDetectSegmentsAge.ndf; sourceTree = "<group>"; };
+		DB4D49C81CF848250079A574 /* FacesDetectSegmentsAttributes.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetectSegmentsAttributes.ndf; path = ../../../../../../Bin/Data/FacesDetectSegmentsAttributes.ndf; sourceTree = "<group>"; };
+		DB4D49C91CF848250079A574 /* FacesDetectSegmentsEmotions.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetectSegmentsEmotions.ndf; path = ../../../../../../Bin/Data/FacesDetectSegmentsEmotions.ndf; sourceTree = "<group>"; };
+		DB4D49CA1CF848250079A574 /* FacesDetectSegmentsOrientation.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetectSegmentsOrientation.ndf; path = ../../../../../../Bin/Data/FacesDetectSegmentsOrientation.ndf; sourceTree = "<group>"; };
+		DB4D49CB1CF848250079A574 /* FacesDetectSegmentsFeaturePointsTrack.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetectSegmentsFeaturePointsTrack.ndf; path = ../../../../../../Bin/Data/FacesDetectSegmentsFeaturePointsTrack.ndf; sourceTree = "<group>"; };
+		DB4D49CC1CF848250079A574 /* FacesDetectSegmentsLiveness.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FacesDetectSegmentsLiveness.ndf; path = ../../../../../../Bin/Data/FacesDetectSegmentsLiveness.ndf; sourceTree = "<group>"; };
+		DB4D49CD1CF848250079A574 /* FingersDetectSegmentsClassifier.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FingersDetectSegmentsClassifier.ndf; path = ../../../../../../Bin/Data/FingersDetectSegmentsClassifier.ndf; sourceTree = "<group>"; };
+		DB4D49CE1CF848250079A574 /* Irises.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Irises.ndf; path = ../../../../../../Bin/Data/Irises.ndf; sourceTree = "<group>"; };
+		DB4D49CF1CF848250079A574 /* VoicesCreateTemplateModel.ndf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VoicesCreateTemplateModel.ndf; path = ../../../../../../Bin/Data/VoicesCreateTemplateModel.ndf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D4909B11B69F6DD0058C178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DA5969C1B6A020B00A4C44C /* CoreData.framework in Frameworks */,
+				2D9476C51B6A050B0070818E /* NDevices.framework in Frameworks */,
+				2D9476CB1B6A050B0070818E /* NMediaProc.framework in Frameworks */,
+				2D9476C71B6A050B0070818E /* NLicensing.framework in Frameworks */,
+				2DA5969A1B6A00C900A4C44C /* SystemConfiguration.framework in Frameworks */,
+				2D9476C31B6A050B0070818E /* NCore.framework in Frameworks */,
+				2D9476BD1B6A050B0070818E /* NBiometricClient.framework in Frameworks */,
+				2D9476C11B6A050B0070818E /* NCluster.framework in Frameworks */,
+				2DA596981B6A00B500A4C44C /* libz.dylib in Frameworks */,
+				2D9476C91B6A050B0070818E /* NMedia.framework in Frameworks */,
+				2D9476BF1B6A050B0070818E /* NBiometrics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D4909CA1B69F6DD0058C178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D4909AB1B69F6DD0058C178 = {
+			isa = PBXGroup;
+			children = (
+				2D4909B61B69F6DD0058C178 /* Biometrics */,
+				2D4909D01B69F6DD0058C178 /* BiometricsTests */,
+				2DA596861B69FF5B00A4C44C /* Frameworks */,
+				2D4909B51B69F6DD0058C178 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2D4909B51B69F6DD0058C178 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D4909B41B69F6DD0058C178 /* Biometrics.app */,
+				2D4909CD1B69F6DD0058C178 /* BiometricsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D4909B61B69F6DD0058C178 /* Biometrics */ = {
+			isa = PBXGroup;
+			children = (
+				2D4909BB1B69F6DD0058C178 /* AppDelegate.h */,
+				2D4909BC1B69F6DD0058C178 /* AppDelegate.m */,
+				2DA596661B69FF5000A4C44C /* models */,
+				2DA596151B69FEEF00A4C44C /* controller */,
+				2DA596111B69FEDE00A4C44C /* collectionLayouts */,
+				2DA595E01B69FDD800A4C44C /* Resources */,
+				2DA595C71B69FD1400A4C44C /* Helpers */,
+				2DA5959A1B69FC5000A4C44C /* view */,
+				2D4909C41B69F6DD0058C178 /* Images.xcassets */,
+				2D4909B71B69F6DD0058C178 /* Supporting Files */,
+			);
+			path = Biometrics;
+			sourceTree = "<group>";
+		};
+		2D4909B71B69F6DD0058C178 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D9476CD1B6A0A1B0070818E /* InfoPlist.strings */,
+				2D4909B81B69F6DD0058C178 /* Info.plist */,
+				2D4909B91B69F6DD0058C178 /* main.m */,
+				2DA595991B69F93C00A4C44C /* Biometrics-Prefix.pch */,
+				2D4909C61B69F6DD0058C178 /* LaunchScreen.xib */,
+				2D4909C11B69F6DD0058C178 /* Main.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2D4909D01B69F6DD0058C178 /* BiometricsTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D4909D31B69F6DD0058C178 /* BiometricsTests.m */,
+				2D4909D11B69F6DD0058C178 /* Supporting Files */,
+			);
+			path = BiometricsTests;
+			sourceTree = "<group>";
+		};
+		2D4909D11B69F6DD0058C178 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D4909D21B69F6DD0058C178 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2DA5959A1B69FC5000A4C44C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2D5D94291B8C8B0B00067848 /* EWFView.h */,
+				2D5D942A1B8C8B0B00067848 /* EWFView.m */,
+				2DA5959B1B69FCB900A4C44C /* CameraView.h */,
+				2DA5959C1B69FCB900A4C44C /* CameraView.m */,
+				2DA5959D1B69FCB900A4C44C /* Database */,
+				2DA595A41B69FCB900A4C44C /* EnrollDialog.h */,
+				2DA595A51B69FCB900A4C44C /* EnrollDialog.m */,
+				2DA595A61B69FCB900A4C44C /* EnrollDialog.xib */,
+				2DA595A71B69FCB900A4C44C /* ProgressView.h */,
+				2DA595A81B69FCB900A4C44C /* ProgressView.m */,
+				2DA595A91B69FCB900A4C44C /* Settings */,
+				2DA595B31B69FCB900A4C44C /* SoundWaveView.h */,
+				2DA595B41B69FCB900A4C44C /* SoundWaveView.m */,
+				2DA595B51B69FCB900A4C44C /* UITextFieldWithInsets.h */,
+				2DA595B61B69FCB900A4C44C /* UITextFieldWithInsets.m */,
+			);
+			name = view;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		2DA5959D1B69FCB900A4C44C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				2DA5959E1B69FCB900A4C44C /* DBCategoryCell.h */,
+				2DA5959F1B69FCB900A4C44C /* DBCategoryCell.m */,
+				2DA595A01B69FCB900A4C44C /* DBCategoryCell.xib */,
+				2DA595A11B69FCB900A4C44C /* DBEmptyCell.h */,
+				2DA595A21B69FCB900A4C44C /* DBEmptyCell.m */,
+				2DA595A31B69FCB900A4C44C /* DBEmptyCell.xib */,
+			);
+			name = Database;
+			path = Biometrics/view/Database;
+			sourceTree = "<group>";
+		};
+		2DA595A91B69FCB900A4C44C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2DA595AA1B69FCB900A4C44C /* SettingsCheckboxCell.h */,
+				2DA595AB1B69FCB900A4C44C /* SettingsCheckboxCell.m */,
+				2DA595AC1B69FCB900A4C44C /* SettingsCheckboxCell.xib */,
+				2DA595AD1B69FCB900A4C44C /* SettingsSectionHeader.h */,
+				2DA595AE1B69FCB900A4C44C /* SettingsSectionHeader.m */,
+				2DA595AF1B69FCB900A4C44C /* SettingsSectionHeader.xib */,
+				2DA595B01B69FCB900A4C44C /* SettingsSliderCell.h */,
+				2DA595B11B69FCB900A4C44C /* SettingsSliderCell.m */,
+				2DA595B21B69FCB900A4C44C /* SettingsSliderCell.xib */,
+			);
+			name = Settings;
+			path = Biometrics/view/Settings;
+			sourceTree = "<group>";
+		};
+		2DA595C71B69FD1400A4C44C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2DA595C81B69FD1400A4C44C /* ALAssetsLibrary+CustomPhotoAlbum.h */,
+				2DA595C91B69FD1400A4C44C /* ALAssetsLibrary+CustomPhotoAlbum.m */,
+				2DA595CA1B69FD1400A4C44C /* UIBackgroundImages.h */,
+				2DA595CB1B69FD1400A4C44C /* UIBackgroundImages.m */,
+				2DA595CC1B69FD1400A4C44C /* UICollectionViewCell+typeEnum.h */,
+				2DA595CD1B69FD1400A4C44C /* UICollectionViewCell+typeEnum.m */,
+				2DA595CE1B69FD1400A4C44C /* UIColor+applicationColors.h */,
+				2DA595CF1B69FD1400A4C44C /* UIColor+applicationColors.m */,
+				2DA595D01B69FD1400A4C44C /* UIFont+applicationFonts.h */,
+				2DA595D11B69FD1400A4C44C /* UIFont+applicationFonts.m */,
+				2DA595D21B69FD1400A4C44C /* UIImage+ImageEffects.h */,
+				2DA595D31B69FD1400A4C44C /* UIImage+ImageEffects.m */,
+				2DA595D41B69FD1400A4C44C /* UIImageView+geometryConverse.h */,
+				2DA595D51B69FD1400A4C44C /* UIImageView+geometryConverse.m */,
+				2DA595D61B69FD1400A4C44C /* UIMotionEffectHelper.h */,
+				2DA595D71B69FD1400A4C44C /* UIMotionEffectHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2DA595E01B69FDD800A4C44C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB4D49C21CF848240079A574 /* FacesCreateTemplateLargeLite.ndf */,
+				DB4D49C31CF848240079A574 /* FacesCreateTemplateMediumLite.ndf */,
+				DB4D49C41CF848240079A574 /* FacesCreateTemplateSmall.ndf */,
+				DB4D49C51CF848240079A574 /* FacesDetect45.ndf */,
+				DB4D49C61CF848240079A574 /* FacesDetect180.ndf */,
+				DB4D49C71CF848250079A574 /* FacesDetectSegmentsAge.ndf */,
+				DB4D49C81CF848250079A574 /* FacesDetectSegmentsAttributes.ndf */,
+				DB4D49C91CF848250079A574 /* FacesDetectSegmentsEmotions.ndf */,
+				DB4D49CA1CF848250079A574 /* FacesDetectSegmentsOrientation.ndf */,
+				DB4D49CB1CF848250079A574 /* FacesDetectSegmentsFeaturePointsTrack.ndf */,
+				DB4D49CC1CF848250079A574 /* FacesDetectSegmentsLiveness.ndf */,
+				DB4D49CD1CF848250079A574 /* FingersDetectSegmentsClassifier.ndf */,
+				DB4D49CE1CF848250079A574 /* Irises.ndf */,
+				DB4D49CF1CF848250079A574 /* VoicesCreateTemplateModel.ndf */,
+				2DADB96E1B6A58EE00F2E078 /* info.html */,
+				2DADB96F1B6A58EE00F2E078 /* initialImages */,
+				2DADB97F1B6A58EE00F2E078 /* pause_icon@2x.png */,
+				2DADB9801B6A58EE00F2E078 /* play_icon@2x.png */,
+				2DA595E11B69FDD800A4C44C /* close@2x.png */,
+				2D9476D11B6A0C470070818E /* Localizable.strings */,
+				2DA595E21B69FDD800A4C44C /* db_eye@2x.png */,
+				2DA595E31B69FDD800A4C44C /* db_face@2x.png */,
+				2DA595E41B69FDD800A4C44C /* db_finger@2x.png */,
+				2DA595E51B69FDD800A4C44C /* db_voice@2x.png */,
+				2DA595E61B69FDD800A4C44C /* delete_icon@2x.png */,
+				2DA595E71B69FDD800A4C44C /* gallery_icon@2x.png */,
+				2DA595E81B69FDD800A4C44C /* logo@2x.png */,
+				2DA595E91B69FDD800A4C44C /* menu_eye@2x.png */,
+				2DA595EA1B69FDD800A4C44C /* menu_face@2x.png */,
+				2DA595EB1B69FDD800A4C44C /* menu_finger@2x.png */,
+				2DA595EC1B69FDD800A4C44C /* menu_voice@2x.png */,
+				2DA595ED1B69FDD800A4C44C /* navigation_bar@2x.png */,
+				2DA595EE1B69FDD800A4C44C /* open_gallery@2x.png */,
+				2DA595EF1B69FDD800A4C44C /* record_voice@2x.png */,
+				2DA595F01B69FDD800A4C44C /* record_voice_selected@2x.png */,
+				2DA595F11B69FDD800A4C44C /* settings@2x.png */,
+				2DA595F21B69FDD800A4C44C /* shadow@2x.png */,
+				2DA595F31B69FDD800A4C44C /* slider_handle@2x.png */,
+				2DA595F41B69FDD800A4C44C /* slider_maximum_track@2x.png */,
+				2DA595F51B69FDD800A4C44C /* slider_minimum_track@2x.png */,
+				2DA595F61B69FDD800A4C44C /* switch_camera@2x.png */,
+				2DA595F71B69FDD800A4C44C /* switch_camera_round@2x.png */,
+				2DA595F81B69FDD800A4C44C /* take_photo@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2DA596111B69FEDE00A4C44C /* collectionLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				2DA596121B69FEDE00A4C44C /* HeaderLayout.h */,
+				2DA596131B69FEDE00A4C44C /* HeaderLayout.m */,
+			);
+			path = collectionLayouts;
+			sourceTree = "<group>";
+		};
+		2DA596151B69FEEF00A4C44C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DA596161B69FEEF00A4C44C /* CollectionDelegate.h */,
+				2DA596171B69FEEF00A4C44C /* CollectionDelegate.m */,
+				2DA596181B69FEEF00A4C44C /* DatabaseController.h */,
+				2DA596191B69FEEF00A4C44C /* DatabaseController.m */,
+				2DA5961A1B69FEEF00A4C44C /* DatabaseController.xib */,
+				2DA5961B1B69FEEF00A4C44C /* EyeController.h */,
+				2DA5961C1B69FEEF00A4C44C /* EyeController.m */,
+				2DA5961D1B69FEEF00A4C44C /* EyeController.xib */,
+				2DA5961E1B69FEEF00A4C44C /* EyesCollectionViewDelegate.h */,
+				2DA5961F1B69FEEF00A4C44C /* EyesCollectionViewDelegate.m */,
+				2DA596201B69FEEF00A4C44C /* FaceController.h */,
+				2DA596211B69FEEF00A4C44C /* FaceController.m */,
+				2DA596221B69FEEF00A4C44C /* FaceController.xib */,
+				2DA596231B69FEEF00A4C44C /* FacesCollectionViewDelegate.h */,
+				2DA596241B69FEEF00A4C44C /* FacesCollectionViewDelegate.m */,
+				2DA596251B69FEEF00A4C44C /* FingerController.h */,
+				2DA596261B69FEEF00A4C44C /* FingerController.m */,
+				2DA596271B69FEEF00A4C44C /* FingerController.xib */,
+				2DA596281B69FEEF00A4C44C /* FingersCollectionViewDelegate.h */,
+				2DA596291B69FEEF00A4C44C /* FingersCollectionViewDelegate.m */,
+				2DA5962A1B69FEEF00A4C44C /* ImagePickerController.h */,
+				2DA5962B1B69FEEF00A4C44C /* ImagePickerController.m */,
+				2DA5962C1B69FEEF00A4C44C /* InfoController.h */,
+				2DA5962D1B69FEEF00A4C44C /* InfoController.m */,
+				2DA5962E1B69FEEF00A4C44C /* InfoController.xib */,
+				2DA5962F1B69FEEF00A4C44C /* MenuController.h */,
+				2DA596301B69FEEF00A4C44C /* MenuController.m */,
+				2DA596311B69FEEF00A4C44C /* MenuController.xib */,
+				2DA596321B69FEEF00A4C44C /* NavigationController.h */,
+				2DA596331B69FEEF00A4C44C /* NavigationController.m */,
+				2DA596341B69FEEF00A4C44C /* SettingsController.h */,
+				2DA596351B69FEEF00A4C44C /* SettingsController.m */,
+				2DA596361B69FEEF00A4C44C /* SettingsController.xib */,
+				2DA596371B69FEEF00A4C44C /* VoiceController.h */,
+				2DA596381B69FEEF00A4C44C /* VoiceController.m */,
+				2DA596391B69FEEF00A4C44C /* VoiceController.xib */,
+				2DA5963A1B69FEEF00A4C44C /* VoicesCollectionViewDelegate.h */,
+				2DA5963B1B69FEEF00A4C44C /* VoicesCollectionViewDelegate.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		2DA596661B69FF5000A4C44C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2DA596671B69FF5000A4C44C /* BiometricsLayer.h */,
+				2DA596681B69FF5000A4C44C /* BiometricsLayer.m */,
+				2DA596691B69FF5000A4C44C /* BiometricsResource.h */,
+				2DA5966A1B69FF5000A4C44C /* BiometricsResource.m */,
+				2DA5966B1B69FF5000A4C44C /* Eye.h */,
+				2DA5966C1B69FF5000A4C44C /* Eye.m */,
+				2DA5966D1B69FF5000A4C44C /* Face.h */,
+				2DA5966E1B69FF5000A4C44C /* Face.m */,
+				2DA5966F1B69FF5000A4C44C /* FaceResult.h */,
+				2DA596701B69FF5000A4C44C /* FaceResult.m */,
+				2DA596711B69FF5000A4C44C /* Finger.h */,
+				2DA596721B69FF5000A4C44C /* Finger.m */,
+				2DA596731B69FF5000A4C44C /* SettingHandler.h */,
+				2DA596741B69FF5000A4C44C /* SettingHandler.m */,
+				2DA596751B69FF5000A4C44C /* SettingsHandler.h */,
+				2DA596761B69FF5000A4C44C /* SettingsHandler.m */,
+				2DA596771B69FF5000A4C44C /* Voice.h */,
+				2DA596781B69FF5000A4C44C /* Voice.m */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		2DA596861B69FF5B00A4C44C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D9476AD1B6A04F80070818E /* NBiometricClient.framework */,
+				2D9476AE1B6A04F80070818E /* NBiometrics.framework */,
+				2D9476AF1B6A04F80070818E /* NCluster.framework */,
+				2D9476B01B6A04F80070818E /* NCore.framework */,
+				2D9476B11B6A04F80070818E /* NDevices.framework */,
+				2D9476B21B6A04F80070818E /* NLicensing.framework */,
+				2D9476B31B6A04F80070818E /* NMedia.framework */,
+				2D9476B41B6A04F80070818E /* NMediaProc.framework */,
+				2DA5969B1B6A020B00A4C44C /* CoreData.framework */,
+				2DA596991B6A00C900A4C44C /* SystemConfiguration.framework */,
+				2DA596971B6A00B500A4C44C /* libz.dylib */,
+			);
+			name = Frameworks;
+			path = Biometrics;
+			sourceTree = "<group>";
+		};
+		2DADB96F1B6A58EE00F2E078 /* initialImages */ = {
+			isa = PBXGroup;
+			children = (
+				2DADB9701B6A58EE00F2E078 /* Neurotechnology_image0000_L_000.png */,
+				2DADB9711B6A58EE00F2E078 /* Neurotechnology_image0000_R_000.png */,
+				2DADB9721B6A58EE00F2E078 /* Neurotechnology_image0001_L_000.png */,
+				2DADB9731B6A58EE00F2E078 /* Neurotechnology_image0001_L_001.png */,
+				2DADB9741B6A58EE00F2E078 /* Neurotechnology_image0001_L_002.png */,
+				2DADB9751B6A58EE00F2E078 /* Neurotechnology_image0001_L_003.png */,
+				2DADB9761B6A58EE00F2E078 /* Neurotechnology_image0001_L_004.png */,
+				2DADB9771B6A58EE00F2E078 /* Neurotechnology_image0001_R_000.png */,
+				2DADB9781B6A58EE00F2E078 /* Neurotechnology_image0001_R_001.png */,
+				2DADB9791B6A58EE00F2E078 /* Neurotechnology_image0001_R_002.png */,
+				2DADB97A1B6A58EE00F2E078 /* Neurotechnology_image0001_R_003.png */,
+				2DADB97B1B6A58EE00F2E078 /* Neurotechnology_image0001_R_004.png */,
+				2DADB97C1B6A58EE00F2E078 /* Neurotechnology_image0002_L_000.png */,
+				2DADB97D1B6A58EE00F2E078 /* Neurotechnology_image0002_L_001.png */,
+				2DADB97E1B6A58EE00F2E078 /* Neurotechnology_image0002_L_002.png */,
+			);
+			path = initialImages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D4909B31B69F6DD0058C178 /* Biometrics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D4909D71B69F6DD0058C178 /* Build configuration list for PBXNativeTarget "Biometrics" */;
+			buildPhases = (
+				2D4909B01B69F6DD0058C178 /* Sources */,
+				2D4909B11B69F6DD0058C178 /* Frameworks */,
+				2D4909B21B69F6DD0058C178 /* Resources */,
+				2D94768C1B6A03D30070818E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Biometrics;
+			productName = Biometrics;
+			productReference = 2D4909B41B69F6DD0058C178 /* Biometrics.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D4909CC1B69F6DD0058C178 /* BiometricsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D4909DA1B69F6DD0058C178 /* Build configuration list for PBXNativeTarget "BiometricsTests" */;
+			buildPhases = (
+				2D4909C91B69F6DD0058C178 /* Sources */,
+				2D4909CA1B69F6DD0058C178 /* Frameworks */,
+				2D4909CB1B69F6DD0058C178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D4909CF1B69F6DD0058C178 /* PBXTargetDependency */,
+			);
+			name = BiometricsTests;
+			productName = BiometricsTests;
+			productReference = 2D4909CD1B69F6DD0058C178 /* BiometricsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D4909AC1B69F6DD0058C178 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Neurotechnology;
+				TargetAttributes = {
+					2D4909B31B69F6DD0058C178 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					2D4909CC1B69F6DD0058C178 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 2D4909B31B69F6DD0058C178;
+					};
+				};
+			};
+			buildConfigurationList = 2D4909AF1B69F6DD0058C178 /* Build configuration list for PBXProject "Biometrics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D4909AB1B69F6DD0058C178;
+			productRefGroup = 2D4909B51B69F6DD0058C178 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D4909B31B69F6DD0058C178 /* Biometrics */,
+				2D4909CC1B69F6DD0058C178 /* BiometricsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D4909B21B69F6DD0058C178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB4D49D01CF848250079A574 /* FacesCreateTemplateLargeLite.ndf in Resources */,
+				DB4D49D11CF848250079A574 /* FacesCreateTemplateMediumLite.ndf in Resources */,
+				DB4D49D21CF848250079A574 /* FacesCreateTemplateSmall.ndf in Resources */,
+				DB4D49D31CF848250079A574 /* FacesDetect45.ndf in Resources */,
+				DB4D49D41CF848250079A574 /* FacesDetect180.ndf in Resources */,
+				DB4D49D51CF848250079A574 /* FacesDetectSegmentsAge.ndf in Resources */,
+				DB4D49D61CF848250079A574 /* FacesDetectSegmentsAttributes.ndf in Resources */,
+				DB4D49D71CF848250079A574 /* FacesDetectSegmentsEmotions.ndf in Resources */,
+				DB4D49D81CF848250079A574 /* FacesDetectSegmentsOrientation.ndf in Resources */,
+				DB4D49D91CF848250079A574 /* FacesDetectSegmentsFeaturePointsTrack.ndf in Resources */,
+				DB4D49DA1CF848250079A574 /* FacesDetectSegmentsLiveness.ndf in Resources */,
+				DB4D49DB1CF848250079A574 /* FingersDetectSegmentsClassifier.ndf in Resources */,
+				DB4D49DC1CF848250079A574 /* Irises.ndf in Resources */,
+				DB4D49DD1CF848250079A574 /* VoicesCreateTemplateModel.ndf in Resources */,
+				2DADB98E1B6A58EE00F2E078 /* Neurotechnology_image0002_L_000.png in Resources */,
+				2DADB98B1B6A58EE00F2E078 /* Neurotechnology_image0001_R_002.png in Resources */,
+				2DADB9921B6A58EE00F2E078 /* play_icon@2x.png in Resources */,
+				2DADB9911B6A58EE00F2E078 /* pause_icon@2x.png in Resources */,
+				2DA596051B69FDD800A4C44C /* navigation_bar@2x.png in Resources */,
+				2D9476CF1B6A0A1B0070818E /* InfoPlist.strings in Resources */,
+				2DA596091B69FDD800A4C44C /* settings@2x.png in Resources */,
+				2DADB98F1B6A58EE00F2E078 /* Neurotechnology_image0002_L_001.png in Resources */,
+				2DA595FA1B69FDD800A4C44C /* db_eye@2x.png in Resources */,
+				2DADB9851B6A58EE00F2E078 /* Neurotechnology_image0001_L_001.png in Resources */,
+				2DA5964C1B69FEEF00A4C44C /* MenuController.xib in Resources */,
+				2D4909C31B69F6DD0058C178 /* Main.storyboard in Resources */,
+				2DA595C21B69FCB900A4C44C /* SettingsSectionHeader.xib in Resources */,
+				2DADB9811B6A58EE00F2E078 /* info.html in Resources */,
+				2DA596071B69FDD800A4C44C /* record_voice@2x.png in Resources */,
+				2DADB98D1B6A58EE00F2E078 /* Neurotechnology_image0001_R_004.png in Resources */,
+				2D9476D31B6A0C470070818E /* Localizable.strings in Resources */,
+				2DA595BD1B69FCB900A4C44C /* EnrollDialog.xib in Resources */,
+				2DA595C41B69FCB900A4C44C /* SettingsSliderCell.xib in Resources */,
+				2DA595FC1B69FDD800A4C44C /* db_finger@2x.png in Resources */,
+				2DA595BB1B69FCB900A4C44C /* DBEmptyCell.xib in Resources */,
+				2DA5960D1B69FDD800A4C44C /* slider_minimum_track@2x.png in Resources */,
+				2DA596401B69FEEF00A4C44C /* EyeController.xib in Resources */,
+				2DA596061B69FDD800A4C44C /* open_gallery@2x.png in Resources */,
+				2DA5964A1B69FEEF00A4C44C /* InfoController.xib in Resources */,
+				2DA5963E1B69FEEF00A4C44C /* DatabaseController.xib in Resources */,
+				2DA596001B69FDD800A4C44C /* logo@2x.png in Resources */,
+				2DADB9831B6A58EE00F2E078 /* Neurotechnology_image0000_R_000.png in Resources */,
+				2DADB98C1B6A58EE00F2E078 /* Neurotechnology_image0001_R_003.png in Resources */,
+				2DA595FD1B69FDD800A4C44C /* db_voice@2x.png in Resources */,
+				2DADB9861B6A58EE00F2E078 /* Neurotechnology_image0001_L_002.png in Resources */,
+				2DA596511B69FEEF00A4C44C /* VoiceController.xib in Resources */,
+				2DA595FF1B69FDD800A4C44C /* gallery_icon@2x.png in Resources */,
+				2DA596101B69FDD800A4C44C /* take_photo@2x.png in Resources */,
+				2DA595F91B69FDD800A4C44C /* close@2x.png in Resources */,
+				2DA595FB1B69FDD800A4C44C /* db_face@2x.png in Resources */,
+				2DADB9901B6A58EE00F2E078 /* Neurotechnology_image0002_L_002.png in Resources */,
+				2DADB98A1B6A58EE00F2E078 /* Neurotechnology_image0001_R_001.png in Resources */,
+				2DA595C01B69FCB900A4C44C /* SettingsCheckboxCell.xib in Resources */,
+				2DA596461B69FEEF00A4C44C /* FingerController.xib in Resources */,
+				2DA5960A1B69FDD800A4C44C /* shadow@2x.png in Resources */,
+				2DA596041B69FDD800A4C44C /* menu_voice@2x.png in Resources */,
+				2DA5960C1B69FDD800A4C44C /* slider_maximum_track@2x.png in Resources */,
+				2DA5960B1B69FDD800A4C44C /* slider_handle@2x.png in Resources */,
+				2DA5964F1B69FEEF00A4C44C /* SettingsController.xib in Resources */,
+				2DA5960E1B69FDD800A4C44C /* switch_camera@2x.png in Resources */,
+				2DA596021B69FDD800A4C44C /* menu_face@2x.png in Resources */,
+				2DA5960F1B69FDD800A4C44C /* switch_camera_round@2x.png in Resources */,
+				2D4909C81B69F6DD0058C178 /* LaunchScreen.xib in Resources */,
+				2DADB9881B6A58EE00F2E078 /* Neurotechnology_image0001_L_004.png in Resources */,
+				2DADB9891B6A58EE00F2E078 /* Neurotechnology_image0001_R_000.png in Resources */,
+				2D4909C51B69F6DD0058C178 /* Images.xcassets in Resources */,
+				2DA596011B69FDD800A4C44C /* menu_eye@2x.png in Resources */,
+				2DA595FE1B69FDD800A4C44C /* delete_icon@2x.png in Resources */,
+				2DADB9821B6A58EE00F2E078 /* Neurotechnology_image0000_L_000.png in Resources */,
+				2DA596081B69FDD800A4C44C /* record_voice_selected@2x.png in Resources */,
+				2DADB9871B6A58EE00F2E078 /* Neurotechnology_image0001_L_003.png in Resources */,
+				2DA596031B69FDD800A4C44C /* menu_finger@2x.png in Resources */,
+				2DA596431B69FEEF00A4C44C /* FaceController.xib in Resources */,
+				2DADB9841B6A58EE00F2E078 /* Neurotechnology_image0001_L_000.png in Resources */,
+				2DA595B91B69FCB900A4C44C /* DBCategoryCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D4909CB1B69F6DD0058C178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D4909B01B69F6DD0058C178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D4909BD1B69F6DD0058C178 /* AppDelegate.m in Sources */,
+				2DA596801B69FF5000A4C44C /* FaceResult.m in Sources */,
+				2DA595BF1B69FCB900A4C44C /* SettingsCheckboxCell.m in Sources */,
+				2D4909BA1B69F6DD0058C178 /* main.m in Sources */,
+				2DA595B71B69FCB900A4C44C /* CameraView.m in Sources */,
+				2DA5964E1B69FEEF00A4C44C /* SettingsController.m in Sources */,
+				2DA5964B1B69FEEF00A4C44C /* MenuController.m in Sources */,
+				2DA595DB1B69FD1400A4C44C /* UIColor+applicationColors.m in Sources */,
+				2DA596811B69FF5000A4C44C /* Finger.m in Sources */,
+				2DA595BA1B69FCB900A4C44C /* DBEmptyCell.m in Sources */,
+				2DA596421B69FEEF00A4C44C /* FaceController.m in Sources */,
+				2DA596821B69FF5000A4C44C /* SettingHandler.m in Sources */,
+				2DA595D91B69FD1400A4C44C /* UIBackgroundImages.m in Sources */,
+				2DA595DC1B69FD1400A4C44C /* UIFont+applicationFonts.m in Sources */,
+				2DA596831B69FF5000A4C44C /* SettingsHandler.m in Sources */,
+				2DA5967E1B69FF5000A4C44C /* Eye.m in Sources */,
+				2DA595C31B69FCB900A4C44C /* SettingsSliderCell.m in Sources */,
+				2DA5963F1B69FEEF00A4C44C /* EyeController.m in Sources */,
+				2DA595C51B69FCB900A4C44C /* SoundWaveView.m in Sources */,
+				2DA5967C1B69FF5000A4C44C /* BiometricsLayer.m in Sources */,
+				2DA596471B69FEEF00A4C44C /* FingersCollectionViewDelegate.m in Sources */,
+				2DA5963C1B69FEEF00A4C44C /* CollectionDelegate.m in Sources */,
+				2DA596521B69FEEF00A4C44C /* VoicesCollectionViewDelegate.m in Sources */,
+				2DA595C61B69FCB900A4C44C /* UITextFieldWithInsets.m in Sources */,
+				2DA595B81B69FCB900A4C44C /* DBCategoryCell.m in Sources */,
+				2DA595D81B69FD1400A4C44C /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
+				2DA596491B69FEEF00A4C44C /* InfoController.m in Sources */,
+				2DA596451B69FEEF00A4C44C /* FingerController.m in Sources */,
+				2DA5967D1B69FF5000A4C44C /* BiometricsResource.m in Sources */,
+				2DA595BE1B69FCB900A4C44C /* ProgressView.m in Sources */,
+				2DA595DE1B69FD1400A4C44C /* UIImageView+geometryConverse.m in Sources */,
+				2D5D942B1B8C8B0B00067848 /* EWFView.m in Sources */,
+				2DA595DD1B69FD1400A4C44C /* UIImage+ImageEffects.m in Sources */,
+				2DA5967F1B69FF5000A4C44C /* Face.m in Sources */,
+				2DA5963D1B69FEEF00A4C44C /* DatabaseController.m in Sources */,
+				2DA595C11B69FCB900A4C44C /* SettingsSectionHeader.m in Sources */,
+				2DA596411B69FEEF00A4C44C /* EyesCollectionViewDelegate.m in Sources */,
+				2DA596141B69FEDE00A4C44C /* HeaderLayout.m in Sources */,
+				2DA595DA1B69FD1400A4C44C /* UICollectionViewCell+typeEnum.m in Sources */,
+				2DA596841B69FF5000A4C44C /* Voice.m in Sources */,
+				2DA595DF1B69FD1400A4C44C /* UIMotionEffectHelper.m in Sources */,
+				2DA596481B69FEEF00A4C44C /* ImagePickerController.m in Sources */,
+				2DA596501B69FEEF00A4C44C /* VoiceController.m in Sources */,
+				2DA5964D1B69FEEF00A4C44C /* NavigationController.m in Sources */,
+				2DA596441B69FEEF00A4C44C /* FacesCollectionViewDelegate.m in Sources */,
+				2DA595BC1B69FCB900A4C44C /* EnrollDialog.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D4909C91B69F6DD0058C178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D4909D41B69F6DD0058C178 /* BiometricsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D4909CF1B69F6DD0058C178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D4909B31B69F6DD0058C178 /* Biometrics */;
+			targetProxy = 2D4909CE1B69F6DD0058C178 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2D4909C11B69F6DD0058C178 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D4909C21B69F6DD0058C178 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2D4909C61B69F6DD0058C178 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D4909C71B69F6DD0058C178 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		2D9476CD1B6A0A1B0070818E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D9476CE1B6A0A1B0070818E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2D9476D11B6A0C470070818E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D9476D21B6A0C470070818E /* en */,
+			);
+			name = Localizable.strings;
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D4909D51B69F6DD0058C178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../../../Frameworks/iOS/;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Biometrics/Biometrics-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2D4909D61B69F6DD0058C178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../../../Frameworks/iOS/;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Biometrics/Biometrics-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D4909D81B69F6DD0058C178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../../Frameworks/iOS,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = Biometrics/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neurotec.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2D4909D91B69F6DD0058C178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../../Frameworks/iOS,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = Biometrics/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neurotec.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2D4909DB1B69F6DD0058C178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BiometricsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neurotec.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Biometrics.app/Biometrics";
+			};
+			name = Debug;
+		};
+		2D4909DC1B69F6DD0058C178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BiometricsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neurotec.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Biometrics.app/Biometrics";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D4909AF1B69F6DD0058C178 /* Build configuration list for PBXProject "Biometrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D4909D51B69F6DD0058C178 /* Debug */,
+				2D4909D61B69F6DD0058C178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D4909D71B69F6DD0058C178 /* Build configuration list for PBXNativeTarget "Biometrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D4909D81B69F6DD0058C178 /* Debug */,
+				2D4909D91B69F6DD0058C178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D4909DA1B69F6DD0058C178 /* Build configuration list for PBXNativeTarget "BiometricsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D4909DB1B69F6DD0058C178 /* Debug */,
+				2D4909DC1B69F6DD0058C178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D4909AC1B69F6DD0058C178 /* Project object */;
+}

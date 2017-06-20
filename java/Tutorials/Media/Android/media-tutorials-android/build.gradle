@@ -1,0 +1,35 @@
+buildscript {
+	System.properties['com.android.build.gradle.overrideVersionCheck'] = 'true'
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:2.2.0'
+	}
+}
+
+description = "Media Tutorials Android"
+project.ext.archivesBaseName = "media-tutorials"
+
+project.ext.nativeLibsInclude = ["**/libjnidispatch.so",
+								 "**/libNCore.so",
+								 "**/libNGui.so",
+								 "**/libNLicensing.so",
+								 "**/libNService.so",
+								 "**/libNMedia.so",
+								 "**/libNMediaProc.so",
+								 "**/libgstreamer_android.so"]
+
+apply from: "../../../../Samples/Common/Android/buildCommon/applicationCommon.gradle"
+apply from: "../../../../Samples/Common/Android/buildCommon/common.gradle"
+
+project.group = "com.neurotec.tutorials"
+
+dependencies {
+	provided project.modules."android"
+
+	compile ":neurotec-gui-android"
+	compile ":neurotec-media-processing-android"
+	compile ":neurotec-devices-media-android"
+	compile project(":tutorials-utils")
+}

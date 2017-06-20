@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CFC3ABC-AD5F-4758-ACE0-9FF2F447F6C8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Neurotec.Samples.Program</StartupObject>
+    <RootNamespace>Neurotec.Samples</RootNamespace>
+    <AssemblyName>SimpleFacesSampleVB</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>..\..\..\..\Resources\Neurotechnology.ico</ApplicationIcon>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\Bin\Win32_x86\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\Bin\Win64_x64\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\Bin\Win32_x86\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\Bin\Win64_x64\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Neurotec, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Biometrics.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics.Client, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Biometrics.Client.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics.Gui, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Biometrics.Gui.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Devices, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Devices.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Gui, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Gui.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Licensing, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Licensing.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Media, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Media.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CaptureIcaoCompliantImage.resx">
+      <DependentUpon>CaptureIcaoCompliantImage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateTokenFaceImage.resx">
+      <DependentUpon>CreateTokenFaceImage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetectFaces.resx">
+      <DependentUpon>DetectFaces.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollFromCamera.resx">
+      <DependentUpon>EnrollFromCamera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollFromImage.resx">
+      <DependentUpon>EnrollFromImage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralizeFaces.resx">
+      <DependentUpon>GeneralizeFaces.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IcaoWarningView.resx">
+      <DependentUpon>IcaoWarningView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IdentifyFace.resx">
+      <DependentUpon>IdentifyFace.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicensePanel.resx">
+      <DependentUpon>LicensePanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchMultipleFaces.resx">
+      <DependentUpon>MatchMultipleFaces.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerifyFace.resx">
+      <DependentUpon>VerifyFace.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Common\VB\Utils.vb">
+      <Link>Utils.vb</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CaptureIcaoCompliantImage.Designer.vb">
+      <DependentUpon>CaptureIcaoCompliantImage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CaptureIcaoCompliantImage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreateTokenFaceImage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CreateTokenFaceImage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CreateTokenFaceImage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DetectFaces.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DetectFaces.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DetectFaces.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollFromCamera.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EnrollFromCamera.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EnrollFromCamera.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollFromImage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EnrollFromImage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EnrollFromImage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GeneralizeFaces.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GeneralizeFaces.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="GeneralizeFaces.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IcaoWarningView.Designer.vb">
+      <DependentUpon>IcaoWarningView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IcaoWarningView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IdentifyFace.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IdentifyFace.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="IdentifyFace.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LicensePanel.designer.vb">
+      <DependentUpon>LicensePanel.vb</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LicensePanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatchMultipleFaces.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MatchMultipleFaces.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="MatchMultipleFaces.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Program.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VerifyFace.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>VerifyFace.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="VerifyFace.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\openfolderHS.png" />
+    <Content Include="Resources\saveHS.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	package="com.neurotec.samples.multibiometric"
+	android:versionCode="1"
+	android:versionName="9.0.0.0">
+
+	<uses-sdk android:minSdkVersion="15"
+		android:targetSdkVersion="19" />
+
+
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.CAMERA"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.READ_OWNER_DATA" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+
+	<uses-feature android:name="android.hardware.usb.host" />
+
+	<application
+		tools:replace="android:name"
+		android:hardwareAccelerated="true"
+		android:name="BiometricApplication"
+		package="com.neurotec.samples.multibiometric"
+		android:icon="@com.neurotec.samples.multibiometric:drawable/ic_neurotechnology_logo"
+		android:theme="@android:style/Theme.Holo.Light"
+		android:label="@string/app_name">
+
+		<!-- Common -->
+		<activity android:name="com.neurotec.samples.app.InfoActivity"></activity>
+		<activity android:name="com.neurotec.samples.app.InputSourceActivity"></activity>
+		<activity android:name="com.neurotec.samples.app.DirectoryViewer"></activity>
+
+		<activity android:name="org.acra.CrashReportDialog"
+			android:theme="@android:style/Theme.Dialog"
+			android:launchMode="singleInstance"
+			android:excludeFromRecents="true"
+			android:finishOnTaskLaunch="true">
+		</activity>
+
+		<!-- Licensing -->
+
+		<activity android:name="com.neurotec.licensing.gui.ActivationActivity"></activity>
+
+		<activity android:name="com.neurotec.samples.licensing.app.LicensingServiceReportActivity"></activity>
+		<activity android:name="com.neurotec.samples.licensing.preference.LicensingPreferences"></activity>
+		<activity android:name="com.neurotec.samples.licensing.preference.LicensingServicePreferences"
+				android:parentActivityName="com.neurotec.samples.licensing.preference.LicensingPreferences">
+				<meta-data
+						android:name="android.support.PARENT_ACTIVITY"
+						android:value="com.neurotec.samples.licensing.preference.LicensingPreferences" />
+		</activity>
+
+		<!-- Faces -->
+		<activity
+			android:name=".faces.FaceActivity"
+			android:label="@string/face_app_name"
+			android:taskAffinity="com.neurotec.samples.multibiometric.faces"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".faces.preference.FacePreferences"
+				android:parentActivityName="com.neurotec.samples.multibiometric.faces.FaceActivity" >
+			<meta-data
+					android:name="android.support.PARENT_ACTIVITY"
+					android:value="com.neurotec.samples.multibiometric.faces.FaceActivity" />
+		</activity>
+
+		<!-- Fingers -->
+		<activity
+			android:name=".fingers.FingerActivity"
+			android:label="@string/finger_app_name"
+			android:taskAffinity="com.neurotec.samples.multibiometric.fingers"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".fingers.preference.FingerPreferences"
+				android:parentActivityName="com.neurotec.samples.multibiometric.fingers.FingerActivity" >
+			<meta-data
+					android:name="android.support.PARENT_ACTIVITY"
+					android:value="com.neurotec.samples.multibiometric.fingers.FingerActivity" />
+		</activity>
+
+		<!-- Voices -->
+		<activity
+			android:name=".voices.VoiceActivity"
+			android:label="@string/voice_app_name"
+			android:taskAffinity="com.neurotec.samples.multibiometric.voices"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".voices.preference.VoicePreferences"
+				android:parentActivityName="com.neurotec.samples.multibiometric.voices.VoiceActivity" >
+			<meta-data
+					android:name="android.support.PARENT_ACTIVITY"
+					android:value="com.neurotec.samples.multibiometric.voices.VoiceActivity" />
+		</activity>
+
+
+		<!-- Irises -->
+		<activity
+			android:name=".irises.IrisActivity"
+			android:label="@string/iris_app_name"
+			android:taskAffinity="com.neurotec.samples.multibiometric.irises"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".irises.preference.IrisPreferences"
+				android:parentActivityName="com.neurotec.samples.multibiometric.irises.IrisActivity" >
+			<meta-data
+					android:name="android.support.PARENT_ACTIVITY"
+					android:value="com.neurotec.samples.multibiometric.irises.IrisActivity" />
+		</activity>
+	</application>
+
+</manifest>

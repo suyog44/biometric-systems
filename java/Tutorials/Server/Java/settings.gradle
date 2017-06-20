@@ -1,0 +1,7 @@
+include \
+'send-task', \
+'server-admin', \
+'server-database', \
+'server-status', \
+'tutorials-utils';
+project(':tutorials-utils').projectDir = new File("../../Common/Java/utils");

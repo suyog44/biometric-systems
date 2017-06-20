@@ -1,0 +1,21 @@
+description = "ANTemplate Sample"
+
+apply plugin: 'application'
+apply from: "../../../Common/Java/buildCommon/common.gradle"
+mainClassName =  "com.neurotec.samples.biometrics.standards.ANTemplateSample";
+
+dependencies {
+	compile ":neurotec-core"
+	compile ":neurotec-licensing"
+	compile ":neurotec-gui"
+	compile ":neurotec-media"
+	compile ":neurotec-media-processing"
+	compile ":neurotec-biometrics"
+	compile ":neurotec-biometrics-client"
+	compile ":neurotec-biometrics-gui"
+	compile ":jna"
+	compile project.modules."simple-xml"
+	compile project(":samples-utils")
+}
+
+apply from: "../../../Common/Java/buildCommon/run.gradle"

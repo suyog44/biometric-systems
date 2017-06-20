@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ====================================================================== -->
+<!-- Ant build file (http://ant.apache.org/) for Ant 1.6.2 or above.        -->
+<!-- ====================================================================== -->
+
+<project name="abis-sample" default="package" basedir=".">
+
+	<!-- ====================================================================== -->
+	<!-- Build environment properties                                           -->
+	<!-- ====================================================================== -->
+
+	<property name="build.finalName" value="abis-sample"/>
+	<property name="build.dir" value="target"/>
+	<property name="build.outputDir" value="${build.dir}/classes"/>
+	<property name="build.srcDir.0" value="src/main/java"/>
+	<property name="build.resourceDir.0" value="../../../Common/Resources"/>
+	<property name="build.resourceDir.1" value="../../../../Resources"/>
+	<property name="product.dir" value="../../../.."/>
+	<property name="product.dir.java" value="${product.dir}/Bin/Java"/>
+
+	<!-- ====================================================================== -->
+	<!-- Defining classpaths                                                    -->
+	<!-- ====================================================================== -->
+
+	<path id="build.classpath">
+		<pathelement location="${product.dir.java}/neurotec-core.jar"/>
+		<pathelement location="${product.dir.java}/neurotec-media.jar"/>
+		<pathelement location="${product.dir.java}/neurotec-media-processing.jar"/>
+		<pathelement location="${product.dir.java}/neurotec-biometrics.jar"/>
+		<pathelement location="${product.dir.java}/neurotec-gui.jar"/>
+		<pathelement location="${product.dir.java}/neurotec-biometrics-gui.jar"/>
+		<pathelement location="${product.dir.java}/neurotec-devices.jar"/>
+		<pathelement location="${product.dir.java}/neurotec-biometrics-client.jar"/>
+		<pathelement location="${product.dir.java}/neurotec-cluster.jar"/>
+		<pathelement location="${product.dir.java}/neurotec-licensing.jar"/>
+		<pathelement location="${product.dir.java}/utils.jar"/>
+		<pathelement location="${product.dir.java}/simple-xml.jar"/>
+		<pathelement location="${product.dir.java}/stax-api.jar"/>
+		<pathelement location="${product.dir.java}/stax.jar"/>
+		<pathelement location="${product.dir.java}/commons-logging.jar"/>
+		<pathelement location="${product.dir.java}/jna.jar"/>
+	</path>
+
+	<!-- ====================================================================== -->
+	<!-- Cleaning up target                                                     -->
+	<!-- ====================================================================== -->
+
+	<target name="clean" description="Clean the output directory">
+		<delete dir="${build.dir}"/>
+	</target>
+
+	<!-- ====================================================================== -->
+	<!-- Compilation target                                                     -->
+	<!-- ====================================================================== -->
+
+	<target name="compile" description="Compile the code">
+		<mkdir dir="${build.outputDir}"/>
+		<javac destdir="${build.outputDir}"
+			nowarn="false"
+			debug="true"
+			optimize="false"
+			deprecation="true"
+			target="1.5"
+			verbose="false"
+			fork="false"
+			source="1.5">
+			<src>
+				<pathelement location="${build.srcDir.0}"/>
+			</src>
+			<classpath refid="build.classpath"/>
+		</javac>
+		<copy todir="${build.outputDir}">
+			<fileset dir="${build.resourceDir.0}">
+				<include name="**/*.png"/>
+				<include name="**/*.jpg"/>
+			</fileset>
+		</copy>
+		<copy todir="${build.outputDir}">
+			<fileset dir="${build.resourceDir.1}"/>
+		</copy>
+	</target>
+
+	<!-- ====================================================================== -->
+	<!-- Package target                                                         -->
+	<!-- ====================================================================== -->
+
+	<target name="package" depends="compile" description="Package the application">
+		<jar jarfile="${product.dir.java}/${build.finalName}.jar"
+			compress="true"
+			index="false"
+			basedir="${build.outputDir}"
+			excludes="**/package.html">
+			<manifest>
+				<attribute name="Main-Class" value="com.neurotec.samples.abis.AbisApplication"/>
+				<attribute name="Class-Path" value="jna.jar neurotec-core.jar neurotec-media.jar neurotec-media-processing.jar neurotec-biometrics.jar
+					neurotec-gui.jar neurotec-biometrics-gui.jar neurotec-devices.jar neurotec-biometrics-client.jar
+					neurotec-cluster.jar neurotec-licensing.jar utils.jar simple-xml.jar
+					stax-api.jar stax.jar commons-logging.jar
+					"/>
+			</manifest>
+		</jar>
+	</target>
+</project>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+		<string name="app_name">DeviceSample</string>
+		<string name="title_device_detail">Device Detail</string>
+		<string name="msg_automatic">Automatic</string>
+		<string name="msg_use_timeout">Use timeout</string>
+		<string name="msg_any">Any</string>
+		<string name="msg_capture_device">Capture Device</string>
+		<string name="msg_camera">Camera</string>
+		<string name="msg_microphone">Microphone</string>
+		<string name="msg_biometric_device">Biometric device</string>
+		<string name="msg_fscanner">F scanner</string>
+		<string name="msg_finger_scanner">Finger scanner</string>
+		<string name="msg_palm_scanner">Palm scanner</string>
+		<string name="msg_iris_scanner">Iris scanner</string>
+		<string name="msg_create">Create...</string>
+		<string name="msg_connect">Connect...</string>
+		<string name="msg_disconnect">Disconnect</string>
+		<string name="msg_plugins">Plugins:</string>
+		<string name="msg_properties">Properties:</string>
+		<string name="msg_initializing">Initializing...</string>
+
+</resources>

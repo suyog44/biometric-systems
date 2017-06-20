@@ -1,0 +1,56 @@
+buildscript {
+	System.properties['com.android.build.gradle.overrideVersionCheck'] = 'true'
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:2.2.0'
+	}
+}
+
+description = "Multibiometric Sample"
+project.ext.archivesBaseName = "multibiometric-sample"
+
+project.ext.ndfFiles = ["FingersDetectSegmentsClassifier.ndf",
+						"FacesDetect45.ndf",
+						"FacesDetect180.ndf",
+						"FacesDetectSegmentsAge.ndf",
+						"FacesDetectSegmentsEmotions.ndf",
+						"FacesDetectSegmentsAttributes.ndf",
+						"FacesDetectSegmentsOrientation.ndf",
+						"FacesDetectSegmentsFeaturePointsTrack.ndf",
+						"FacesDetectSegmentsLiveness.ndf",
+						"FacesCreateTemplateSmall.ndf",
+						"FacesCreateTemplateMedium.ndf",
+						"FacesCreateTemplateLarge.ndf",
+						"Irises.ndf",
+						"VoicesCreateTemplateModel.ndf"]
+
+project.ext.nativeLibsInclude = ["**/*"]
+project.ext.nativeLibsExclude = ["**/libgstreamer_android.so"]
+
+apply from: "../../../Common/Android/buildCommon/applicationCommon.gradle"
+apply from: "../../../Common/Android/buildCommon/common.gradle"
+
+dependencies {
+	provided project.modules."android"
+
+	compile ":neurotec-biometrics-client-android"
+	compile ":neurotec-devices-fscanners-nitgen-android"
+	compile ":neurotec-devices-fscanners-suprema-biomini-android"
+	compile ":neurotec-devices-fscanners-bluefin-android"
+	compile ":neurotec-devices-multimodal-credenceid-android"
+	compile ":neurotec-devices-fscanners-digitalpersona-uareu-android"
+	compile ":neurotec-devices-fscanners-secugen-android"
+	compile ":neurotec-devices-fscanners-futronic-android"
+	compile ":neurotec-devices-fscanners-integratedbiometrics-android"
+	compile ":neurotec-devices-fscanners-smufsbio-android"
+	compile ":neurotec-devices-fscanners-startek-android"
+	compile ":neurotec-devices-fscanners-nextbiometrics-android"
+	compile ":neurotec-devices-irisscanners-iritech-irishield-android"
+	compile ":neurotec-devices-media-android"
+	compile project.modules."acra"
+	compile project(":samples-utils")
+	compile project(":neurotec-biometrics-gui-android")
+	compile project(":neurotec-licensing-gui-android")
+}

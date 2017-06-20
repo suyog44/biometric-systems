@@ -1,0 +1,24 @@
+description = "Template Conversion Sample"
+
+apply plugin: 'application'
+apply from: "../../../Common/Java/buildCommon/common.gradle"
+mainClassName =  "com.neurotec.samples.biometrics.TemplateConversionSample";
+
+dependencies {
+	compile ":neurotec-core"
+	compile ":neurotec-licensing"
+	compile ":neurotec-gui"
+	compile ":neurotec-media"
+	compile ":neurotec-media-processing"
+	compile ":neurotec-biometrics"
+	compile ":jna"
+	compile project(":samples-utils")
+}
+
+apply from: "../../../Common/Java/buildCommon/run.gradle"
+
+prepareResources {
+	from "${project.productRootDir}/Samples/Common/Resources"
+	include "OpenFolder.png"
+	include "Save.png"
+}

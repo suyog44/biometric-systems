@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+	<id>web-dependencies</id>
+	<formats>
+		<format>dir</format>
+	</formats>
+	<baseDirectory></baseDirectory>
+	<includeBaseDirectory>false</includeBaseDirectory>
+
+	<dependencySets>
+		<dependencySet>
+			<includes>
+				<include>com.neurotec:*</include>
+				<include>com.neurotec.samples:samples-utils</include>
+			</includes>
+			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
+		</dependencySet>
+	</dependencySets>
+	<fileSets>
+		<fileSet>
+			<directory>${basedir}/src/main/html</directory>
+			<includes>
+				<include>**/*.jnlp</include>
+				<include>**/*.html</include>
+			</includes>
+			<useDefaultExcludes>true</useDefaultExcludes>
+			<outputDirectory>/</outputDirectory>
+		</fileSet>
+	</fileSets>
+</assembly>

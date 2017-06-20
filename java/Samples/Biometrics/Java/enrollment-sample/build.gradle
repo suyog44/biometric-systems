@@ -1,0 +1,27 @@
+description = "Enrollment Sample"
+
+apply plugin: 'application'
+apply from: "../../../Common/Java/buildCommon/common.gradle"
+mainClassName =  "com.neurotec.samples.EnrollmentSample";
+
+dependencies {
+	compile ":neurotec-core"
+	compile ":neurotec-licensing"
+	compile ":neurotec-gui"
+	compile ":neurotec-media"
+	compile ":neurotec-media-processing"
+	compile ":neurotec-biometrics"
+	compile ":neurotec-biometrics-client"
+	compile ":neurotec-biometrics-gui"
+	compile ":neurotec-devices"
+	compile ":jna"
+	compile project.modules."simple-xml"
+	compile project(":samples-utils")
+}
+
+apply from: "../../../Common/Java/buildCommon/run.gradle"
+
+prepareResources {
+	from "${project.productRootDir}/Samples/Common/Resources"
+	include "Save.png"
+}

@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Neurotec.Samples.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SelectedFScannerId" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ScanSlaps" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ScanRolled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ScanPlain" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowOriginal" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Information" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Key = 'Thumbnail', IsThumbnail = 'True', Editable = 'False' ;Key = 'Name' ;Key = 'Middle Name';Key = 'Last Name' ;Key = 'National Id'; Key = 'Nationality'</Value>
+    </Setting>
+    <Setting Name="InformationThumbnailField" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Thumbnail</Value>
+    </Setting>
+    <Setting Name="ClientProperties" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

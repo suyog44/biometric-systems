@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<neu:sampleInfo xmlns:neu="http://www.neurotechnology.com/SampleExplorer">
+	<neu:title>Faces Sample C++</neu:title>
+	<neu:description>The C++ Faces sample application demonstrates how to use enroll and/or identify faces in images retrieved from a file
+or a video stream. Using this sample application you can do the following:[br/]
+[b]Enroll subjects' face image.[/b][br/]
+[b]Enroll with generalization.[/b][br/]
+[b]Identify face image.[/b][br/]
+This sample application also allows to identify subject's face image against all database (makes 1:N matching).
+Faces sample application uses internal database. Application uses WxWidgets framework.</neu:description>
+	<neu:tag>C++</neu:tag>
+	<neu:tag>WxWidgets</neu:tag>
+	<neu:tag>Faces</neu:tag>
+	<neu:tag>Cameras</neu:tag>
+	<neu:tag>Identification</neu:tag>
+	<neu:tag>Enrollment</neu:tag>
+	<neu:tag>VeriLook Standard SDK</neu:tag>
+	<neu:tag>VeriLook Extended SDK</neu:tag>
+	<neu:tag>MegaMatcher Standard SDK</neu:tag>
+	<neu:tag>MegaMatcher Extended SDK</neu:tag>
+</neu:sampleInfo>

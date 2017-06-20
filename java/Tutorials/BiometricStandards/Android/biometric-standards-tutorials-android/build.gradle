@@ -1,0 +1,43 @@
+buildscript {
+	System.properties['com.android.build.gradle.overrideVersionCheck'] = 'true'
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:2.2.0'
+	}
+}
+
+description = "Biometric Standards Tutorials Android"
+project.ext.archivesBaseName = "biometric-standards-tutorials"
+
+project.ext.ndfFiles = ["FingersDetectSegmentsClassifier.ndf",
+						"FacesDetect45.ndf",
+						"FacesDetect180.ndf",
+						"FacesDetectSegmentsAge.ndf",
+						"FacesDetectSegmentsOrientation.ndf",
+						"FacesDetectSegmentsFeaturePointsTrack.ndf",
+						"FacesDetectSegmentsEmotions.ndf",
+						"FacesDetectSegmentsAttributes.ndf",
+						"FacesDetectSegmentsLiveness.ndf",
+						"FacesCreateTemplateSmall.ndf",
+						"FacesCreateTemplateMediumLite.ndf",
+						"FacesCreateTemplateLargeLite.ndf",
+						"Irises.ndf",
+						"VoicesCreateTemplateModel.ndf"]
+
+project.ext.nativeLibsInclude = ["**/*"]
+
+apply from: "../../../../Samples/Common/Android/buildCommon/applicationCommon.gradle"
+apply from: "../../../../Samples/Common/Android/buildCommon/common.gradle"
+
+project.group = "com.neurotec.tutorials"
+
+dependencies {
+	provided project.modules."android"
+
+	compile ":neurotec-media-processing-android"
+	compile ":neurotec-biometrics-android"
+	compile ":neurotec-biometrics-client-android"
+	compile project(":tutorials-utils")
+}

@@ -1,0 +1,17 @@
+description = "Tutorials utils"
+
+apply from: "../../../../Samples/Common/Android/buildCommon/libraryCommon.gradle"
+apply from: "../../../../Samples/Common/Android/buildCommon/common.gradle"
+
+dependencies {
+	provided project.modules."android"
+
+	compile ":neurotec-core-android"
+	compile ":neurotec-licensing-android"
+	compile ":neurotec-media-android"
+	compile ":neurotec-devices-android"
+	compile ":jna"
+	compile ":compatibility-v4"
+	compile project.modules."acra"
+	compile project(":neurotec-licensing-gui-android")
+}

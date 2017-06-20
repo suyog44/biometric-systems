@@ -1,0 +1,178 @@
+plugins {
+  id 'com.github.johnrengelman.shadow' version '1.2.3'
+}
+description = "ABIS Sample"
+
+apply plugin: 'application'
+apply from: "../../../Common/Java/buildCommon/common.gradle"
+mainClassName =  "com.neurotec.samples.abis.AbisApplication";
+
+
+if (project.hasProperty('web')) {
+	
+	mainClassName = "com.neurotec.samples.abis.AbisApplet"
+	archivesBaseName = "abis-sample-web"
+	project.ext.outputDir = "$project.productBinJavaDir/$archivesBaseName"
+	project.ext.webDir = "$buildDir/unsigned"
+	
+	sourceSets {
+		main {
+			resources {
+				srcDir project.productBinDir;
+				include "Data/FingersDetectSegmentsClassifier.ndf"
+				include "Data/FacesDetect45.ndf"
+				include "Data/FacesDetect180.ndf"
+				include "Data/FacesDetectSegmentsAge.ndf"
+				include "Data/FacesDetectSegmentsOrientation.ndf"
+				include "Data/FacesDetectSegmentsFeaturePointsTrack.ndf"
+				include "Data/FacesDetectSegmentsEmotions.ndf"
+				include "Data/FacesDetectSegmentsAttributes.ndf"
+				include "Data/FacesDetectSegmentsLiveness.ndf"
+				include "Data/FacesCreateTemplateSmall.ndf"
+				include "Data/FacesCreateTemplateMediumLite.ndf"
+				include "Data/FacesCreateTemplateLargeLite.ndf"
+				include "Data/Irises.ndf"
+				include "Data/VoicesCreateTemplateModel.ndf"
+			}
+		}
+	}
+	
+	copyScripts.enabled = false
+		
+	shadowJar {
+		baseName = archivesBaseName
+		classifier = null
+		version = null
+		dependencies {
+			exclude(dependency(':neurotec-.*:.*'))
+			exclude(project(':samples-utils'))
+		}
+	}
+	
+	clean {
+		delete new File(project.productBinJavaDir, archivesBaseName)
+	}
+
+	task win32x86NativeLibs(type: Jar) {
+		baseName "neurotec-native-win32-x86"
+		version = null
+		from "${productBinDir}/Win32_x86"
+		include "**/*.dll"
+		include "**/*.bin"
+		exclude "Release/**/*.*"
+		exclude "Debug/**/*.*"
+		exclude "**/*Neurotec*.*"
+		includeEmptyDirs = false
+	}
+
+	task win64x64NativeLibs(type: Jar) {
+		baseName "neurotec-native-win64-x64"
+		version = null
+		from "${productBinDir}/Win64_x64"
+		include "**/*.dll"
+		include "**/*.bin"
+		exclude "Release/**/*.*"
+		exclude "Debug/**/*.*"
+		exclude "**/*Neurotec*.*"
+		includeEmptyDirs = false
+	}
+
+	task linuxx86NativeLibs(type: Jar) {
+		baseName "neurotec-native-linux-x86"
+		version = null
+		from "${productBinDir}/Linux_x86"
+		include "**/*.so"
+		include "**/*.bin"
+		exclude "Release/**/*.*"
+		exclude "Debug/**/*.*"
+		exclude "**/*Neurotec*.*"
+		includeEmptyDirs = false
+	}
+
+	task linuxx64NativeLibs(type: Jar) {
+		baseName "neurotec-native-linux-x86-64"
+		version = null
+		from "${productBinDir}/Linux_x86_64"
+		include "**/*.so"
+		include "**/*.bin"
+		exclude "Release/**/*.*"
+		exclude "Debug/**/*.*"
+		exclude "**/*Neurotec*.*"
+		includeEmptyDirs = false
+	}
+
+	task copyWebResources(type: Copy) {
+		description = "Copies all extras to the applet folder"
+		from "src/main/html"
+		into project.ext.outputDir
+		include "**/*.jnlp"
+		include "**/*.html"
+	}
+
+	task copyMainJar(type:Copy) {
+		from (jar)
+		into(webDir)
+	}	
+	
+	task copyDeps(type:Copy) {
+		description = "Copies all ABIS Web Sample libs to single folder"
+		
+		// Lib dependencies 
+		from configurations.compile {
+			include "neurotec-*.jar"
+			include "samples-utils.jar"
+		}		
+
+		from win32x86NativeLibs
+		from win64x64NativeLibs
+		from linuxx86NativeLibs
+		from linuxx64NativeLibs
+		into(webDir)
+	}	
+	
+	task copyFiles(dependsOn: [copyMainJar, copyDeps])
+
+	task signJars (dependsOn: copyFiles) {
+		 doLast {
+			new File(outputDir).mkdirs()
+			fileTree(webDir).include('*.jar').each { 
+				File file -> ant.signjar(
+					destDir: outputDir, 
+					jar: file, 
+					alias: 'test', 
+					digestalg: 'SHA1',
+					storetype: 'pkcs12', 
+					keystore: 'src/main/keystore/keystore.pfx', 
+					storepass: 'test'
+				)
+			}
+		}
+	
+	}
+	build.dependsOn shadowJar, signJars, copyWebResources
+}
+
+prepareResources {
+	from "${project.productRootDir}/Samples/Common/Resources"
+	include "*.png"
+	include "*.jpg"
+}
+
+dependencies {
+	compile ":neurotec-core"
+	compile ":neurotec-licensing"
+	compile ":neurotec-gui"
+	compile ":neurotec-media"
+	compile ":neurotec-media-processing"
+	compile ":neurotec-biometrics"
+	compile ":neurotec-biometrics-client"
+	compile ":neurotec-biometrics-gui"
+	compile ":neurotec-devices"
+	compile ":jna"
+	compile project.modules."simple-xml"
+	compile project(":samples-utils")
+	testCompile project.modules."junit"
+}
+
+apply from: "../../../Common/Java/buildCommon/run.gradle"
+

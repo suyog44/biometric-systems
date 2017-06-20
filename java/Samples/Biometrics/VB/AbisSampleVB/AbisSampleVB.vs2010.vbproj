@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3518002A-B3FA-4AA5-8C44-88D784335487}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Neurotec.Samples.Program</StartupObject>
+    <RootNamespace>Neurotec.Samples</RootNamespace>
+    <AssemblyName>AbisSampleVB</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>..\..\..\..\Resources\Neurotechnology.ico</ApplicationIcon>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\Bin\Win32_x86\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\Bin\Win64_x64\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\Bin\Win32_x86\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\Bin\Win64_x64\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Neurotec, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Biometrics.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics.Client, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Biometrics.Client.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics.Gui, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Biometrics.Gui.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Devices, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Devices.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Gui, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Gui.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Licensing, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Licensing.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Media, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Media.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Media.Processing, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Media.Processing.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\BusyIndicator.resx">
+      <DependentUpon>BusyIndicator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ChangeDatabaseDialog.resx">
+      <DependentUpon>ChangeDatabaseDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\CloseableTabControl.resx">
+      <DependentUpon>CloseableTabControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ConnectToDeviceForm.resx">
+      <DependentUpon>ConnectToDeviceForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\DatabaseOperationTab.resx">
+      <DependentUpon>DatabaseOperationTab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\GeneralizeProgressView.resx">
+      <DependentUpon>GeneralizeProgressView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\IcaoWarningView.resx">
+      <DependentUpon>IcaoWarningView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\LongActionDialog.resx">
+      <DependentUpon>LongActionDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\MatchingResultTab.resx">
+      <DependentUpon>MatchingResultTab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\MatchingResultView.resx">
+      <DependentUpon>MatchingResultView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\MediaPlayerControl.resx">
+      <DependentUpon>MediaPlayerControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\OpenSubjectDialog.resx">
+      <DependentUpon>OpenSubjectDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\SchemaBuilderForm.resx">
+      <DependentUpon>SchemaBuilderForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\StartTab.resx">
+      <DependentUpon>StartTab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\SubjectTreeControl.resx">
+      <DependentUpon>SubjectTreeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FacesSettingsPage.resx">
+      <DependentUpon>FacesSettingsPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FingersSettingsPage.resx">
+      <DependentUpon>FingersSettingsPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\GeneralSettingsPage.resx">
+      <DependentUpon>GeneralSettingsPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\IrisesSettingsPage.resx">
+      <DependentUpon>IrisesSettingsPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\PalmsSettingsPage.resx">
+      <DependentUpon>PalmsSettingsPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\SettingsPageBase.resx">
+      <DependentUpon>SettingsPageBase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\SettingsTab.resx">
+      <DependentUpon>SettingsTab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\VoicesSettingsPage.resx">
+      <DependentUpon>VoicesSettingsPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\BiometricPreviewPage.resx">
+      <DependentUpon>BiometricPreviewPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\CaptureFacePage.resx">
+      <DependentUpon>CaptureFacePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\CaptureFingersPage.resx">
+      <DependentUpon>CaptureFingersPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\CaptureIrisPage.resx">
+      <DependentUpon>CaptureIrisPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\CapturePalmsPage.resx">
+      <DependentUpon>CapturePalmsPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\CaptureVoicePage.resx">
+      <DependentUpon>CaptureVoicePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\EditPhrasesForm.resx">
+      <DependentUpon>EditPhrasesForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\EditSubjectTab.resx">
+      <DependentUpon>EditSubjectTab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\FingerSelector.resx">
+      <DependentUpon>FingerSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\PalmSelector.resx">
+      <DependentUpon>PalmSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\SubjectStartPage.resx">
+      <DependentUpon>SubjectStartPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\TenPrintCard\PhotoScannerForm.resx">
+      <DependentUpon>PhotoScannerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\TenPrintCard\TenPrintCardForm.resx">
+      <DependentUpon>TenPrintCardForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\TenPrintCard\TenPrintCardPrintForm.resx">
+      <DependentUpon>TenPrintCardPrintForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectEditor\VoiceView.resx">
+      <DependentUpon>VoiceView.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\BusyIndicator.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\ChangeDatabaseDialog.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ChangeDatabaseDialog.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\ChangeDatabaseDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\CloseableTabControl.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CloseableTabControl.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\CloseableTabControl.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\CloseableTabPage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CloseableTabPage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\CloseableTabPage.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\ConnectToDeviceForm.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ConnectToDeviceForm.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\ConnectToDeviceForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\DatabaseOperationTab.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DatabaseOperationTab.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\DatabaseOperationTab.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\EnrollDataSerializer.vb" />
+    <Compile Include="Common\GeneralizeProgressView.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GeneralizeProgressView.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\GeneralizeProgressView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\GetSubjectDialog.Designer.vb">
+      <DependentUpon>GetSubjectDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GetSubjectDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\IcaoWarningView.Designer.vb">
+      <DependentUpon>IcaoWarningView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\IcaoWarningView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\IPageController.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ITabController.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\LicensingTools.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\LongActionDialog.designer.vb">
+      <DependentUpon>LongActionDialog.vb</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\LongActionDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\MainForm.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\MatchingResultTab.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MatchingResultTab.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\MatchingResultTab.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\MatchingResultView.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MatchingResultView.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\MatchingResultView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\MediaPlayerControl.Designer.vb">
+      <DependentUpon>MediaPlayerControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\MediaPlayerControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\OpenSubjectDialog.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>OpenSubjectDialog.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\OpenSubjectDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\PageBase.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PageBase.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\PageBase.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\SchemaPropertyGridAdapter.vb" />
+    <Compile Include="Common\SchemaBuilderForm.Designer.vb">
+      <DependentUpon>SchemaBuilderForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SchemaBuilderForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\StartTab.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>StartTab.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\StartTab.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\SubjectTreeControl.designer.vb">
+      <DependentUpon>SubjectTreeControl.vb</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SubjectTreeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\SubjectUtils.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\TabPageContentBase.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TabPageContentBase.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\TabPageContentBase.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\Utilities.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Program.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Settings\FacesSettingsPage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FacesSettingsPage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Settings\FacesSettingsPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\FingersSettingsPage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FingersSettingsPage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Settings\FingersSettingsPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\GeneralSettingsPage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GeneralSettingsPage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Settings\GeneralSettingsPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\IrisesSettingsPage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IrisesSettingsPage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Settings\IrisesSettingsPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\PalmsSettingsPage.designer.vb">
+      <DependentUpon>PalmsSettingsPage.vb</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Settings\PalmsSettingsPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\SettingsManager.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Settings\SettingsPageBase.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SettingsPageBase.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Settings\SettingsPageBase.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\SettingsTab.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SettingsTab.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Settings\SettingsTab.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\VoicesSettingsPage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>VoicesSettingsPage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Settings\VoicesSettingsPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\BiometricPreviewPage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BiometricPreviewPage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubjectEditor\BiometricPreviewPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\CaptureFacePage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CaptureFacePage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubjectEditor\CaptureFacePage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\CaptureFingersPage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CaptureFingersPage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubjectEditor\CaptureFingersPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\CaptureIrisPage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CaptureIrisPage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubjectEditor\CaptureIrisPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\CapturePalmsPage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CapturePalmsPage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubjectEditor\CapturePalmsPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\CaptureVoicePage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CaptureVoicePage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubjectEditor\CaptureVoicePage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\EditPhrasesForm.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EditPhrasesForm.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubjectEditor\EditPhrasesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\EditSubjectTab.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EditSubjectTab.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubjectEditor\EditSubjectTab.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\FingerSelector.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FingerSelector.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubjectEditor\FingerSelector.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\PalmSelector.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PalmSelector.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubjectEditor\PalmSelector.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\SubjectStartPage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SubjectStartPage.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubjectEditor\SubjectStartPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\TenPrintCard\FramePainter.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\TenPrintCard\PhotoScannerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\TenPrintCard\TenPrintCardForm.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TenPrintCardForm.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubjectEditor\TenPrintCard\TenPrintCardForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\TenPrintCard\TenPrintCardPrintForm.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TenPrintCardPrintForm.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubjectEditor\TenPrintCard\TenPrintCardPrintForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\TenPrintCard\TwainDefs.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\TenPrintCard\TwainLib.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SubjectEditor\VoiceView.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>VoiceView.vb</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SubjectEditor\VoiceView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Resources\add.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\closeMouseOn.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\GoToNext.png" />
+    <None Include="Resources\GoToPrevious.png" />
+    <None Include="Resources\Hands.svg" />
+    <None Include="Resources\Help.png" />
+    <None Include="Resources\NewDocumentHS.png" />
+    <None Include="Resources\newSource.png" />
+    <None Include="Resources\openfolderHS.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\Repeat.png" />
+    <None Include="Resources\saveHS.png" />
+    <None Include="Resources\scanner.ico" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\TenPrintCard.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ApplicantCard.xml" />
+    <Content Include="Resources\CriminalCard.xml" />
+    <Content Include="Resources\Get.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

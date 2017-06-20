@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <!-- Common -->
+    <string name="app_name">Server Tutorials</string>
+    <string name="standard_iso">ISO</string>
+    <string name="standard_ansi">ANSI</string>
+
+    <!-- Licensing -->
+
+
+    <!-- GUI -->
+    <string name="action_settings">Settings</string>
+    <string name="commands">Commands</string>
+    <string name="command">Command</string>
+    <string name="template_type">Template Type</string>
+    <string name="template">Template</string>
+    <string name="query">Query</string>
+    <string name="execute">Execute</string>
+    <string name="status">Status</string>
+    <string name="info_type">Info Type</string>
+    <string name="id">ID</string>
+    <string name="task_type">Task Type</string>
+
+    <!-- Messages -->
+    <!-- Messages - Info -->
+    <string name="msg_processing">Processing</string>
+    <string name="msg_request_server_info">Requesting info about server</string>
+    <string name="msg_server_status">Server Status</string>
+    <string name="msg_node_info">Node Info</string>
+    <string name="msg_running_nodes">node(s) running</string>
+    <string name="msg_tasks_info">Tasks Info</string>
+    <string name="msg_tasks">task(s)</string>
+    <string name="msg_id">id</string>
+    <string name="msg_task_id">TaskID</string>
+    <string name="msg_progress">progress</string>
+    <string name="msg_completed_nodes">nodes completed</string>
+    <string name="msg_working_nodes">working nodes</string>
+    <string name="msg_node_id">node ID</string>
+    <string name="msg_node_progress">node progress</string>
+    <string name="msg_result_info">Result Info</string>
+    <string name="msg_completed_tasks">completed task(s)</string>
+    <string name="msg_ask_info">Asking info from</string>
+    <string name="msg_ask_node_info">Requesting info about nodes</string>
+    <string name="msg_ask_task_info">Requesting info about tasks</string>
+    <string name="msg_ask_result_info">Requesting info about results</string>
+    <string name="msg_start_sending_task">Start Sending Task</string>
+    <string name="msg_waiting_for_result">Waiting for results</string>
+    <string name="msg_score">Score</string>
+    <string name="msg_insert_task_started">Insert Task Started</string>
+    <string name="msg_delete_task_started">Delete Task Started</string>
+    <string name="msg_start_executing_task">Start executing Task</string>
+    <string name="msg_wait_for_result">Wait for Result</string>
+
+    <!-- Messages - Positive -->
+    <string name="msg_file_read_completed">File read completed</string>
+    <string name="msg_task_created">Task Created</string>
+    <string name="msg_send_task_finished">Sending task finished</string>
+    <string name="msg_get_task_started">Task started</string>
+    <string name="msg_found">Found</string>
+    <string name="msg_matched_with_id">Matched With ID</string>
+    <string name="msg_match_found">Match Found</string>
+    <string name="msg_task_succeeded">Task succeeded</string>
+    <string name="msg_task_partially_succeeded">Task Partially succeeded</string>
+
+    <!-- Messages - Negative -->
+    <string name="msg_invalid_ip">IP address Invalid</string>
+    <string name="msg_invalid_port">Port Number Invalid</string>
+    <string name="msg_invalid_id">Invalid id</string>
+    <string name="msg_invalid_selection">Invalid Selection</string>
+    <string name="msg_invalid_task_type">Invalid task type</string>
+    <string name="msg_unable_to_get_serverstatus">Unable to determine server status</string>
+    <string name="msg_failed_to_get_node_info">Failed to receive info about nodes</string>
+    <string name="msg_failed_to_get_tasks_info">Failed to receive tasks info</string>
+    <string name="msg_failed_to_get_results_info">Failed to receive results info</string>
+    <string name="msg_exception">Exception</string>
+    <string name="msg_no_files_selected">No files selected</string>
+    <string name="msg_templates_not_loaded">Could not load template from file</string>
+    <string name="msg_unable_to_send_task">Unable to send Task</string>
+    <string name="msg_get_taskid_failed">Failed to get task id</string>
+    <string name="msg_taskid_not_added">Task was not added</string>
+    <string name="msg_file_read_failed">Failed to read the File</string>
+    <string name="msg_not_found">Not found</string>
+    <string name="msg_task_aborted">Task aborted on server side</string>
+    <string name="msg_task_not_completed">Task Not Completed</string>
+    <string name="msg_no_matches_found">No Matches Found</string>
+    <string name="msg_failed_to_get_inserted_result">Failed to get insert results</string>
+    <string name="msg_failed_to_get_deleted_result">Failed to get delete results</string>
+    <string name="msg_task_failed">Task Failed</string>
+    <string name="msg_server_not_ready">Server is not yet ready</string>
+    <string name="msg_unknown_result">Unknown result</string>
+
+    <!-- Hints -->
+    <string name="msg_hint_server_admin">Server: Server IP \n\n
+        Port: Server port number\n\nCommands:\n
+        start - Start Cluster\nstop (id) - Stop\n(wait until finished task in progress) server (id is 0) or node (id is above or equal 4)
+        \nkill (id) - Instantly stop server (id is 0) or node (id is above or equal 4)\ninfo (info type="")     - Print info about cluster or nodes
+        \ndbupdate - DB update\ndbchanged (id)      - Notify server of changed templates in DB
+        \ndbflush - Flush the database\nstatus - Gets current server status</string>
+    <string name="msg_hint_server_status">Server: Server IP\n\nPort: Server port number</string>
+    <string name="msg_hint_send_task">"Server: Server IP \n\nPort: Server port number \n\nTemplate: Template file name.
+        \nif template file is not a NTemplate, Template type should be selected\n
+        \nQuery: Specify the query. If query is empty, default query is used"</string>
+    <string name="msg_hint_server_database">Server: Server IP\n\nPort:	Server port number\n\nTemplate:	Template file name.
+        \n(valid for insert to MegaMatcher Accelerator only)\nTask:	command to be performed (either insert or delete)
+        \nID:	id of template to be deleted or inserted (required)</string>
+
+    <!-- String Arrays -->
+    <string-array name="spinnerItems">
+        <item>INSERT</item>
+        <item>DELETE</item>
+    </string-array>
+    <string-array name="spinnerInfoType">
+        <item>tasks_short</item>
+        <item>tasks_complete</item>
+        <item>nodes</item>
+        <item>results</item>
+    </string-array>
+    <string-array name="spinnerCommands">
+        <item>start</item>
+        <item>stop</item>
+        <item>kill</item>
+        <item>info</item>
+        <item>dbupdate</item>
+        <item>dbchanged</item>
+        <item>dbflush</item>
+        <item>status</item>
+    </string-array>
+    <string-array name="templateTypes">
+        <item>ISO</item>
+        <item>ANSI</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Samples/Biometrics/Java/simple-fingers-sample" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/classify-finger" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-face-template-on-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-finger-template-on-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-iris-template-on-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-multiface-template" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-multifinger-template" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-palm-template-on-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-token-face-image" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-two-iris-template" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-voice-template-on-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/detect-facial-features" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/detect-facial-features-from-camera" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/detect-facial-features-from-image-stream" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/draw-minutiae-on-image" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-face-from-camera" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-face-from-image" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-face-from-image-stream" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-finger-from-image" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-finger-from-scanner" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-iris-from-image" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-iris-from-scanner" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-palm-from-image" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-to-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-to-sqlite-database" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-voice-from-audio-file" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-voice-from-microphone" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/evaluate-finger-quality" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/generalize-face" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/generalize-finger" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/generalize-palm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-face" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-finger" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-iris" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-on-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-on-sqlite-database" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-palm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-voice" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/match-multiple-faces" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/segment-fingers" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/segment-iris" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/show-template-content" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/verify" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-face" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-finger" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-iris" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-palm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-voice" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tutorials/Common/Java/utils" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="abis-sample" />
+        <module name="classify-finger" />
+        <module name="create-face-template-on-server" />
+        <module name="create-finger-template-on-server" />
+        <module name="create-iris-template-on-server" />
+        <module name="create-multiface-template" />
+        <module name="create-multifinger-template" />
+        <module name="create-palm-template-on-server" />
+        <module name="create-token-face-image" />
+        <module name="create-two-iris-template" />
+        <module name="create-voice-template-on-server" />
+        <module name="detect-facial-features" />
+        <module name="detect-facial-features-from-camera" />
+        <module name="detect-facial-features-from-image-stream" />
+        <module name="draw-minutiae-on-image" />
+        <module name="enroll-face-from-camera" />
+        <module name="enroll-face-from-image" />
+        <module name="enroll-face-from-image-stream" />
+        <module name="enroll-finger-from-image" />
+        <module name="enroll-finger-from-scanner" />
+        <module name="enroll-iris-from-image" />
+        <module name="enroll-iris-from-scanner" />
+        <module name="enroll-palm-from-image" />
+        <module name="enroll-to-server" />
+        <module name="enroll-to-sqlite-database" />
+        <module name="enroll-voice-from-audio-file" />
+        <module name="enroll-voice-from-microphone" />
+        <module name="enrollment-sample" />
+        <module name="evaluate-finger-quality" />
+        <module name="generalize-face" />
+        <module name="generalize-finger" />
+        <module name="generalize-palm" />
+        <module name="identify" />
+        <module name="identify-face" />
+        <module name="identify-finger" />
+        <module name="identify-iris" />
+        <module name="identify-on-server" />
+        <module name="identify-on-sqlite-database" />
+        <module name="identify-palm" />
+        <module name="identify-voice" />
+        <module name="latent-fingerprint-sample" />
+        <module name="match-multiple-faces" />
+        <module name="segment-fingers" />
+        <module name="segment-iris" />
+        <module name="server-sample" />
+        <module name="show-template-content" />
+        <module name="simple-faces-sample" />
+        <module name="simple-fingers-sample" />
+        <module name="simple-irises-sample" />
+        <module name="simple-voices-sample" />
+        <module name="template-conversion-sample" />
+        <module name="tutorials-utils" />
+        <module name="verify" />
+        <module name="verify-face" />
+        <module name="verify-finger" />
+        <module name="verify-iris" />
+        <module name="verify-palm" />
+        <module name="verify-voice" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="abis-sample" target="1.5" />
+      <module name="biometrics-samples" target="1.5" />
+      <module name="biometrics-tutorials" target="1.5" />
+      <module name="classify-finger" target="1.6" />
+      <module name="create-face-template-on-server" target="1.6" />
+      <module name="create-finger-template-on-server" target="1.6" />
+      <module name="create-iris-template-on-server" target="1.6" />
+      <module name="create-multiface-template" target="1.6" />
+      <module name="create-multifinger-template" target="1.6" />
+      <module name="create-palm-template-on-server" target="1.6" />
+      <module name="create-token-face-image" target="1.6" />
+      <module name="create-two-iris-template" target="1.6" />
+      <module name="create-voice-template-on-server" target="1.6" />
+      <module name="detect-facial-features" target="1.6" />
+      <module name="detect-facial-features-from-camera" target="1.6" />
+      <module name="detect-facial-features-from-image-stream" target="1.6" />
+      <module name="draw-minutiae-on-image" target="1.6" />
+      <module name="enroll-face-from-camera" target="1.6" />
+      <module name="enroll-face-from-image" target="1.6" />
+      <module name="enroll-face-from-image-stream" target="1.6" />
+      <module name="enroll-finger-from-image" target="1.6" />
+      <module name="enroll-finger-from-scanner" target="1.6" />
+      <module name="enroll-iris-from-image" target="1.6" />
+      <module name="enroll-iris-from-scanner" target="1.6" />
+      <module name="enroll-palm-from-image" target="1.6" />
+      <module name="enroll-to-server" target="1.6" />
+      <module name="enroll-to-sqlite-database" target="1.6" />
+      <module name="enroll-voice-from-audio-file" target="1.6" />
+      <module name="enroll-voice-from-microphone" target="1.6" />
+      <module name="enrollment-sample" target="1.5" />
+      <module name="evaluate-finger-quality" target="1.6" />
+      <module name="generalize-face" target="1.6" />
+      <module name="generalize-finger" target="1.6" />
+      <module name="generalize-palm" target="1.6" />
+      <module name="identify" target="1.6" />
+      <module name="identify-face" target="1.6" />
+      <module name="identify-finger" target="1.6" />
+      <module name="identify-iris" target="1.6" />
+      <module name="identify-on-server" target="1.6" />
+      <module name="identify-on-sqlite-database" target="1.6" />
+      <module name="identify-palm" target="1.6" />
+      <module name="identify-voice" target="1.6" />
+      <module name="latent-fingerprint-sample" target="1.5" />
+      <module name="match-multiple-faces" target="1.6" />
+      <module name="segment-fingers" target="1.6" />
+      <module name="segment-iris" target="1.6" />
+      <module name="server-sample" target="1.5" />
+      <module name="show-template-content" target="1.6" />
+      <module name="simple-faces-sample" target="1.5" />
+      <module name="simple-fingers-sample" target="1.6" />
+      <module name="simple-irises-sample" target="1.5" />
+      <module name="simple-voices-sample" target="1.5" />
+      <module name="template-conversion-sample" target="1.5" />
+      <module name="tutorials-utils" target="1.6" />
+      <module name="verify" target="1.6" />
+      <module name="verify-face" target="1.6" />
+      <module name="verify-finger" target="1.6" />
+      <module name="verify-iris" target="1.6" />
+      <module name="verify-palm" target="1.6" />
+      <module name="verify-voice" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

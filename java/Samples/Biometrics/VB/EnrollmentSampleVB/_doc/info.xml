@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<neu:sampleInfo xmlns:neu="http://www.neurotechnology.com/SampleExplorer">
+	<neu:title>Enrollment Sample VB.NET</neu:title>
+	<neu:description>
+Enrollment sample application demonstrates how to use SDK to collect fingerprints and other data during enrollment process.
+Sample shows how to do fingerprint segmentation, evaluate quality of fingerprints and do other enrollment procedures.
+	</neu:description>
+	<neu:tag>VB.NET</neu:tag>
+	<neu:tag>.NET</neu:tag>
+	<neu:tag>Server</neu:tag>
+	<neu:tag>Enrollment</neu:tag>
+	<neu:tag>Biometric Standards</neu:tag>
+	<neu:tag>Fingerprint scanners</neu:tag>
+	<neu:tag>Fingers</neu:tag>
+	<neu:tag>Cameras</neu:tag>
+	<neu:tag>Biometric Tools</neu:tag>
+	<neu:tag>Fingerprint location</neu:tag>
+	<neu:tag>Fingerprint quality</neu:tag>
+	<neu:tag>Fingerprint classification</neu:tag>
+	<neu:tag>MegaMatcher Accelerator</neu:tag>
+	<neu:tag>VeriFinger Standard SDK</neu:tag>
+	<neu:tag>VeriFinger Extended SDK</neu:tag>
+	<neu:tag>MegaMatcher Standard SDK</neu:tag>
+	<neu:tag>MegaMatcher Extended SDK</neu:tag>
+</neu:sampleInfo>

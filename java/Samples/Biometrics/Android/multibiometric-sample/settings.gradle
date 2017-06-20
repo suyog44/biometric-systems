@@ -1,0 +1,5 @@
+rootProject.name = 'multibiometric-sample-android'
+include 'samples-utils', 'neurotec-biometrics-gui-android', 'neurotec-licensing-gui-android'
+project(':samples-utils').projectDir = new File("../../../Common/Android/utils")
+project(':neurotec-licensing-gui-android').projectDir = new File("../../../Common/Android/neurotec-licensing-gui-android")
+project(':neurotec-biometrics-gui-android').projectDir = new File("../../../Common/Android/neurotec-biometrics-gui-android")

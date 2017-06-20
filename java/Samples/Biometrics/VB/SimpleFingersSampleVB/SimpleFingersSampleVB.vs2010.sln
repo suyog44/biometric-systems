@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SimpleFingersSampleVB", "SimpleFingersSampleVB.vs2010.vbproj", "{9EC53A7B-0EB6-4A5D-AAEB-D7422C7BA4C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32_x86 = Debug|Win32_x86
+		Debug|Win64_x64 = Debug|Win64_x64
+		Release|Win32_x86 = Release|Win32_x86
+		Release|Win64_x64 = Release|Win64_x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EC53A7B-0EB6-4A5D-AAEB-D7422C7BA4C2}.Debug|Win32_x86.ActiveCfg = Debug|x86
+		{9EC53A7B-0EB6-4A5D-AAEB-D7422C7BA4C2}.Debug|Win32_x86.Build.0 = Debug|x86
+		{9EC53A7B-0EB6-4A5D-AAEB-D7422C7BA4C2}.Debug|Win64_x64.ActiveCfg = Debug|x64
+		{9EC53A7B-0EB6-4A5D-AAEB-D7422C7BA4C2}.Debug|Win64_x64.Build.0 = Debug|x64
+		{9EC53A7B-0EB6-4A5D-AAEB-D7422C7BA4C2}.Release|Win32_x86.ActiveCfg = Release|x86
+		{9EC53A7B-0EB6-4A5D-AAEB-D7422C7BA4C2}.Release|Win32_x86.Build.0 = Release|x86
+		{9EC53A7B-0EB6-4A5D-AAEB-D7422C7BA4C2}.Release|Win64_x64.ActiveCfg = Release|x64
+		{9EC53A7B-0EB6-4A5D-AAEB-D7422C7BA4C2}.Release|Win64_x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

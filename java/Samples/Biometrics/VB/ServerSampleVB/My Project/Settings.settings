@@ -1,0 +1,78 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UseDB" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="TemplateDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\templates</Value>
+    </Setting>
+    <Setting Name="Server" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Table" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="User" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DBType" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="MMAServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="MMAPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">25452</Value>
+    </Setting>
+    <Setting Name="MMAUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Admin</Value>
+    </Setting>
+    <Setting Name="MMAPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Admin</Value>
+    </Setting>
+    <Setting Name="IDCollumn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dbid</Value>
+    </Setting>
+    <Setting Name="TemplateCollumn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">template</Value>
+    </Setting>
+    <Setting Name="MMAAdminPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">24932</Value>
+    </Setting>
+    <Setting Name="IsAccelerator" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MatchingThreshold" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FingersMaximalRotation" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FingersMatchingSpeed" Type="Neurotec.Biometrics.NMatchingSpeed" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FacesMatchingSpeed" Type="Neurotec.Biometrics.NMatchingSpeed" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="IrisesMatchingSpeed" Type="Neurotec.Biometrics.NMatchingSpeed" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="IrisesMaxRotation" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PalmsMatchingSpeed" Type="Neurotec.Biometrics.NMatchingSpeed" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PalmsMaximalRotation" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FingersMatchingMode" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

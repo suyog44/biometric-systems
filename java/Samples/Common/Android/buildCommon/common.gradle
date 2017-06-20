@@ -1,0 +1,137 @@
+project.ext.defaultArchitectures = "arm64-v8a,armeabi-v7a,x86"
+
+group = 'com.neurotec.samples'
+version = '9.0.0.0'
+
+// ============================================================================
+// Android
+// ============================================================================
+
+android {
+	compileSdkVersion 23
+	buildToolsVersion "23.0.3"
+
+	defaultConfig {
+		minSdkVersion 15
+		targetSdkVersion 19
+	}
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_6
+		targetCompatibility JavaVersion.VERSION_1_6
+	}
+	sourceSets {
+		main {
+			manifest.srcFile 'AndroidManifest.xml'
+			java.srcDirs = ['src/main/java']
+			resources.srcDirs = ['src/main/resources']
+			aidl.srcDirs = ['src']
+			renderscript.srcDirs = ['src']
+			res.srcDirs = ['res']
+			assets.srcDirs = ['assets']
+		}
+		androidTest.setRoot('src/main/tests')
+	}
+	packagingOptions {
+		exclude "META-INF/LE-832C0.RSA"
+		exclude "META-INF/LE-832C0.SF"
+	}
+	lintOptions {
+		abortOnError false
+	}
+}
+
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:deprecation"
+    }
+}
+
+// ============================================================================
+// Building
+// ============================================================================
+
+// Also delete all project related files from product bin directory.
+clean {
+	delete fileTree(dir: project.productBinAndroidDir , include: "${archivesBaseName}*.*")
+}
+
+// Copy data files images to project build directory so thay can be packed in apk.
+if (project.hasProperty("ndfFiles")) {
+	task prepareNdfFiles(type: Copy) {
+		from "${project.productBinDir}/Data"
+		includes = project.ndfFiles
+		rename { String fileName ->
+			fileName.replace('.ndf', '.ndf.jet')
+		}
+		into "${android.sourceSets.main.assets.srcDirs[0]}/data";
+	}
+	tasks.preBuild.dependsOn(prepareNdfFiles)
+}
+
+// Copy native libraries to project directory so thay can be packed in apk.
+if (project.hasProperty("nativeLibsInclude") || project.hasProperty("nativeLibsExclude")) {
+	if (!project.hasProperty("arch")) {
+		project.ext.arch = project.defaultArchitectures;
+	}
+	int counter = 1;
+	project.arch.split(',').each {
+		String srcDir = "${project.productLibAndroidDir}/${it}"
+		String dstDir = "${projectDir}/lib/${it}"
+		task "prepareNativeLibs$counter"(type: Copy) {
+			from srcDir
+			if (project.hasProperty("nativeLibsInclude")) {
+				for (String lib : project.nativeLibsInclude) {
+					include lib;
+				}
+			}
+			if (project.hasProperty("nativeLibsExclude")) {
+				for (String lib : project.nativeLibsExclude) {
+					exclude lib;
+				}
+			}
+			into dstDir
+		}
+		tasks.preBuild.dependsOn("prepareNativeLibs$counter");
+		counter++;
+	}
+}
+
+// Copy apk to product bin directory.
+task copyApk(type: Copy) {
+	from "${project.buildDir}/outputs/apk"
+	include "${project.archivesBaseName}-debug.apk"
+	rename "${project.archivesBaseName}-debug.apk", "${project.archivesBaseName}.apk"
+	into project.productBinAndroidDir
+}
+tasks.build.dependsOn(copyApk)
+
+task deleteTemporaryFiles(type: Delete) {
+	if (project.hasProperty("ndfFiles")) {
+		for (String file : project.ndfFiles) {
+			delete "${android.sourceSets.main.assets.srcDirs[0]}/data/${file}.jet";
+		}
+	}
+	delete "${projectDir}/lib"
+}
+tasks.copyApk.dependsOn(deleteTemporaryFiles)
+
+// ============================================================================
+// Dependencies
+// ============================================================================
+
+dependencies {
+
+	project.ext.modules = [
+		"android":			"com.google.android:android:4.1.1.4",
+		"acra":				"ch.acra:acra:4.5.0",
+	]
+
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+	flatDir {
+		dirs "${project.productBinAndroidDir}/"
+	}
+}

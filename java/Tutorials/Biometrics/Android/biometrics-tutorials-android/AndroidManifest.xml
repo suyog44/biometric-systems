@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		package="com.neurotec.tutorials.biometrics"
+		android:versionName="9.0.0.0"
+		android:versionCode="0" >
+
+		<uses-sdk
+				android:minSdkVersion="15"
+				android:targetSdkVersion="19" />
+
+		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+		<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+		<uses-permission android:name="android.permission.BLUETOOTH" />
+		<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+		<uses-permission android:name="android.permission.CAMERA" />
+		<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+		<uses-permission android:name="android.permission.INTERNET" />
+		<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+		<uses-permission android:name="android.permission.RECORD_AUDIO" />
+		<uses-permission android:name="android.permission.WAKE_LOCK" />
+		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+		<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+		<uses-feature android:name="android.hardware.camera" />
+
+		<application
+				tools:replace="android:name"
+				android:name="BiometricsTutorialsApp"
+				android:icon="@com.neurotec.tutorials.biometrics:drawable/ic_neurotechnology_logo"
+				android:label="@string/app_name"
+				android:theme="@android:style/Theme.Holo.Light">
+				<activity android:name=".BiometricsTutorials"
+					android:screenOrientation="portrait">
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="android.intent.category.DEFAULT" />
+								<category android:name="android.intent.category.LAUNCHER" />
+						</intent-filter>
+				</activity>
+				<activity android:name="com.neurotec.samples.app.DirectoryViewer"
+					android:screenOrientation="portrait">
+				</activity>
+				<activity
+						android:name=".ClassifyFinger"
+						android:label="Classify finger"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".CreateFaceTemplateOnServer"
+						android:label="Create face template on server"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".CreateFingerTemplateOnServer"
+						android:label="Create finger template on server"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".CreateIrisTemplateOnServer"
+						android:label="Create iris template on server"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".CreatePalmTemplateOnServer"
+						android:label="Create palm template on server"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".CreateVoiceTemplateOnServer"
+						android:label="Create voice template on server"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".CreateMultiFaceTemplate"
+						android:label="Create multiface template"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".CreateMultiFingerTemplate"
+						android:label="Create multifinger template"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".CreateTokenFaceImage"
+						android:label="Create token face image"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".CreateTwoIrisTemplate"
+						android:label="Create two iris template"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".DetectFacialFeatures"
+						android:label="Detect facial features"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".EnrollFaceFromCamera"
+						android:label="Enroll face from camera"
+						android:screenOrientation="landscape" >
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".EnrollFaceFromImage"
+						android:label="Enroll face from image"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".EnrollFingerFromImage"
+						android:label="Enroll finger from image"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".EnrollFingerFromScanner"
+						android:label="Enroll finger from scanner"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".EnrollIrisFromImage"
+						android:label="Enroll iris from image"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".EnrollPalmFromImage"
+						android:label="Enroll palm from image"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".EnrollToServer"
+						android:label="Enroll to server"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".EnrollVoiceFromAudioFile"
+						android:label="Enroll voice from audio file"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".EnrollVoiceFromMicrophone"
+						android:label="Enroll voice from microphone"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".GeneralizeFace"
+						android:label="Generalize face"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".GeneralizeFinger"
+						android:label="Generalize finger"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".GeneralizePalm"
+						android:label="Generalize palm"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".Identify"
+						android:label="Identify"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".IdentifyFace"
+						android:label="Identify face"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".IdentifyFinger"
+						android:label="Identify finger"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".IdentifyIris"
+						android:label="Identify iris"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".IdentifyOnServer"
+						android:label="Identify on server"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".IdentifyPalm"
+						android:label="Identify palm"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".IdentifyVoice"
+						android:label="Identify voice"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".MatchMultipleFaces"
+						android:label="Match multiple faces"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".Verify"
+						android:label="Verify"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".VerifyFace"
+						android:label="Verify face"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".VerifyFinger"
+						android:label="Verify finger"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".VerifyIris"
+						android:label="Verify iris"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".VerifyPalm"
+						android:label="Verify palm"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".VerifyVoice"
+						android:label="Verify voice"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".ShowTemplateContent"
+						android:label="Show template content"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".SegmentIris"
+						android:label="Segment iris"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".SegmentFingers"
+						android:label="Segment fingers"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".DetectFacialFeaturesFromCamera"
+						android:label="Detect facial features from camera"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".DetectFacialFeaturesFromImageStream"
+						android:label="Detect facial features from image stream"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+				<activity
+						android:name=".EnrollFaceFromImageStream"
+						android:label="Enroll face from image stream"
+						android:screenOrientation="portrait">>
+						<intent-filter>
+								<action android:name="android.intent.action.MAIN" />
+
+								<category android:name="com.neurotec.tutorials.biometrics.CATEGORY_NEUROTEC_TUTORIAL" />
+						</intent-filter>
+				</activity>
+
+		<!-- Licensing -->
+
+		<activity android:name="com.neurotec.licensing.gui.ActivationActivity"></activity>
+
+		</application>
+
+</manifest>

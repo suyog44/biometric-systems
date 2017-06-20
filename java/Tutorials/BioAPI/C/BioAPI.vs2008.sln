@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BioAPICapture", "BioAPICapture\BioAPICapture.vs2008.vcproj", "{7229C4B6-120A-4142-90B5-F486AAAF6102}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BioAPIIdentifyMatch", "BioAPIIdentifyMatch\BioAPIIdentifyMatch.vs2008.vcproj", "{B67E840A-2BDA-4E08-9542-F24F4F0EB36B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BioAPIInfo", "BioAPIInfo\BioAPIInfo.vs2008.vcproj", "{62CCFD69-A7DF-4964-9658-EF4AD3182993}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BioAPIVerifyMatch", "BioAPIVerifyMatch\BioAPIVerifyMatch.vs2008.vcproj", "{4C839F5A-36E2-49B1-A47C-9A33D455A184}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CreateBIRFromFCR", "CreateBIRFromFCR\CreateBIRFromFCR.vs2008.vcproj", "{82FA33EF-EBEE-4EFC-90FC-0CCA84F18038}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CreateBIRFromFIR", "CreateBIRFromFIR\CreateBIRFromFIR.vs2008.vcproj", "{B752F878-A9C9-43BD-9E75-2C4E6AB12217}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CreateBIRFromIIR", "CreateBIRFromIIR\CreateBIRFromIIR.vs2008.vcproj", "{D9A33554-765B-4BFD-A10D-21FC231ACC24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32_x86 = Debug|Win32_x86
+		Release|Win32_x86 = Release|Win32_x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7229C4B6-120A-4142-90B5-F486AAAF6102}.Debug|Win32_x86.ActiveCfg = Debug|Win32
+		{7229C4B6-120A-4142-90B5-F486AAAF6102}.Debug|Win32_x86.Build.0 = Debug|Win32
+		{7229C4B6-120A-4142-90B5-F486AAAF6102}.Release|Win32_x86.ActiveCfg = Release|Win32
+		{7229C4B6-120A-4142-90B5-F486AAAF6102}.Release|Win32_x86.Build.0 = Release|Win32
+		{B67E840A-2BDA-4E08-9542-F24F4F0EB36B}.Debug|Win32_x86.ActiveCfg = Debug|Win32
+		{B67E840A-2BDA-4E08-9542-F24F4F0EB36B}.Debug|Win32_x86.Build.0 = Debug|Win32
+		{B67E840A-2BDA-4E08-9542-F24F4F0EB36B}.Release|Win32_x86.ActiveCfg = Release|Win32
+		{B67E840A-2BDA-4E08-9542-F24F4F0EB36B}.Release|Win32_x86.Build.0 = Release|Win32
+		{62CCFD69-A7DF-4964-9658-EF4AD3182993}.Debug|Win32_x86.ActiveCfg = Debug|Win32
+		{62CCFD69-A7DF-4964-9658-EF4AD3182993}.Debug|Win32_x86.Build.0 = Debug|Win32
+		{62CCFD69-A7DF-4964-9658-EF4AD3182993}.Release|Win32_x86.ActiveCfg = Release|Win32
+		{62CCFD69-A7DF-4964-9658-EF4AD3182993}.Release|Win32_x86.Build.0 = Release|Win32
+		{4C839F5A-36E2-49B1-A47C-9A33D455A184}.Debug|Win32_x86.ActiveCfg = Debug|Win32
+		{4C839F5A-36E2-49B1-A47C-9A33D455A184}.Debug|Win32_x86.Build.0 = Debug|Win32
+		{4C839F5A-36E2-49B1-A47C-9A33D455A184}.Release|Win32_x86.ActiveCfg = Release|Win32
+		{4C839F5A-36E2-49B1-A47C-9A33D455A184}.Release|Win32_x86.Build.0 = Release|Win32
+		{82FA33EF-EBEE-4EFC-90FC-0CCA84F18038}.Debug|Win32_x86.ActiveCfg = Debug|Win32
+		{82FA33EF-EBEE-4EFC-90FC-0CCA84F18038}.Debug|Win32_x86.Build.0 = Debug|Win32
+		{82FA33EF-EBEE-4EFC-90FC-0CCA84F18038}.Release|Win32_x86.ActiveCfg = Release|Win32
+		{82FA33EF-EBEE-4EFC-90FC-0CCA84F18038}.Release|Win32_x86.Build.0 = Release|Win32
+		{B752F878-A9C9-43BD-9E75-2C4E6AB12217}.Debug|Win32_x86.ActiveCfg = Debug|Win32
+		{B752F878-A9C9-43BD-9E75-2C4E6AB12217}.Debug|Win32_x86.Build.0 = Debug|Win32
+		{B752F878-A9C9-43BD-9E75-2C4E6AB12217}.Release|Win32_x86.ActiveCfg = Release|Win32
+		{B752F878-A9C9-43BD-9E75-2C4E6AB12217}.Release|Win32_x86.Build.0 = Release|Win32
+		{D9A33554-765B-4BFD-A10D-21FC231ACC24}.Debug|Win32_x86.ActiveCfg = Debug|Win32
+		{D9A33554-765B-4BFD-A10D-21FC231ACC24}.Debug|Win32_x86.Build.0 = Debug|Win32
+		{D9A33554-765B-4BFD-A10D-21FC231ACC24}.Release|Win32_x86.ActiveCfg = Release|Win32
+		{D9A33554-765B-4BFD-A10D-21FC231ACC24}.Release|Win32_x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

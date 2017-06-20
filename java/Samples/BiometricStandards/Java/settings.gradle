@@ -1,0 +1,8 @@
+include \
+'antemplate-sample', \
+'fcrecord-sample', \
+'firecord-sample', \
+'fmrecord-sample', \
+'iirecord-sample', \
+'samples-utils';
+project(':samples-utils').projectDir = new File("../../Common/Java/utils")

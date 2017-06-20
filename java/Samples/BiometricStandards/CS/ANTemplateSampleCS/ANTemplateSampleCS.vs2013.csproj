@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3B671E72-0465-4E26-9603-BEA66EA391B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <StartupObject>Neurotec.Samples.Program</StartupObject>
+    <RootNamespace>Neurotec.Samples</RootNamespace>
+    <AssemblyName>ANTemplateSampleCS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>..\..\..\..\Resources\Neurotechnology.ico</ApplicationIcon>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Bin\Win32_x86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Bin\Win64_x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Bin\Win32_x86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Bin\Win64_x64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Neurotec, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Biometrics.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics.Gui, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Biometrics.Gui.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Gui, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Gui.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Licensing, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Licensing.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Neurotec.Media, Version=9.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Media.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CharsetForm.resx">
+      <DependentUpon>CharsetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateANPenVectorArrayForm.resx">
+      <DependentUpon>CreateANPenVectorArrayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FieldForm.resx">
+      <DependentUpon>FieldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FieldNumberForm.resx">
+      <DependentUpon>FieldNumberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemForm.resx">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANImageBinaryRecordCreateForm.resx">
+      <DependentUpon>ANImageBinaryRecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANRecordCreateForm.resx">
+      <DependentUpon>ANRecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType10RecordCreateForm.resx">
+      <DependentUpon>ANType10RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType13RecordCreateForm.resx">
+      <DependentUpon>ANType13RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType14RecordCreateForm.resx">
+      <DependentUpon>ANType14RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType15RecordCreateForm.resx">
+      <DependentUpon>ANType15RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType16RecordCreateForm.resx">
+      <DependentUpon>ANType16RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType17RecordCreateForm.resx">
+      <DependentUpon>ANType17RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType1RecordCreateForm.resx">
+      <DependentUpon>ANType1RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType3RecordCreateForm.resx">
+      <DependentUpon>ANType3RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType4RecordCreateForm.resx">
+      <DependentUpon>ANType4RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType5RecordCreateForm.resx">
+      <DependentUpon>ANType5RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType6RecordCreateForm.resx">
+      <DependentUpon>ANType6RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType7RecordCreateForm.resx">
+      <DependentUpon>ANType7RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType8RecordCreateForm.resx">
+      <DependentUpon>ANType8RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType99RecordCreateForm.resx">
+      <DependentUpon>ANType99RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ANType9RecordCreateForm.resx">
+      <DependentUpon>ANType9RecordCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ImageLoaderControl.resx">
+      <DependentUpon>ImageLoaderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordCreateForms\ResolutionEditBox.resx">
+      <DependentUpon>ResolutionEditBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordTypeForm.resx">
+      <DependentUpon>RecordTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValidateForm.resx">
+      <DependentUpon>ValidateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VersionForm.resx">
+      <DependentUpon>VersionForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CharsetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharsetForm.designer.cs">
+      <DependentUpon>CharsetForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateANPenVectorArrayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateANPenVectorArrayForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CreateANPenVectorArrayForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FieldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FieldForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FieldForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FieldNumberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FieldNumberForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FieldNumberForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ItemForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANImageBinaryRecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANImageBinaryRecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANImageBinaryRecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANRecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANRecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANRecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType10RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType10RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType10RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType13RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType13RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType13RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType14RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType14RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType14RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType15RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType15RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType15RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType16RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType16RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType16RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType17RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType17RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType17RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType1RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType1RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType1RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType3RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType3RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType3RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType4RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType4RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType4RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType5RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType5RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType5RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType6RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType6RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType6RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType7RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType7RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType7RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType8RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType8RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType8RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType99RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType99RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType99RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType9RecordCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ANType9RecordCreateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ANType9RecordCreateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ImageLoaderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ImageLoaderControl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ImageLoaderControl.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordCreateForms\ResolutionEditBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RecordCreateForms\ResolutionEditBox.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ResolutionEditBox.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecordTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordTypeForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RecordTypeForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ResolutionUnits.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValidateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ValidateForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ValidateForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="VersionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VersionForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>VersionForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\NewDocumentHS.png" />
+    <Content Include="Resources\openHS.png" />
+    <Content Include="Resources\saveHS.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

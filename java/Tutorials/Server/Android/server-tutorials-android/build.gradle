@@ -1,0 +1,37 @@
+buildscript {
+	System.properties['com.android.build.gradle.overrideVersionCheck'] = 'true'
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:2.2.0'
+	}
+}
+
+description = "Server Tutorials Android"
+project.ext.archivesBaseName = "server-tutorials"
+
+project.ext.nativeLibsInclude = ["**/libjnidispatch.so",
+								 "**/libNCore.so",
+								 "**/libNGui.so",
+								 "**/libNLicensing.so",
+								 "**/libNService.so",
+								 "**/libNMedia.so",
+								 "**/libNMediaProc.so",
+								 "**/libNBiometrics.so",
+								 "**/libNCluster.so",
+								 "**/libNClusterJni.so"]
+
+apply from: "../../../../Samples/Common/Android/buildCommon/applicationCommon.gradle"
+apply from: "../../../../Samples/Common/Android/buildCommon/common.gradle"
+
+project.group = "com.neurotec.tutorials"
+
+dependencies {
+	provided project.modules."android"
+
+	compile ":neurotec-media-processing-android"
+	compile ":neurotec-biometrics-android"
+	compile ":neurotec-cluster-android"
+	compile project(":tutorials-utils")
+}

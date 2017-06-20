@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<neu:sampleInfo xmlns:neu="http://www.neurotechnology.com/SampleExplorer">
+	<neu:title>Fingers Sample C++</neu:title>
+	<neu:description>
+The C++ Fingers sample demonstrates how to use enroll and/or identify faces
+ in images retrieved from a file or a fingerprint scanner. This sample application has
+three modes:[br/]
+[b]Enrollment[/b] - Fingerprint can be enrolled from image
+    or using fingerprint scanner.[br/]
+  [b]Verification[/b] - Using this option one fingerprint
+    can be verified against other (1:1 matching).[br/]
+  [b]Identification[/b] - Using this option fingerprint is
+    identified against internal database. (1:N matching).[br/]
+Sample uses wxWidgets framework.
+	</neu:description>
+	<neu:tag>C++</neu:tag>
+	<neu:tag>WxWidgets</neu:tag>
+	<neu:tag>Fingers</neu:tag>
+	<neu:tag>Finegrprint scanners</neu:tag>
+	<neu:tag>Identification</neu:tag>
+	<neu:tag>Verification</neu:tag>
+	<neu:tag>Generalization</neu:tag>
+	<neu:tag>Enrollment</neu:tag>
+	<neu:tag>VeriFinger Standard SDK</neu:tag>
+	<neu:tag>VeriFinger Extended SDK</neu:tag>
+	<neu:tag>MegaMatcher Standard SDK</neu:tag>
+	<neu:tag>MegaMatcher Extended SDK</neu:tag>
+</neu:sampleInfo>

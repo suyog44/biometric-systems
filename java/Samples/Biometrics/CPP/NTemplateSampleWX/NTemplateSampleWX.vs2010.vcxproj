@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>NTemplateSampleWX</ProjectName>
+    <ProjectGuid>{10C4FAC9-B28F-4287-A9EB-280BCED4E1BA}</ProjectGuid>
+    <RootNamespace>NTemplateSampleWX</RootNamespace>
+    <Keyword />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\Bin\Win32_x86\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Obj\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\Bin\Win64_x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Obj\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\Bin\Win32_x86\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Obj\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\Bin\Win64_x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Obj\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/Zm500 /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\Common\C;..\..\..\Common\CPP;..\..\..\..\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>wxmsw30ud_propgrid.lib;wxmsw30ud_core.lib;wxbase30ud.lib;comctl32.lib;gdiplus.lib;rpcrt4.lib;NCore.dll.lib;NMedia.dll.lib;NMediaProc.dll.lib;NBiometrics.dll.lib;NBiometricClient.dll.lib;NLicensing.dll.lib;NDevices.dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\Bin\Win32_x86\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\Lib\Win32_x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>/Zm500 /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\Common\C;..\..\..\Common\CPP;..\..\..\..\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>wxmsw30ud_propgrid.lib;wxmsw30ud_core.lib;wxbase30ud.lib;comctl32.lib;gdiplus.lib;rpcrt4.lib;NCore.dll.lib;NMedia.dll.lib;NMediaProc.dll.lib;NBiometrics.dll.lib;NBiometricClient.dll.lib;NLicensing.dll.lib;NDevices.dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\Bin\Win64_x64\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\Lib\Win64_x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/Zm500 /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\Common\C;..\..\..\Common\CPP;..\..\..\..\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>wxmsw30u_propgrid.lib;wxmsw30u_core.lib;wxbase30u.lib;comctl32.lib;gdiplus.lib;rpcrt4.lib;NCore.dll.lib;NMedia.dll.lib;NMediaProc.dll.lib;NBiometrics.dll.lib;NBiometricClient.dll.lib;NLicensing.dll.lib;NDevices.dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\Bin\Win32_x86\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\Lib\Win32_x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>/Zm500 /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\Common\C;..\..\..\Common\CPP;..\..\..\..\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>wxmsw30u_propgrid.lib;wxmsw30u_core.lib;wxbase30u.lib;comctl32.lib;gdiplus.lib;rpcrt4.lib;NCore.dll.lib;NMedia.dll.lib;NMediaProc.dll.lib;NBiometrics.dll.lib;NBiometricClient.dll.lib;NLicensing.dll.lib;NDevices.dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\Bin\Win64_x64\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\Lib\Win64_x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TemplateSample.cpp" />
+    <ClCompile Include="TemplateSampleForm.cpp" />
+    <ClCompile Include="CollectionEditor\CollectionBaseAdapter.cpp" />
+    <ClCompile Include="CollectionEditor\CollectionEditorDialog.cpp" />
+    <ClCompile Include="CollectionEditor\CoreCollectionAdapter.cpp" />
+    <ClCompile Include="CollectionEditor\DeltaCollectionAdapter.cpp" />
+    <ClCompile Include="CollectionEditor\DoubleCoreCollectionAdapter.cpp" />
+    <ClCompile Include="CollectionEditor\FaceCollectionAdapter.cpp" />
+    <ClCompile Include="CollectionEditor\FingerCollectionAdapter.cpp" />
+    <ClCompile Include="CollectionEditor\IrisCollectionAdapter.cpp" />
+    <ClCompile Include="CollectionEditor\MinutiaeCollectionAdapter.cpp" />
+    <ClCompile Include="CollectionEditor\MinutiaeNeighborsCollectionAdapter.cpp" />
+    <ClCompile Include="CollectionEditor\MultiChoiceProperty.cpp" />
+    <ClCompile Include="CollectionEditor\NCollectionProperty.cpp" />
+    <ClCompile Include="CollectionEditor\PalmCollectionAdapter.cpp" />
+    <ClCompile Include="CollectionEditor\PossiblePositionCollectionAdapter.cpp" />
+    <ClCompile Include="CollectionEditor\VoiceCollectionAdapter.cpp" />
+    <ClCompile Include="Controllers\TemplateSampleController.cpp" />
+    <ClCompile Include="MainUIComponentsHelpers\TemplateSamplePropertyGrid.cpp" />
+    <ClCompile Include="MainUIComponentsHelpers\TemplateSampleTreeCtrl.cpp" />
+    <ClCompile Include="MainUIComponentsHelpers\TreeNodeData.cpp" />
+    <ClCompile Include="RecordAddDialogs\NFingerRecordDlg.cpp" />
+    <ClCompile Include="RecordAddDialogs\NIrisRecordDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NTCommonStrings.h" />
+    <ClInclude Include="NTemplateSampleWXVersionInfo.h" />
+    <ClInclude Include="Precompiled.h" />
+    <ClInclude Include="TemplateSample.h" />
+    <ClInclude Include="TemplateSampleForm.h" />
+    <ClInclude Include="CollectionEditor\CollectionBaseAdapter.h" />
+    <ClInclude Include="CollectionEditor\CollectionEditorDialog.h" />
+    <ClInclude Include="CollectionEditor\CoreCollectionAdapter.h" />
+    <ClInclude Include="CollectionEditor\DeltaCollectionAdapter.h" />
+    <ClInclude Include="CollectionEditor\DoubleCoreCollectionAdapter.h" />
+    <ClInclude Include="CollectionEditor\FaceCollectionAdapter.h" />
+    <ClInclude Include="CollectionEditor\FingerCollectionAdapter.h" />
+    <ClInclude Include="CollectionEditor\IrisCollectionAdapter.h" />
+    <ClInclude Include="CollectionEditor\MinutiaeCollectionAdapter.h" />
+    <ClInclude Include="CollectionEditor\MinutiaeNeighborsCollectionAdapter.h" />
+    <ClInclude Include="CollectionEditor\MultiChoiceProperty.h" />
+    <ClInclude Include="CollectionEditor\NCollectionProperty.h" />
+    <ClInclude Include="CollectionEditor\PalmCollectionAdapter.h" />
+    <ClInclude Include="CollectionEditor\PossiblePositionCollectionAdapter.h" />
+    <ClInclude Include="CollectionEditor\VoiceCollectionAdapter.h" />
+    <ClInclude Include="Controllers\TemplateSampleController.h" />
+    <ClInclude Include="MainUIComponentsHelpers\TemplateSamplePropertyGrid.h" />
+    <ClInclude Include="MainUIComponentsHelpers\TemplateSampleTreeCtrl.h" />
+    <ClInclude Include="MainUIComponentsHelpers\TreeNodeData.h" />
+    <ClInclude Include="RecordAddDialogs\NFingerRecordDlg.h" />
+    <ClInclude Include="RecordAddDialogs\NIrisRecordDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NTemplateSampleWX.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.xpm" />
+    <None Include="Resources\Up.xpm" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuController">
+            <connections>
+                <outlet property="databaseButton" destination="URB-J5-bKO" id="2ju-ZW-tri"/>
+                <outlet property="eyeButton" destination="hEN-6w-Yug" id="Ac9-aM-YB2"/>
+                <outlet property="faceButton" destination="HuJ-Hz-ppB" id="vJr-IU-jUt"/>
+                <outlet property="fingerButton" destination="MdV-48-nF5" id="b3b-d6-xLm"/>
+                <outlet property="infoButton" destination="fSL-zX-ebC" id="lHu-Ob-LSJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="voiceButton" destination="Mlc-fT-YsK" id="Kll-wJ-6YP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bA1-Lv-gA9" userLabel="container">
+                    <rect key="frame" x="0.0" y="80" width="320" height="344"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdV-48-nF5" userLabel="fingerButton">
+                            <rect key="frame" x="15" y="0.0" width="140" height="140"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="5Uz-WI-f8X"/>
+                                <constraint firstAttribute="height" constant="140" id="yZG-hm-pAv"/>
+                            </constraints>
+                            <state key="normal" image="menu_finger.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="fingerClicked:" destination="-1" eventType="touchUpInside" id="hIW-PB-M4o"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuJ-Hz-ppB" userLabel="faceButton">
+                            <rect key="frame" x="165" y="0.0" width="140" height="140"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="140" id="1yh-Se-NcF"/>
+                                <constraint firstAttribute="width" constant="140" id="Alx-xs-5IO"/>
+                            </constraints>
+                            <state key="normal" image="menu_face.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="faceClicked:" destination="-1" eventType="touchUpInside" id="1gH-G6-tul"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEN-6w-Yug" userLabel="eyeButton">
+                            <rect key="frame" x="15" y="150" width="140" height="140"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="140" id="jc6-xf-mVo"/>
+                                <constraint firstAttribute="width" constant="140" id="nJ1-tg-YZA"/>
+                            </constraints>
+                            <state key="normal" image="menu_eye.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="eyeClicked:" destination="-1" eventType="touchUpInside" id="INQ-KU-AzE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mlc-fT-YsK" userLabel="voiceButton">
+                            <rect key="frame" x="165" y="150" width="140" height="140"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="AJt-O1-506"/>
+                                <constraint firstAttribute="height" constant="140" id="kFE-bR-z0a"/>
+                            </constraints>
+                            <state key="normal" image="menu_voice.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="voiceClicked:" destination="-1" eventType="touchUpInside" id="g0Z-T1-6Hs"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URB-J5-bKO" userLabel="databaseButton">
+                            <rect key="frame" x="15" y="300" width="140" height="44"/>
+                            <color key="backgroundColor" red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="M5a-Ey-Pmp"/>
+                                <constraint firstAttribute="height" constant="44" id="n90-22-rgl"/>
+                            </constraints>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="databaseClicked:" destination="-1" eventType="touchUpInside" id="WJQ-n6-DKm"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSL-zX-ebC" userLabel="infoButton">
+                            <rect key="frame" x="165" y="300" width="140" height="44"/>
+                            <color key="backgroundColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="GFY-xV-3sX"/>
+                                <constraint firstAttribute="width" constant="140" id="uVl-ai-wSv"/>
+                            </constraints>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="infoClicked:" destination="-1" eventType="touchUpInside" id="eR7-K9-1qF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Mlc-fT-YsK" firstAttribute="top" secondItem="HuJ-Hz-ppB" secondAttribute="bottom" constant="10" id="77p-Eb-yJR"/>
+                        <constraint firstItem="HuJ-Hz-ppB" firstAttribute="top" secondItem="bA1-Lv-gA9" secondAttribute="top" id="7gt-6A-Bqo"/>
+                        <constraint firstItem="fSL-zX-ebC" firstAttribute="leading" secondItem="URB-J5-bKO" secondAttribute="trailing" constant="10" id="8WY-5d-rgd"/>
+                        <constraint firstItem="hEN-6w-Yug" firstAttribute="leading" secondItem="bA1-Lv-gA9" secondAttribute="leading" constant="15" id="A3D-z5-onk"/>
+                        <constraint firstAttribute="height" constant="344" id="ClZ-BX-sca"/>
+                        <constraint firstItem="URB-J5-bKO" firstAttribute="leading" secondItem="bA1-Lv-gA9" secondAttribute="leading" constant="15" id="Luj-9k-yta"/>
+                        <constraint firstItem="hEN-6w-Yug" firstAttribute="top" secondItem="MdV-48-nF5" secondAttribute="bottom" constant="10" id="M2q-8N-msX"/>
+                        <constraint firstItem="MdV-48-nF5" firstAttribute="top" secondItem="bA1-Lv-gA9" secondAttribute="top" id="abi-Dr-Gnb"/>
+                        <constraint firstItem="MdV-48-nF5" firstAttribute="leading" secondItem="bA1-Lv-gA9" secondAttribute="leading" constant="15" id="dUg-Yg-6qo"/>
+                        <constraint firstItem="Mlc-fT-YsK" firstAttribute="leading" secondItem="hEN-6w-Yug" secondAttribute="trailing" constant="10" id="dul-27-K2x"/>
+                        <constraint firstItem="fSL-zX-ebC" firstAttribute="top" secondItem="Mlc-fT-YsK" secondAttribute="bottom" constant="10" id="jad-oT-Pn1"/>
+                        <constraint firstItem="URB-J5-bKO" firstAttribute="top" secondItem="hEN-6w-Yug" secondAttribute="bottom" constant="10" id="pyZ-rB-NV4"/>
+                        <constraint firstItem="HuJ-Hz-ppB" firstAttribute="leading" secondItem="MdV-48-nF5" secondAttribute="trailing" constant="10" id="r8a-Od-kSb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="bA1-Lv-gA9" secondAttribute="trailing" id="Ie4-Kx-MSO"/>
+                <constraint firstItem="bA1-Lv-gA9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="amA-9l-c96"/>
+                <constraint firstAttribute="centerY" secondItem="bA1-Lv-gA9" secondAttribute="centerY" id="vR3-nW-Yjp"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="menu_eye.png" width="140" height="140"/>
+        <image name="menu_face.png" width="140" height="140"/>
+        <image name="menu_finger.png" width="140" height="140"/>
+        <image name="menu_voice.png" width="140" height="140"/>
+    </resources>
+</document>

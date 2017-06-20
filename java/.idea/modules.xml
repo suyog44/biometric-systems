@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/abis-sample/abis-sample.iml" filepath="$PROJECT_DIR$/abis-sample/abis-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/biometrics-samples.iml" filepath="$PROJECT_DIR$/biometrics-samples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/biometrics-tutorials.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/biometrics-tutorials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/classify-finger/classify-finger.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/classify-finger/classify-finger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-face-template-on-server/create-face-template-on-server.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/create-face-template-on-server/create-face-template-on-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-finger-template-on-server/create-finger-template-on-server.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/create-finger-template-on-server/create-finger-template-on-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-iris-template-on-server/create-iris-template-on-server.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/create-iris-template-on-server/create-iris-template-on-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-multiface-template/create-multiface-template.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/create-multiface-template/create-multiface-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-multifinger-template/create-multifinger-template.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/create-multifinger-template/create-multifinger-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-palm-template-on-server/create-palm-template-on-server.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/create-palm-template-on-server/create-palm-template-on-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-token-face-image/create-token-face-image.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/create-token-face-image/create-token-face-image.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-two-iris-template/create-two-iris-template.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/create-two-iris-template/create-two-iris-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/create-voice-template-on-server/create-voice-template-on-server.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/create-voice-template-on-server/create-voice-template-on-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/detect-facial-features/detect-facial-features.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/detect-facial-features/detect-facial-features.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/detect-facial-features-from-camera/detect-facial-features-from-camera.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/detect-facial-features-from-camera/detect-facial-features-from-camera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/detect-facial-features-from-image-stream/detect-facial-features-from-image-stream.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/detect-facial-features-from-image-stream/detect-facial-features-from-image-stream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/draw-minutiae-on-image/draw-minutiae-on-image.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/draw-minutiae-on-image/draw-minutiae-on-image.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-face-from-camera/enroll-face-from-camera.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-face-from-camera/enroll-face-from-camera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-face-from-image/enroll-face-from-image.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-face-from-image/enroll-face-from-image.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-face-from-image-stream/enroll-face-from-image-stream.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-face-from-image-stream/enroll-face-from-image-stream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-finger-from-image/enroll-finger-from-image.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-finger-from-image/enroll-finger-from-image.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-finger-from-scanner/enroll-finger-from-scanner.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-finger-from-scanner/enroll-finger-from-scanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-iris-from-image/enroll-iris-from-image.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-iris-from-image/enroll-iris-from-image.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-iris-from-scanner/enroll-iris-from-scanner.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-iris-from-scanner/enroll-iris-from-scanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-palm-from-image/enroll-palm-from-image.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-palm-from-image/enroll-palm-from-image.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-to-server/enroll-to-server.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-to-server/enroll-to-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-to-sqlite-database/enroll-to-sqlite-database.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-to-sqlite-database/enroll-to-sqlite-database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-voice-from-audio-file/enroll-voice-from-audio-file.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-voice-from-audio-file/enroll-voice-from-audio-file.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-voice-from-microphone/enroll-voice-from-microphone.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/enroll-voice-from-microphone/enroll-voice-from-microphone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enrollment-sample/enrollment-sample.iml" filepath="$PROJECT_DIR$/enrollment-sample/enrollment-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/evaluate-finger-quality/evaluate-finger-quality.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/evaluate-finger-quality/evaluate-finger-quality.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/generalize-face/generalize-face.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/generalize-face/generalize-face.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/generalize-finger/generalize-finger.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/generalize-finger/generalize-finger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/generalize-palm/generalize-palm.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/generalize-palm/generalize-palm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify/identify.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/identify/identify.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-face/identify-face.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-face/identify-face.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-finger/identify-finger.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-finger/identify-finger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-iris/identify-iris.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-iris/identify-iris.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-on-server/identify-on-server.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-on-server/identify-on-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-on-sqlite-database/identify-on-sqlite-database.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-on-sqlite-database/identify-on-sqlite-database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-palm/identify-palm.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-palm/identify-palm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-voice/identify-voice.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/identify-voice/identify-voice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/latent-fingerprint-sample/latent-fingerprint-sample.iml" filepath="$PROJECT_DIR$/latent-fingerprint-sample/latent-fingerprint-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/match-multiple-faces/match-multiple-faces.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/match-multiple-faces/match-multiple-faces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/segment-fingers/segment-fingers.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/segment-fingers/segment-fingers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/segment-iris/segment-iris.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/segment-iris/segment-iris.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-sample/server-sample.iml" filepath="$PROJECT_DIR$/server-sample/server-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/show-template-content/show-template-content.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/show-template-content/show-template-content.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simple-faces-sample/simple-faces-sample.iml" filepath="$PROJECT_DIR$/simple-faces-sample/simple-faces-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Samples/Biometrics/Java/simple-fingers-sample/simple-fingers-sample.iml" filepath="$PROJECT_DIR$/Samples/Biometrics/Java/simple-fingers-sample/simple-fingers-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simple-irises-sample/simple-irises-sample.iml" filepath="$PROJECT_DIR$/simple-irises-sample/simple-irises-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simple-voices-sample/simple-voices-sample.iml" filepath="$PROJECT_DIR$/simple-voices-sample/simple-voices-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/template-conversion-sample/template-conversion-sample.iml" filepath="$PROJECT_DIR$/template-conversion-sample/template-conversion-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Common/Java/utils/tutorials-utils.iml" filepath="$PROJECT_DIR$/Tutorials/Common/Java/utils/tutorials-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/verify/verify.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/verify/verify.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-face/verify-face.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-face/verify-face.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-finger/verify-finger.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-finger/verify-finger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-iris/verify-iris.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-iris/verify-iris.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-palm/verify-palm.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-palm/verify-palm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-voice/verify-voice.iml" filepath="$PROJECT_DIR$/Tutorials/Biometrics/Java/verify-voice/verify-voice.iml" />
+    </modules>
+  </component>
+</project>

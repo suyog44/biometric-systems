@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical" >
+
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1" >
+
+			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:orientation="vertical" >
+
+				<fragment
+						android:id="@+id/fragment_irisscanner"
+						android:name="com.neurotec.samples.devices.view.IrisScannerFragment"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						tools:layout="@layout/fragment_fscanner" />
+
+				<fragment
+						android:id="@+id/fragment_biometric_device"
+						android:name="com.neurotec.samples.devices.view.BiometricDeviceFragment"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						tools:layout="@layout/fragment_biometric_device" />
+
+			</LinearLayout>
+
+			<LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:orientation="vertical" >
+
+                  <fragment
+                          android:id="@+id/fragment_image"
+                          android:name="com.neurotec.samples.devices.view.ImageFragment"
+                          android:layout_width="match_parent"
+                          android:layout_height="0dp"
+                          android:layout_weight="1"
+                          tools:layout="@layout/fragment_image" />
+                  <fragment
+                          android:id="@+id/fragment_status"
+                          android:name="com.neurotec.samples.devices.view.StatusFragment"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          tools:layout="@layout/fragment_status" />
+              </LinearLayout>
+		</LinearLayout>
+
+		<fragment
+				android:id="@+id/fragment_capture_control"
+				android:name="com.neurotec.samples.devices.view.CaptureControlFragment"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				tools:layout="@layout/capture_buttons" />
+
+</LinearLayout>

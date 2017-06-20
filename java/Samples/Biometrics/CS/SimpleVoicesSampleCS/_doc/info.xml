@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<neu:sampleInfo xmlns:neu="http://www.neurotechnology.com/SampleExplorer">
+	<neu:title>Simple Voices Sample C#</neu:title>
+	<neu:description>
+Simple voices sample application demonstrates how to use SDK to do simple voice enrollment (from file or device), verification and identification.
+Sample contains only the code that is needed to accomplish these functionalities, so its a good starting point before continuing to more complicated samples.
+	</neu:description>
+	<neu:tag>C#</neu:tag>
+	<neu:tag>.NET</neu:tag>
+	<neu:tag>Identification</neu:tag>
+	<neu:tag>Enrollment</neu:tag>
+	<neu:tag>Verification</neu:tag>
+	<neu:tag>Microphones</neu:tag>
+	<neu:tag>Voice</neu:tag>
+	<neu:tag>VeriSpeak Standard SDK</neu:tag>
+	<neu:tag>VeriSpeak Extended SDK</neu:tag>
+	<neu:tag>MegaMatcher Standard SDK</neu:tag>
+	<neu:tag>MegaMatcher Extended SDK</neu:tag>
+</neu:sampleInfo>

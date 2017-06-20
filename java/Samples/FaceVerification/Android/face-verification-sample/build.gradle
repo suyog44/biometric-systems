@@ -1,0 +1,42 @@
+buildscript {
+	System.properties['com.android.build.gradle.overrideVersionCheck'] = 'true'
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:2.2.0'
+	}
+}
+
+description = "Face Verification Sample"
+project.ext.archivesBaseName = "face-verification-sample"
+
+project.ext.ndfFiles = ["FacesDetectSegmentsOrientation.ndf",
+						"FacesDetectSegmentsFeaturePointsTrack.ndf",
+						"FacesDetectSegmentsLiveness.ndf",
+						"FacesCreateTemplateSmall.ndf",
+						"FacesCreateTemplateMediumLite.ndf"]
+
+project.ext.nativeLibsInclude = ["**/libjnidispatch.so",
+								 "**/libNCore.so",
+								 "**/libNLicensing.so",
+								 "**/libNFaceVerification.so",
+								 "**/libNGui.so",
+								 "**/libNMedia.so",
+								 "**/libNMediaProc.so",
+								 "**/libopenblas.so"]
+
+apply from: "../../../Common/Android/buildCommon/applicationCommon.gradle"
+apply from: "../../../Common/Android/buildCommon/common.gradle"
+
+dependencies {
+	provided project.modules."android"
+
+	compile ":neurotec-core-android"
+	compile ":neurotec-media-android"
+	compile ":neurotec-media-processing-android"
+	compile ":neurotec-face-verification-android"
+	compile ":neurotec-face-verification-gui-android"
+	compile ":neurotec-gui-android"
+	compile ":jna"
+}

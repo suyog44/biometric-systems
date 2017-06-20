@@ -1,0 +1,7 @@
+if (System.getProperty("applet") == null) {
+	rootProject.name = 'abis-sample'
+} else {
+	rootProject.name = 'abis-sample-applet'
+}
+include 'samples-utils'
+project(':samples-utils').projectDir = new File("../../../Common/Java/utils")

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="pmW-HW-OPu" customClass="EnrollDialog">
+            <rect key="frame" x="0.0" y="0.0" width="270" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4Y-Zk-K1n" userLabel="cancel">
+                    <rect key="frame" x="15" y="94" width="115" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="Nwa-b7-zks"/>
+                        <constraint firstAttribute="width" constant="115" id="uQq-GK-QQD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonClicked:" destination="pmW-HW-OPu" eventType="touchUpInside" id="wzw-HW-jCn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utc-Gz-cZe" userLabel="enroll">
+                    <rect key="frame" x="140" y="94" width="115" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonClicked:" destination="pmW-HW-OPu" eventType="touchUpInside" id="xnC-57-29o"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fV4-PA-gac" customClass="UITextFieldWithInsets">
+                    <rect key="frame" x="15" y="48" width="240" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="miV-ue-A5Q"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                </textField>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="oW3-Hs-03Z" userLabel="title">
+                    <rect key="frame" x="15" y="10" width="240" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fV4-PA-gac" secondAttribute="trailing" constant="15" id="0hh-wk-v5H"/>
+                <constraint firstItem="I4Y-Zk-K1n" firstAttribute="height" secondItem="utc-Gz-cZe" secondAttribute="height" id="8ln-RD-ISe"/>
+                <constraint firstItem="fV4-PA-gac" firstAttribute="top" secondItem="oW3-Hs-03Z" secondAttribute="bottom" constant="10" id="Ank-39-wPe"/>
+                <constraint firstItem="I4Y-Zk-K1n" firstAttribute="leading" secondItem="pmW-HW-OPu" secondAttribute="leading" constant="15" id="CZw-Mf-sdo"/>
+                <constraint firstItem="I4Y-Zk-K1n" firstAttribute="top" secondItem="fV4-PA-gac" secondAttribute="bottom" constant="10" id="Idd-WQ-05E"/>
+                <constraint firstAttribute="bottom" secondItem="I4Y-Zk-K1n" secondAttribute="bottom" constant="10" id="Il0-WT-HuK"/>
+                <constraint firstItem="oW3-Hs-03Z" firstAttribute="leading" secondItem="pmW-HW-OPu" secondAttribute="leading" constant="15" id="JkG-Md-dPf"/>
+                <constraint firstAttribute="trailing" secondItem="utc-Gz-cZe" secondAttribute="trailing" constant="15" id="LAd-0H-UcW"/>
+                <constraint firstItem="utc-Gz-cZe" firstAttribute="leading" secondItem="I4Y-Zk-K1n" secondAttribute="trailing" constant="10" id="RKc-Gl-TiM"/>
+                <constraint firstAttribute="trailing" secondItem="oW3-Hs-03Z" secondAttribute="trailing" constant="15" id="Vyx-Ei-TCL"/>
+                <constraint firstItem="fV4-PA-gac" firstAttribute="leading" secondItem="pmW-HW-OPu" secondAttribute="leading" constant="15" id="Yvq-PG-gkD"/>
+                <constraint firstAttribute="bottom" secondItem="utc-Gz-cZe" secondAttribute="bottom" constant="10" id="enx-7j-2xJ"/>
+                <constraint firstItem="oW3-Hs-03Z" firstAttribute="top" secondItem="pmW-HW-OPu" secondAttribute="top" constant="10" id="vjE-Zs-o40"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="acceptButton" destination="utc-Gz-cZe" id="aR1-K7-Dis"/>
+                <outlet property="cancelButton" destination="I4Y-Zk-K1n" id="vjH-Rn-j5V"/>
+                <outlet property="textField" destination="fV4-PA-gac" id="3Ur-YA-RIg"/>
+                <outlet property="titleLabel" destination="oW3-Hs-03Z" id="2LE-Gg-VEC"/>
+            </connections>
+        </view>
+    </objects>
+</document>

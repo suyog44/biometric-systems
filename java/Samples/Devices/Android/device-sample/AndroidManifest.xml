@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		package="com.neurotec.samples.devices"
+		android:versionCode="1"
+		android:versionName="9.0.0.0" >
+
+		<uses-sdk
+				android:minSdkVersion="15"
+				android:targetSdkVersion="19" />
+
+		<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+		<uses-permission android:name="android.permission.BLUETOOTH" />
+		<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+		<uses-permission android:name="android.permission.CAMERA" />
+		<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+		<uses-permission android:name="android.permission.INTERNET" />
+		<uses-permission android:name="android.permission.READ_LOGS" />
+		<uses-permission android:name="android.permission.READ_OWNER_DATA" />
+		<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+		<uses-permission android:name="android.permission.RECORD_AUDIO" />
+		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+		<uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+		<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+		<uses-permission android:name="android.permission.WAKE_LOCK" />
+
+		<uses-permission android:name="android.permission.CAMERA" />
+			<uses-permission android:name="com.credenceid.permission.SERVICE" />
+
+		<uses-feature android:name="android.hardware.usb.host" />
+
+		<application
+				tools:replace="android:name"
+				android:name=".DevicesApplication"
+				package="com.neurotec.samples.devices"
+				android:allowBackup="true"
+				android:icon="@com.neurotec.samples.devices:drawable/ic_neurotechnology_logo"
+				android:label="@string/app_name"
+				android:theme="@style/AppTheme" >
+
+				<!-- Splash screen -->
+				<activity
+					android:name="com.neurotec.samples.devices.SplashScreen"
+					android:label="@string/app_name"
+					android:screenOrientation="portrait">
+					<intent-filter>
+						<action android:name="android.intent.action.MAIN" />
+						<category android:name="android.intent.category.LAUNCHER" />
+					</intent-filter>
+				</activity>
+
+				<activity
+						android:name="com.neurotec.samples.devices.MainActivity"
+						android:label="@string/app_name"
+						android:windowSoftInputMode="adjustResize"
+						android:screenOrientation="portrait">
+				</activity>
+				<activity
+						android:name="com.neurotec.samples.devices.CameraActivity"
+						android:label="@string/title_device_detail"
+						android:screenOrientation="landscape" >
+						<meta-data
+								android:name="android.support.PARENT_ACTIVITY"
+								android:value=".MainActivity" />
+				</activity>
+				<activity
+						android:name="com.neurotec.samples.devices.FScannerActivity"
+						android:label="@string/title_device_detail"
+						android:screenOrientation="landscape" >
+						<meta-data
+								android:name="android.support.PARENT_ACTIVITY"
+								android:value=".MainActivity" />
+				</activity>
+				<activity
+						android:name="com.neurotec.samples.devices.IrisScannerActivity"
+						android:label="@string/title_device_detail"
+						android:screenOrientation="landscape" >
+						<meta-data
+								android:name="android.support.PARENT_ACTIVITY"
+								android:value=".MainActivity" />
+				</activity>
+				<activity
+						android:name="com.neurotec.samples.devices.MicrophoneActivity"
+						android:label="@string/title_device_detail"
+						android:screenOrientation="landscape" >
+						<meta-data
+								android:name="android.support.PARENT_ACTIVITY"
+								android:value=".MainActivity" />
+				</activity>
+
+				<!-- Licensing -->
+
+				<activity android:name="com.neurotec.licensing.gui.ActivationActivity"></activity>
+		</application>
+
+</manifest>

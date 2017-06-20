@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<neu:sampleInfo xmlns:neu="http://www.neurotechnology.com/SampleExplorer">
+	<neu:title>Latent Fingerprint Sample Java</neu:title>
+	<neu:description>
+Latent Fingerprint Sample is used to work with latent fingerprints. Create latent templates from
+ latent images, add/edit minutia, add/edit singular points and also perform image enhancement and other similar functions.
+	</neu:description>
+	<neu:tag>Java</neu:tag>
+	<neu:tag>Latent fingerprint</neu:tag>
+	<neu:tag>Fingers</neu:tag>
+	<neu:tag>Image adjusment</neu:tag>
+	<neu:tag>VeriFinger Extended SDK</neu:tag>
+	<neu:tag>MegaMatcher Standard SDK</neu:tag>
+	<neu:tag>MegaMatcher Extended SDK</neu:tag>
+</neu:sampleInfo>

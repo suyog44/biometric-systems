@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" xmlns="http://maven.apache.org/POM/4.0.0">
+	<parent>
+		<artifactId>biometrics-tutorials-android-super</artifactId>
+		<groupId>com.neurotec.tutorials</groupId>
+		<version>9.0.0.0</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>biometrics-tutorials-android</artifactId>
+	<packaging>apk</packaging>
+	<name>biometrics-tutorials-android</name>
+	<build>
+		<finalName>biometrics-tutorials</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target
+								name="copy and rename file">
+								<copy
+									file="${product.bin.data.directory}/FingersDetectSegmentsClassifier.ndf"
+									tofile="${project.asset.data.directory}/FingersDetectSegmentsClassifier.ndf.jet" />
+								<copy
+									file="${product.bin.data.directory}/FacesDetect45.ndf"
+									tofile="${project.asset.data.directory}/FacesDetect45.ndf.jet" />
+								<copy
+									file="${product.bin.data.directory}/FacesDetect180.ndf"
+									tofile="${project.asset.data.directory}/FacesDetect180.ndf.jet" />
+								<copy
+									file="${product.bin.data.directory}/FacesDetectSegmentsAge.ndf"
+									tofile="${project.asset.data.directory}/FacesDetectSegmentsAge.ndf.jet" />
+								<copy
+									file="${product.bin.data.directory}/FacesDetectSegmentsOrientation.ndf"
+									tofile="${project.asset.data.directory}/FacesDetectSegmentsOrientation.ndf.jet" />
+								<copy
+									file="${product.bin.data.directory}/FacesDetectSegmentsFeaturePointsTrack.ndf"
+									tofile="${project.asset.data.directory}/FacesDetectSegmentsFeaturePointsTrack.ndf.jet" />
+								<copy
+									file="${product.bin.data.directory}/FacesDetectSegmentsEmotions.ndf"
+									tofile="${project.asset.data.directory}/FacesDetectSegmentsEmotions.ndf.jet" />
+								<copy
+									file="${product.bin.data.directory}/FacesDetectSegmentsAttributes.ndf"
+									tofile="${project.asset.data.directory}/FacesDetectSegmentsAttributes.ndf.jet" />
+								<copy
+									file="${product.bin.data.directory}/FacesDetectSegmentsLiveness.ndf"
+									tofile="${project.asset.data.directory}/FacesDetectSegmentsLiveness.ndf.jet" />
+								<copy
+									file="${product.bin.data.directory}/FacesCreateTemplateSmall.ndf"
+									tofile="${project.asset.data.directory}/FacesCreateTemplateSmall.ndf.jet" />
+								<copy
+									file="${product.bin.data.directory}/FacesCreateTemplateMediumLite.ndf"
+									tofile="${project.asset.data.directory}/FacesCreateTemplateMediumLite.ndf.jet" />
+								<copy
+									file="${product.bin.data.directory}/FacesCreateTemplateLargeLite.ndf"
+									tofile="${project.asset.data.directory}/FacesCreateTemplateLargeLite.ndf.jet" />
+								<copy
+									file="${product.bin.data.directory}/Irises.ndf"
+									tofile="${project.asset.data.directory}/Irises.ndf.jet" />
+								<copy
+									file="${product.bin.data.directory}/VoicesCreateTemplateModel.ndf"
+									tofile="${project.asset.data.directory}/VoicesCreateTemplateModel.ndf.jet" />
+							</target>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+				<artifactId>android-maven-plugin</artifactId>
+				<configuration>
+					<nativeLibrariesDirectory>${product.lib.android.directory}</nativeLibrariesDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>standalone</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<outputDirectory>${product.bin.directory}</outputDirectory>
+					<finalName>Android</finalName>
+					<appendAssemblyId>false</appendAssemblyId>
+					<descriptors>
+						<descriptor>src/main/assembly/standalone.xml</descriptor>
+					</descriptors>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>com.google.android</groupId>
+			<artifactId>android</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec.tutorials</groupId>
+			<artifactId>tutorials-utils-android</artifactId>
+			<type>apklib</type>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-gui-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-media-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-media-processing-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-biometrics-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-biometrics-gui-android</artifactId>
+			<type>aar</type>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-biometrics-gui-android</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-biometrics-client-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-devices-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-devices-fscanners-suprema-biomini-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-devices-fscanners-bluefin-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-devices-multimodal-credenceid-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-devices-fscanners-digitalpersona-uareu-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-devices-fscanners-futronic-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-devices-fscanners-secugen-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-devices-fscanners-integratedbiometrics-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-devices-fscanners-nextbiometrics-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-devices-irisscanners-iritech-irishield-android</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.neurotec</groupId>
+			<artifactId>neurotec-devices-media-android</artifactId>
+		</dependency>
+	</dependencies>
+	<properties>
+		<product.root.directory>${basedir}/../../../..</product.root.directory>
+		<project.asset.data.directory>${project.build.directory}/generated-sources/combined-assets/data</project.asset.data.directory>
+	</properties>
+</project>

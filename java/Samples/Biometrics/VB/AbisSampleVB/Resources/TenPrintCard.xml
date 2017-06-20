@@ -1,0 +1,20 @@
+﻿<TenPrintCard color="red">
+
+	<block x="0" y ="0" width="800" height="508" isFingerBlock="true">
+		<cell width="161" height="154" fingerNo="1"/>
+		<cell width="161" height="154" fingerNo="2"/>
+		<cell width="160" height="154" fingerNo="3"/>
+		<cell width="161" height="154" fingerNo="4"/>
+		<cell width="157" height="154" fingerNo="5"/>
+		<cell width="161" height="150" fingerNo="6"/>
+		<cell width="161" height="150" fingerNo="7"/>
+		<cell width="160" height="150" fingerNo="8"/>
+		<cell width="161" height="150" fingerNo="9"/>
+		<cell width="157" height="150" fingerNo="10"/>
+		<cell width="322" height="204" fingerNo="11"/>
+		<cell width="79" height="204" fingerNo="12"/>
+		<cell width="81" height="204" fingerNo="13"/>
+		<cell width="318" height="204" fingerNo="14"/>
+	</block>
+
+</TenPrintCard>

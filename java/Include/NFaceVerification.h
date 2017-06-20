@@ -1,0 +1,6 @@
+#ifndef N_FACE_VERIFICATION_LIBRARY_H_INCLUDED
+#define N_FACE_VERIFICATION_LIBRARY_H_INCLUDED
+
+#include <FaceVerification/NFaceVerification.h>
+
+#endif // !N_FACE_VERIFICATION_LIBRARY_H_INCLUDED

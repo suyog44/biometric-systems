@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:orientation="vertical" >
+
+		<Spinner
+				android:id="@+id/spinner_finger_positions"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1" />
+
+		<Spinner
+				android:id="@+id/spinner_finger_impression_types"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1" />
+
+</LinearLayout>

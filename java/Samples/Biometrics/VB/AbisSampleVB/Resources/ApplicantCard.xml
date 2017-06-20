@@ -1,0 +1,185 @@
+﻿<TenPrintCard color="blue">
+
+	<block x="0" y="0" width="620" height="61">
+		<cell width="127">
+			<text value="APPLICANT" size="10" alignment="center" bold="true"/>
+			<text value="FD-258 (REV.12-10-07)" size="5" alignment="bottom,left"/>
+		</cell>
+		<cell width="172">
+			<text value="LEAVE BLANK" size="8" alignment="top,center"/>
+		</cell>
+		<cell width="321">
+			<text value="TYPE OR PRINT ALL INFORMATION IN BLACK" size="8" alignment="center,top"/>
+			<text value="LAST NAME                      FIRST NAME                   MIDDLE NAME" size="5" alignment="top,center"/>
+		</cell>
+	</block>
+
+	<block x="620" y="0" width="180" height="91">
+		<cell>
+			<text value=" FBI" size="8" alignment="top,left"/>
+			<text value="LEAVE BLANK" size="8" alignment="top,center"/>
+		</cell>
+		<frame positions="left,bottom" size="4"/>
+	</block>
+
+	<block x="0" y ="61" width="299" height="232">
+		<cell height="35">
+			<text value="SIGNATURE OF PERSON FINGERPRINTED" size="5" alignment="top,left"/>
+		</cell>
+		<cell height="49">
+			<text value="RESIDENCE OF PERSON FINGERPRINTED" size="5" alignment="top,left"/>
+		</cell>
+		<cell width="57" height="31">
+			<text value="DATE" size="5" alignment="top,left"/>
+		</cell>
+		<cell width="242" height="31">
+			<text value="SIGNATURE OF OFFICIAL TAKING FINGERPRINTS" size="5" alignment="top,left"/>
+		</cell>
+		<cell height="58">
+			<text value="EMPLOYER AND ADDRESS" size="5" alignment="top,left"/>
+		</cell>
+		<cell height="59">
+			<text value="REASON FINGERPRINTED" size="5" alignment="top,left"/>
+		</cell>
+		<frame positions="bottom" size="4"/>
+	</block>
+
+	<block x="299" y="127" width="152" height="166">
+		<cell height="27">
+			<text value="CITIZENSHIP" size="5" alignment="top,left"/>
+			<text value="CTZ" size="7" alignment="top,left"/>
+		</cell>
+		<cell height="27">
+			<text value="YOUR NO." size="5" alignment="top,left"/>
+			<text value="OCA" size="7" alignment="top,left"/>
+		</cell>
+		<cell height="28">
+			<text value="FBI NO." size="5" alignment="top,left"/>
+			<text value="FBI" size="7" alignment="top,left"/>
+		</cell>
+		<cell height="27">
+			<text value="ARMED FORCES NO." size="5" alignment="top,left"/>
+			<text value="MNU" size="7" alignment="top,left"/>
+		</cell>
+		<cell height="28">
+			<text value="SOCIAL SECURITY NO." size="5" alignment="top,left"/>
+			<text value="SOC" size="7" alignment="top,left"/>
+		</cell>
+		<cell height="29">
+			<text value="MISCELLANEOUS NO." size="5" alignment="top,left"/>
+			<text value="MNU" size="7" alignment="top,left"/>
+		</cell>
+		<frame positions="bottom" size="4"/>
+	</block>
+
+	<block x="299" y="61" width="39" height="66">
+		<cell drawRect="false">
+			<text value="ALIASES" size="5" alignment="top,left"/>
+			<text value="AKA" size="7" alignment="top,left"/>
+		</cell>
+	</block>
+
+	<block x="438" y="61" width="13" height="34">
+		<cell drawRect="false">
+			<text value="O" size="6" alignment="top,center"/>
+			<text value="R" size="6" alignment="top,center"/>
+			<text value="I" size="6" alignment="top,center"/>
+		</cell>
+		<frame positions="bottom,left" size="1"/>
+	</block>
+
+	<block x="438" y="95" width="13" height="32" drawRect="false">
+		<cell drawRect="false"/>
+		<frame positions="right" size="1"/>
+	</block>
+
+	<block x="451" y="127" width="349" height="27">
+		<cell width="29">
+			<text value="SEX" size="5" alignment="top,center"/>
+		</cell>
+		<cell width="31">
+			<text value="RACE" size="5" alignment="top,center"/>
+		</cell>
+		<cell width="49">
+			<text value="HGT." size="5" alignment="top,center"/>
+		</cell>
+		<cell width="39">
+			<text value="WGT." size="5" alignment="top,center"/>
+		</cell>
+		<cell width="40">
+			<text value="EYES" size="5" alignment="top,center"/>
+		</cell>
+		<cell width="36">
+			<text value="HAIR" size="5" alignment="top,center"/>
+		</cell>
+		<cell width="125">
+			<text value="PLACE OF BIRTH" size="5" alignment="top,left"/>
+			<text value="POB" size="7" alignment="top,left"/>
+		</cell>
+	</block>
+
+	<block x="675" y="91" width="125" height="36">
+		<cell>
+			<text value="DATE OF BIRTH" size="5" alignment="top,left"/>
+			<text value="DOB" size="7" alignment="top,left"/>
+			<text value="   Month" size="5" alignment="center,left"/>
+			<text value="  Day" size="5" alignment="center,left"/>
+			<text value="   Year" size="5" alignment="center,left"/>
+		</cell>
+	</block>
+
+	<block x="451" y="154" width="349" height="139">
+		<cell>
+			<text value="LEAVE BLANK" size="8" alignment="top,center"/>
+		</cell>
+		<frame positions="left,top,bottom" size="4"/>
+	</block>
+
+	<block x="0" y ="292" width="800" height="508" isFingerBlock="true">
+		<cell width="161" height="154" fingerNo="1">
+			<text value="1. R. THUMB" size="5" alignment="bottom,left"/>
+		</cell>
+		<cell width="161" height="154" fingerNo="2">
+			<text value="2. R. INDEX" size="5" alignment="bottom,left"/>
+		</cell>
+		<cell width="160" height="154" fingerNo="3">
+			<text value="3. R. MIDDLE" size="5" alignment="bottom,left"/>
+		</cell>
+		<cell width="161" height="154" fingerNo="4">
+			<text value="4. R. RING" size="5" alignment="bottom,left"/>
+		</cell>
+		<cell width="157" height="154" fingerNo="5">
+			<text value="5. R. LITTLE" size="5" alignment="bottom,left"/>
+		</cell>
+
+		<cell width="161" height="150" fingerNo="6">
+			<text value="6. L.THUMB" size="5" alignment="bottom,left"/>
+		</cell>
+		<cell width="161" height="150" fingerNo="7">
+			<text value="7. L.INDEX" size="5" alignment="bottom,left"/>
+		</cell>
+		<cell width="160" height="150" fingerNo="8">
+			<text value="8. L.MIDDLE" size="5" alignment="bottom,left"/>
+		</cell>
+		<cell width="161" height="150" fingerNo="9">
+			<text value="9. L.RING" size="5" alignment="bottom,left"/>
+		</cell>
+		<cell width="157" height="150" fingerNo="10">
+			<text value="10. L.LITTLE" size="5" alignment="bottom,left"/>
+		</cell>
+
+		<cell width="322" height="204" fingerNo="11">
+			<text value="LEFT FOUR FINGERS TAKEN SIMULTANEOUSLY" size="5" alignment="bottom,center"/>
+		</cell>
+		<cell width="79" height="204" fingerNo="12">
+			<text value="L. THUMB" size="5" alignment="bottom,center"/>
+		</cell>
+		<cell width="81" height="204" fingerNo="13">
+			<text value="R. THUMB" size="5" alignment="bottom,center"/>
+		</cell>
+		<cell width="318" height="204" fingerNo="14">
+			<text value="RIGHT FOUR FINGERS TAKEN SIMULTANEOUSLY" size="5" alignment="bottom,center"/>
+		</cell>
+	</block>
+
+</TenPrintCard>

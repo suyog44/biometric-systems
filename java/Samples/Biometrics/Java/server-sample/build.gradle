@@ -1,0 +1,25 @@
+description = "Server Sample"
+
+apply plugin: 'application'
+apply from: "../../../Common/Java/buildCommon/common.gradle"
+mainClassName =  "com.neurotec.samples.server.ServerSample";
+
+dependencies {
+	compile ":neurotec-core"
+	compile ":neurotec-licensing"
+	compile ":neurotec-gui"
+	compile ":neurotec-media"
+	compile ":neurotec-media-processing"
+	compile ":neurotec-biometrics"
+	compile ":neurotec-biometrics-client"
+	compile ":neurotec-biometrics-gui"
+	compile ":neurotec-devices"
+	compile ":neurotec-cluster"
+	compile ":jna"
+	compile project.modules."simple-xml"
+	compile project.modules."sqlite-jdbc"
+	compile project.modules."mysql-connector-java"
+	compile project(":samples-utils")
+}
+
+apply from: "../../../Common/Java/buildCommon/run.gradle"
