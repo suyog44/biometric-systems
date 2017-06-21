@@ -76,9 +76,37 @@ for f_idx=1:8
     for ld = 1:size(sklt,1)
        line3 = [line3; [f(ld), ld]]; 
     end
+    
+    line4 = []
+    for ld =1:size(sklt,1)
+        line4 = [line4; [ld, 200]];
+    end
+    
     plot(line3(:,1),line3(:,2),'Color','r','LineWidth',1)
+    plot(line4(:,1),line4(:,2),'Color','w','LineWidth',1)
     plot([line1(1,1),line1(2,1)],[line1(1,2),line1(2,2)],'Color','r','LineWidth',2)
     plot([line2(1,1),line2(2,1)],[line2(1,2),line2(2,2)],'Color','r','LineWidth',2)
     grid on;
     drawnow;
+    
+    %line4 = line3(1:2,1:2);
+    %angle= acos(line3.*line4)*180/pi
+    %angle= acos(line4.*line3)*180/pi;
+    x1 = line3(:,1);
+    y1 = line3(:,2);
+    x2 = line4(:,1);
+    y2 = line4(:,2);
+    
+    DirVector1 = [[x1(1),y1(1)]-[x1(end),y1(end)]];
+    DirVector2 = [[x2(1),y2(1)]-[x2(end),y2(end)]];
+    v1 = DirVector1;
+    v2 = DirVector2;
+    
+    ang = atan2(v1(1)*v2(2)-v2(1)*v1(2),v1(1)*v2(1)+v1(2)*v2(2))
+    Angle = mod(-180/pi * ang, 360)-45
 end
+
+%%
+ v1 = [4,3] - [0,3];
+ v2 = [3,0] - [0,2];
+ angle = atan2(norm(cross(v1,v2)),dot(v1,v2));
