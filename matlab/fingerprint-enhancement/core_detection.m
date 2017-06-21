@@ -12,10 +12,10 @@ function [ pCore, pDelta, bImage, bgmask ] = core_detection(filename)
     [ bgmask ] = segmentation(image, blksize, segThreshold);
 
     % Downsize the original image
-    BN = 3;
-    %bImage = imresize(image, 1/BN);
-    bImage = image;
-    %bgmask = imresize(bgmask, 1/BN);
+    BN = 1;
+    bImage = imresize(image, 1/BN);
+    %bImage = image;
+    bgmask = imresize(bgmask, 1/BN);
     
     %% Step 2: compute Orientation Field
     [Theta, gSquSqu] = orientation_field(bImage, 15, 15);
@@ -23,5 +23,4 @@ function [ pCore, pDelta, bImage, bgmask ] = core_detection(filename)
     %% Step 3a: Poincare Index
     curveLen = 2;
     [pCore, pDelta] = poincare_index(Theta, bgmask, curveLen);
-   
 end

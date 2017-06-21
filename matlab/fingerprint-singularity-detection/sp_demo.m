@@ -137,6 +137,7 @@ drawnow;
 %% Step 3a: Poincare Index
 curveLen = 2;
 [pCore, pDelta] = poincare_index(Theta, bgmask, curveLen);
+pCore
 imagesc(bImage.*bgmask,'Parent',handles.axe_poincare_index);
 set(handles.axe_poincare_index,'DataAspectRatio',[1 1 1]);
 axes(handles.axe_poincare_index);
@@ -144,9 +145,9 @@ hold on;
 if (~isempty(pCore))
     plot( pCore(:,1), pCore(:,2),'ro','LineWidth',1);  
 end
-if (~isempty(pDelta))
-    plot( pDelta(:,1), pDelta(:,2),'r^','LineWidth',1);
-end
+%if (~isempty(pDelta))
+%    plot( pDelta(:,1), pDelta(:,2),'r^','LineWidth',1);
+%end
 hold off;
 drawnow;
 
