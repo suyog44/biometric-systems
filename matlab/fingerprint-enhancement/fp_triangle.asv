@@ -1,19 +1,12 @@
 figure
 for f_idx=1:8
-    path = strcat('data/DB1_B/107_',int2str(f_idx),'.tif'); %DB1_B/107 er god
+    path = strcat('data/DB1_B/104_',int2str(f_idx),'.tif');
     im = imread(path);
-    
-    BN = 2;
-    im = imresize(im, 1/BN);
-    
     sklt = skelet(im);
-    [pCore, pDelta, bImage, bgmask] = core_detection(path,BN);
+    [pCore, pDelta, bImage, bgmask] = core_detection(path);
     %imshow(bImage.*bgmask)
 
     pCore
-    if(isempty(pCore))
-        continue;
-    end
     pCore = pCore(1,:);
 
     %%
@@ -21,11 +14,7 @@ for f_idx=1:8
     %Finding start index for triangle top by finding nearest non-zero pixel
     %from core point
     [D,IDX] = bwdist(sklt~=0);
-    try
-        ridge_idx = IDX(pCore(1),pCore(2));
-    catch
-        continue;
-    end
+    ridge_idx = IDX(pCore(1),pCore(2));
     [i, j] = ind2sub(size(sklt), ridge_idx);
     [x, y] = ind2sub(size(sklt), IDX(pCore(2),pCore(1)));
     

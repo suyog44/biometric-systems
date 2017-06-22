@@ -1,4 +1,4 @@
-function [ pCore, pDelta, bImage, bgmask ] = core_detection(filename)
+function [ pCore, pDelta, bImage, bgmask ] = core_detection(filename, BN)
   
     image = imread(filename);
     if size(image,3) > 1 % if image is not 8 bit
@@ -12,7 +12,6 @@ function [ pCore, pDelta, bImage, bgmask ] = core_detection(filename)
     [ bgmask ] = segmentation(image, blksize, segThreshold);
 
     % Downsize the original image
-    BN = 1;
     bImage = imresize(image, 1/BN);
     %bImage = image;
     bgmask = imresize(bgmask, 1/BN);

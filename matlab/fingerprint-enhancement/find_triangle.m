@@ -17,11 +17,17 @@ function [ mid_point, x1, y1, x2, y2 ] = find_triangle( x, y, sklt, dist )
     plot(contour7(:,1), contour7(:,2), 'Color', 'g', 'LineWidth', 1)
     plot(contour3(:,1), contour3(:,2), 'Color', 'b', 'LineWidth', 1)
     
-    y1 = unique_contours(1,1);
-    x1 = unique_contours(1,2);
-    y2 = unique_contours(2,1);
-    x2 = unique_contours(2,2);
-
+    x1=0;
+    y1=0;
+    x2=0;
+    y2=0;
+    if(size(unique_contours,1)>1)
+        y1 = unique_contours(1,1);
+        x1 = unique_contours(1,2);
+        y2 = unique_contours(2,1);
+        x2 = unique_contours(2,2);
+    end
+    
     mid_point = [(x1+x2)/2, (y1+y2)/2];
 end
 
