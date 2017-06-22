@@ -14,8 +14,8 @@ function [ mid_point, x1, y1, x2, y2 ] = find_triangle( x, y, sklt, dist )
     contours = [contour1(end,:); contour2(end,:); contour3(end,:); contour4(end,:); contour5(end,:); contour6(end,:); contour7(end,:); contour8(end,:)];
     unique_contours = unique(contours, 'rows');
 
-    plot(contour7(:,1), contour7(:,2), 'Color', 'g', 'LineWidth', 1)
-    plot(contour3(:,1), contour3(:,2), 'Color', 'b', 'LineWidth', 1)
+    %plot(contour7(:,1), contour7(:,2), 'Color', 'g', 'LineWidth', 1)
+    %plot(contour3(:,1), contour3(:,2), 'Color', 'b', 'LineWidth', 1)
     
     x1=0;
     y1=0;

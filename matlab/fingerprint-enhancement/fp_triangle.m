@@ -16,7 +16,7 @@ for f_idx=1:8
     end
     pCore = pCore(1,:);
 
-    %%
+    
     
     %Finding start index for triangle top by finding nearest non-zero pixel
     %from core point
@@ -38,7 +38,7 @@ for f_idx=1:8
     hold on;
     plot(i,j,'r.','MarkerSize',20)
     
-    [mid_point, x1, y1, x2, y2] = find_triangle(x, y, sklt, 30);
+    [mid_point, x1, y1, x2, y2] = find_triangle(x, y, sklt, 40);
     if(x1==0 && x2==0 && y1==0 && y2==0)
         continue;
     end
@@ -61,53 +61,21 @@ for f_idx=1:8
        line3 = [line3; [f(ld), ld]]; 
     end
 
-    %% All dem triangles
-    [x, y] = arrayfun(@(x) ind2sub(size(sklt), x), find(sklt > 0));
-    points = [x, y];
     
-    intersects = [];
-    for idx = 1:size(points, 1)
-        point = points(idx,:);
-        x = point(1,1);
-        y = point(1,2);
-        if (y < j) % we only care about intersects above the pCore
-            for idx_line = 1:size(line3, 1)
-                l3 = line3(idx_line,:);
-                l_x = int16(l3(1,1));
-                l_y = int16(l3(1,2));
-                if (l_x == x && l_y == y)
-                   intersects = [intersects; [x, y]];
-                end
-            end
-        end
-    end
-    
-    size(intersects)
-    
-    for idx = 1:size(intersects, 1)
-        point = intersects(idx,:);
-        x = point(1,1);
-        y = point(1,2);
-        [mid_point, x1, y1, x2, y2] = find_triangle(x, y, sklt, 15);
+    %[x, y] = arrayfun(@(x) ind2sub(size(sklt), x), find(sklt > 0));
+    %points = [x, y];
         
-        % plot intersect triangle
-        plot(x, y, 'r.', 'MarkerSize', 20)
-        plot(y1, x1, 'g.', 'MarkerSize', 20)
-        plot(y2, x2, 'b.', 'MarkerSize', 20)
-        plot(mid_point(2), mid_point(1), 'y.', 'MarkerSize', 20)
-    end
-    
-    %% Dat angle tho'
-    
     line4 = []
     for ld =1:size(sklt,1)
         line4 = [line4; [ld, pCore(2)]];
     end
     
-    plot(line3(:,1),line3(:,2),'Color','r','LineWidth',1)
+    plot(line3(:,1),line3(:,2),'Color','m','LineWidth',1)
     plot(line4(:,1),line4(:,2),'Color','w','LineWidth',1)
-    plot([line1(1,1),line1(2,1)],[line1(1,2),line1(2,2)],'Color','r','LineWidth',2)
-    plot([line2(1,1),line2(2,1)],[line2(1,2),line2(2,2)],'Color','r','LineWidth',2)
+    plot([line1(1,1),line1(2,1)],[line1(1,2),line1(2,2)],'--','Color','r','LineWidth',2)
+    plot([line1(1,1),i],[line1(1,2),j],'--','Color','r','LineWidth',2)
+    plot([line1(2,1),i],[line1(2,2),j],'--','Color','r','LineWidth',2)
+
     
     grid on;
     drawnow;
@@ -123,7 +91,8 @@ for f_idx=1:8
     v2 = DirVector2;
     
     ang = atan2(v1(1)*v2(2)-v2(1)*v1(2),v1(1)*v2(1)+v1(2)*v2(2));
-    Angle = 180-mod(-180/pi * ang, 360)
+    Angle = mod(-180/pi * ang, 360)
+    title(Angle)
 end
 
 %%
